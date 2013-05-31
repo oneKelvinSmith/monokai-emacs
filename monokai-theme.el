@@ -40,9 +40,8 @@
 (defvar monokai-colors-alist
     '(("monokai-bg-1"      . "#171A0B")
       ("monokai-bg"        . "#272822")
-      ("monokai-bg+1"      . "#32322A")
-      ("monokai-bg+2"      . "#383830")
-      ("monokai-bg+3"      . "#49483E")
+      ("monokai-bg+1"      . "#3E3D31")
+      ("monokai-bg+2"      . "#49483E")
       ("monokai-red-1"     . "#A20C41")
       ("monokai-red"       . "#F92672")
       ("monokai-red+1"     . "#FC5C94")
@@ -108,10 +107,11 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(cursor ((t (:foreground ,monokai-bg-1 :background ,monokai-fg))))
    `(escape-glyph ((t (:foreground ,monokai-fg-1 :bold t))))
    `(fringe ((t (:foreground ,monokai-fg :background ,monokai-bg))))
-   `(header-line ((t (:foreground ,monokai-fg-1
+   `(header-line ((t (:
+foreground ,monokai-fg-1
                                   :background ,monokai-bg-1
                                   :box (:line-width -1 :style released-button)))))
-   `(highlight ((t (:background ,monokai-bg+2))))
+   `(highlight ((t (:foreground ,monokai-fg+1 :background ,monokai-bg+2))))
    `(success ((t (:foreground ,monokai-green :weight bold))))
    `(warning ((t (:foreground ,monokai-orange :weight bold))))
    `(menu ((t (:foreground ,monokai-fg :background ,monokai-bg))))
@@ -123,12 +123,12 @@ Also bind `class' to ((class color) (min-colors 89))."
       (t :inverse-video t)))
    `(mode-line-buffer-id ((t (:foreground ,monokai-green :weight bold))))
    `(mode-line-inactive
-     ((t (:foreground ,monokai-bg+3
+     ((t (:foreground ,monokai-bg+2
                       :background ,monokai-bg
                       :box (:line-width -1 :style released-button)))))
    `(region ((,class (:background ,monokai-bg+2))
              (t :inverse-video t)))
-   `(secondary-selection ((t (:background ,monokai-bg+3))))
+   `(secondary-selection ((t (:background ,monokai-bg+2))))
    `(trailing-whitespace ((t (:background ,monokai-red))))
    `(vertical-border ((t (:foreground ,monokai-bg+2))))
 ;;;;; compilation
@@ -139,8 +139,8 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(compilation-info-face ((t (:foreground ,monokai-blue))))
    `(compilation-info ((t (:foreground ,monokai-purple :underline t))))
    `(compilation-leave-directory-face ((t (:foreground ,monokai-green))))
-   `(compilation-line-face ((t (:foreground ,monokai-bg+3))))
-   `(compilation-line-number ((t (:foreground ,monokai-bg+3))))
+   `(compilation-line-face ((t (:foreground ,monokai-bg+2))))
+   `(compilation-line-number ((t (:foreground ,monokai-bg+2))))
    `(compilation-message-face ((t (:foreground ,monokai-blue))))
    `(compilation-warning-face ((t (:foreground ,monokai-orange :weight bold :underline t))))
 ;;;;; grep
@@ -427,7 +427,7 @@ Also bind `class' to ((class color) (min-colors 89))."
                       :box (:line-width -1 :style released-button)))))
    `(helm-selection ((t (:background ,monokai-bg+2 :underline nil))))
    `(helm-selection-line ((t (:background ,monokai-bg+1))))
-   `(helm-visible-mark ((t (:foreground ,monokai-fg-1 :background ,monokai-bg+3))))
+   `(helm-visible-mark ((t (:foreground ,monokai-fg-1 :background ,monokai-bg+2))))
    `(helm-candidate-number ((t (:foreground ,monokai-green+2 :background ,monokai-bg-1))))
    `(helm-ff-directory ((t (:foreground ,monokai-magenta))))
 ;;;;; hl-line-mode
@@ -786,7 +786,7 @@ Also bind `class' to ((class color) (min-colors 89))."
 ;;;;; vc-annotate
    `(vc-annotate-color-map
      '(( 20. . ,monokai-fg-1)
-       ( 40. . ,monokai-bg+3)
+       ( 40. . ,monokai-bg+2)
        ( 60. . ,monokai-red)
        ( 80. . ,monokai-red+1)
        (100. . ,monokai-orange)
