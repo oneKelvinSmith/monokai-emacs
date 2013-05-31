@@ -205,8 +205,8 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(font-latex-sedate ((t (:foreground ,monokai-fg-1 :weight bold ))))
    `(font-latex-title-4 ((t (:inherit variable-pitch :weight bold))))
 ;;;;; auto-complete
-   `(ac-candidate-face ((t (:background ,monokai-bg-1 :foreground ,monokai-orange))))
-   `(ac-selection-face ((t (:background ,monokai-bg :foreground ,monokai-green))))
+   `(ac-candidate-face ((t (:background ,monokai-bg+1 :foreground ,monokai-orange))))
+   `(ac-selection-face ((t (:background ,monokai-bg+2 :foreground ,monokai-green))))
    `(popup-tip-face ((t (:background ,monokai-bg :foreground ,monokai-fg-1))))
    `(popup-scroll-bar-foreground-face ((t (:background ,monokai-blue-1))))
    `(popup-scroll-bar-background-face ((t (:background ,monokai-bg-1))))
@@ -679,8 +679,8 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(rst-level-5-face ((t (:foreground ,monokai-purple))))
    `(rst-level-6-face ((t (:foreground ,monokai-red))))
 ;;;;; show-paren
-   `(show-paren-mismatch ((t (:foreground ,monokai-red :background ,monokai-bg :weight bold))))
-   `(show-paren-match ((t (:foreground ,monokai-green :background ,monokai-bg :weight bold))))
+   `(show-paren-mismatch ((t (:foreground ,monokai-magenta :background ,monokai-bg :weight bold))))
+   `(show-paren-match ((t (:foreground ,monokai-cyan :background ,monokai-bg :weight bold))))
 ;;;;; sml-mode-line
    '(sml-modeline-end-face ((t :inherit default :width condensed)))
 ;;;;; SLIME
