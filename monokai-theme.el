@@ -431,10 +431,9 @@ foreground ,monokai-fg-1
    `(helm-candidate-number ((t (:foreground ,monokai-green+2 :background ,monokai-bg-1))))
    `(helm-ff-directory ((t (:foreground ,monokai-magenta))))
 ;;;;; hl-line-mode
-   `(hl-line ((nil (:background ,monokai-bg+1 nil :inherit t))))
+   `(hl-line((nil (:background ,monokai-bg+1 :inherit t))))
 ;;;;; hl-sexp
-   `(hl-sexp-face ((,class (:background ,monokai-bg+1))
-                   (t :weight bold)))
+   `(hl-sexp-face ((nil (:background ,monokai-bg+1 :inherit t))))
 ;;;;; ido-mode
    `(ido-first-match ((t (:foreground ,monokai-orange :background ,monokai-bg :weight bold))))
    `(ido-only-match ((t (:foreground ,monokai-green :background ,monokai-bg :weight bold))))
