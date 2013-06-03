@@ -431,10 +431,7 @@ foreground ,monokai-fg-1
    `(helm-candidate-number ((t (:foreground ,monokai-green+2 :background ,monokai-bg-1))))
    `(helm-ff-directory ((t (:foreground ,monokai-magenta))))
 ;;;;; hl-line-mode
-   `(hl-line-face ((,class (:background ,monokai-bg+1))
-                   (t :weight bold)))
-   `(hl-line ((,class (:background ,monokai-bg+1)) ; old emacsen
-              (t :weight bold)))
+   `(hl-line ((nil (:background ,monokai-bg+1 nil :inherit t))))
 ;;;;; hl-sexp
    `(hl-sexp-face ((,class (:background ,monokai-bg+1))
                    (t :weight bold)))
