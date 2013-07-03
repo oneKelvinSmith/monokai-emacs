@@ -232,10 +232,10 @@ foreground ,monokai-fg-1
    `(ctbl:face-row-select ((t (:background ,monokai-cyan :foreground ,monokai-bg))))
 ;;;;; diff
    `(diff-added ((,class (:foreground ,monokai-green :background nil))
-                 (t (:foreground ,monokai-green-1 :background nil))))
+                 (t (:foreground ,monokai-green :background nil))))
    `(diff-changed ((t (:foreground ,monokai-yellow))))
    `(diff-removed ((,class (:foreground ,monokai-red :background nil))
-                   (t (:foreground ,monokai-red-1 :background nil))))
+                   (t (:foreground ,monokai-red :background nil))))
    `(diff-refine-added ((t :inherit diff-added :weight bold)))
    `(diff-refine-change ((t :inherit diff-changed :weight bold)))
    `(diff-refine-removed ((t :inherit diff-removed :weight bold)))
