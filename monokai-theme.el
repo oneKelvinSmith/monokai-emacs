@@ -205,7 +205,7 @@ foreground ,monokai-fg-1
    `(font-latex-sedate ((t (:foreground ,monokai-fg-1 :weight bold ))))
    `(font-latex-title-4 ((t (:inherit variable-pitch :weight bold))))
 ;;;;; auto-complete
-   `(ac-candidate-face ((t (:background ,monokai-bg+1 :force-exit ,monokai-fg-1))))
+   `(ac-candidate-face ((t (:background ,monokai-bg+1 :foreground ,monokai-fg-1))))
    `(ac-selection-face ((t (:background ,monokai-bg+2 :foreground ,monokai-orange))))
    `(popup-tip-face ((t (:background ,monokai-bg+2 :foreground ,monokai-orange))))
    `(popup-scroll-bar-foreground-face ((t (:background ,monokai-fg-1))))
