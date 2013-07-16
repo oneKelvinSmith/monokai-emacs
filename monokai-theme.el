@@ -205,10 +205,10 @@ foreground ,monokai-fg-1
    `(font-latex-sedate ((t (:foreground ,monokai-fg-1 :weight bold ))))
    `(font-latex-title-4 ((t (:inherit variable-pitch :weight bold))))
 ;;;;; auto-complete
-   `(ac-candidate-face ((t (:background ,monokai-bg+1 :foreground ,monokai-orange))))
-   `(ac-selection-face ((t (:background ,monokai-bg+2 :foreground ,monokai-green))))
-   `(popup-tip-face ((t (:background ,monokai-bg :foreground ,monokai-fg-1))))
-   `(popup-scroll-bar-foreground-face ((t (:background ,monokai-blue-1))))
+   `(ac-candidate-face ((t (:background ,monokai-bg+1 :force-exit ,monokai-fg-1))))
+   `(ac-selection-face ((t (:background ,monokai-bg+2 :foreground ,monokai-orange))))
+   `(popup-tip-face ((t (:background ,monokai-bg+2 :foreground ,monokai-orange))))
+   `(popup-scroll-bar-foreground-face ((t (:background ,monokai-fg-1))))
    `(popup-scroll-bar-background-face ((t (:background ,monokai-bg-1))))
    `(popup-isearch-match ((t (:background ,monokai-bg :foreground ,monokai-fg))))
 ;;;;; android mode
@@ -220,8 +220,8 @@ foreground ,monokai-fg-1
 ;;;;; bm
    `(bm-face ((t (:background ,monokai-yellow-1 :foreground ,monokai-bg))))
    `(bm-fringe-face ((t (:background ,monokai-yellow-1 :foreground ,monokai-bg))))
-   `(bm-fringe-persistent-face ((t (:background ,monokai-green-1 :foreground ,monokai-bg))))
-   `(bm-persistent-face ((t (:background ,monokai-green-1 :foreground ,monokai-bg))))
+   `(bm-fringe-persistent-face ((t (:background ,monokai-orange-1 :foreground ,monokai-bg))))
+   `(bm-persistent-face ((t (:background ,monokai-orange-1 :foreground ,monokai-bg))))
 ;;;;; clojure-test-mode
    `(clojure-test-failure-face ((t (:foreground ,monokai-red :weight bold :underline t))))
    `(clojure-test-error-face ((t (:foreground ,monokai-orange :weight bold :underline t))))
@@ -543,9 +543,15 @@ foreground ,monokai-fg-1
    `(mew-face-eof-message ((t (:foreground ,monokai-red))))
    `(mew-face-eof-part ((t (:foreground ,monokai-yellow))))
 ;;;;; mic-paren
-   `(paren-face-match ((t (:foreground ,monokai-cyan :background ,monokai-bg :weight bold))))
-   `(paren-face-mismatch ((t (:foreground ,monokai-bg :background ,monokai-magenta :weight bold))))
-   `(paren-face-no-match ((t (:foreground ,monokai-bg :background ,monokai-red :weight bold))))
+   `(paren-face-match ((t (:foreground ,monokai-bg-1
+                                       :background ,monokai-orange
+                                       :weight bold))))
+   `(paren-face-mismatch ((t (:foreground ,monokai-bg-1
+                                          :background ,monokai-magenta
+                                          :weight bold))))
+   `(paren-face-no-match ((t (:foreground ,monokai-bg-1
+                                          :background ,monokai-purple
+                                          :weight bold))))
 ;;;;; mingus
    `(mingus-directory-face ((t (:foreground ,monokai-blue))))
    `(mingus-pausing-face ((t (:foreground ,monokai-magenta))))
@@ -675,8 +681,12 @@ foreground ,monokai-fg-1
    `(rst-level-5-face ((t (:foreground ,monokai-purple))))
    `(rst-level-6-face ((t (:foreground ,monokai-red))))
 ;;;;; show-paren
-   `(show-paren-mismatch ((t (:foreground ,monokai-magenta :background ,monokai-bg :weight bold))))
-   `(show-paren-match ((t (:foreground ,monokai-cyan :background ,monokai-bg :weight bold))))
+   `(show-paren-mismatch ((t (:foreground ,monokai-bg-1
+                                          :background ,monokai-red
+                                          :weight bold))))
+   `(show-paren-match ((t (:foreground ,monokai-bg-1
+                                       :background ,monokai-orange
+                                       ::weight bold))))
 ;;;;; sml-mode-line
    '(sml-modeline-end-face ((t :inherit default :width condensed)))
 ;;;;; SLIME
