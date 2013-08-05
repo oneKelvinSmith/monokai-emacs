@@ -848,7 +848,9 @@ This requires library `rainbow-mode'.")
      (boundp 'custom-theme-load-path)
      (add-to-list 'custom-theme-load-path
                   (file-name-as-directory
-                   (file-name-directory load-file-name))))
+                   (file-name-directory load-file-name)))
+     (when (not window-system)
+       (custom-set-faces '(default ((t (:background "nil")))))))
 
 (provide-theme 'monokai)
 
