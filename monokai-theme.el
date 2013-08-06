@@ -82,6 +82,46 @@ Each element has the form (NAME . HEX).
 
 `+N' suffixes indicate a color is lighter.
 `-N' suffixes indicate a color is darker.")
+(defvar monokai-256-colors-alist
+  '(("monokai-bg-1"      . "#141414")
+    ("monokai-bg"        . "nil")
+    ("monokai-bg+1"      . "#303030")
+    ("monokai-bg+2"      . "#474747")
+    ("monokai-red-1"     . "#5F0000")
+    ("monokai-red"       . "#FF1493")
+    ("monokai-red+1"     . "#EE6AA7")
+    ("monokai-red+2"     . "#FF82AB")
+    ("monokai-green-1"   . "#6B8E23")
+    ("monokai-green"     . "#87D700")
+    ("monokai-green+1"   . "#B3EE3A")
+    ("monokai-green+2"   . "#CCFF99")
+    ("monokai-orange-1"  . "#A0522D")
+    ("monokai-orange"    . "#FF8C00")
+    ("monokai-orange+1"  . "#FFA54F")
+    ("monokai-orange+2"  . "#FFD39B")
+    ("monokai-yellow-1"  . "#968B26")
+    ("monokai-yellow"    . "#FFEC8B")
+    ("monokai-yellow+1"  . "#F3EA98")
+    ("monokai-yellow+2"  . "#F3ECB0")
+    ("monokai-blue-1"    . "#21889B")
+    ("monokai-blue"      . "#00d7ff")
+    ("monokai-blue+1"    . "#8DE6F7")
+    ("monokai-blue+2"    . "#A9EBF7")
+    ("monokai-purple-1"  . "#562AA6")
+    ("monokai-purple"    . "#AE81FF")
+    ("monokai-purple+1"  . "#C2A1FF")
+    ("monokai-purple+2"  . "#D2BAFF")
+    ("monokai-magenta-1" . "#A41F99")
+    ("monokai-magenta"   . "#D700D7")
+    ("monokai-magenta+1" . "#FE87F4")
+    ("monokai-magenta+2" . "#FEA7F7")
+    ("monokai-cyan-1"    . "#349B8D")
+    ("monokai-cyan"      . "#5FFFFF")
+    ("monokai-cyan+1"    . "#AFEEEE")
+    ("monokai-cyan+2"    . "#CBF7F1")
+    ("monokai-fg-1"      . "#8b8970")
+    ("monokai-fg"        . "#F5F5F5")
+    ("monokai-fg+1"      . "#FFFAFA")))
 
 (defmacro monokai-with-color-variables (&rest body)
   "`let' bind all colors defined in `monokai-colors-alist'.
@@ -90,7 +130,9 @@ Also bind `class' to ((class color) (min-colors 89))."
   `(let ((class '((class color) (min-colors 89)))
          ,@(mapcar (lambda (cons)
                      (list (intern (car cons)) (cdr cons)))
-                   monokai-colors-alist))
+                   (if window-system
+                       monokai-colors-alist
+                     monokai-256-colors-alist)))
      ,@body))
 
 ;;; Theme Faces
@@ -108,8 +150,8 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(escape-glyph ((t (:foreground ,monokai-fg-1 :bold t))))
    `(fringe ((t (:foreground ,monokai-fg :background ,monokai-bg))))
    `(header-line ((t (:foreground ,monokai-fg-1
-                      :background ,monokai-bg-1
-                      :box (:line-width -1 :style released-button)))))
+                                  :background ,monokai-bg-1
+                                  :box (:line-width -1 :style released-button)))))
    `(highlight ((t (:foreground ,monokai-fg+1 :background ,monokai-bg+2))))
    `(success ((t (:foreground ,monokai-green :weight bold))))
    `(warning ((t (:foreground ,monokai-orange :weight bold))))
@@ -777,7 +819,7 @@ Also bind `class' to ((class color) (min-colors 89))."
 ;;;;; yascroll
    `(yascroll:thumb-text-area ((t (:background ,monokai-bg-1))))
    `(yascroll:thumb-fringe ((t (:background ,monokai-bg-1 :foreground ,monokai-bg-1))))
-  ))
+   ))
 
 ;;; Theme Variables
 (monokai-with-color-variables
@@ -787,30 +829,30 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(ansi-color-names-vector [,monokai-bg ,monokai-red ,monokai-green ,monokai-orange ,monokai-blue ,monokai-purple ,monokai-cyan ,monokai-fg])
 
 ;;;;; fill-column-indicator
-  `(fci-rule-color ,monokai-bg-1)
+   `(fci-rule-color ,monokai-bg-1)
 ;;;;; vc-annotate
-  `(vc-annotate-color-map
-    '(( 20. . ,monokai-fg-1)
-      ( 40. . ,monokai-bg+2)
-      ( 60. . ,monokai-red)
-      ( 80. . ,monokai-red+1)
-      (100. . ,monokai-orange)
-      (120. . ,monokai-orange+1)
-      (140. . ,monokai-green)
-      (160. . ,monokai-green+1)
-      (180. . ,monokai-yellow)
-      (200. . ,monokai-yellow+1)
-      (220. . ,monokai-blue)
-      (240. . ,monokai-blue+1)
-      (260. . ,monokai-purple)
-      (280. . ,monokai-purple+1)
-      (300. . ,monokai-cyan)
-      (320. . ,monokai-cyan+1)
-      (340. . ,monokai-magenta)
-      (360. . ,monokai-magenta+1)))
-  `(vc-annotate-very-old-color ,monokai-magenta)
-  `(vc-annotate-background ,monokai-bg)
-))
+   `(vc-annotate-color-map
+     '(( 20. . ,monokai-fg-1)
+       ( 40. . ,monokai-bg+2)
+       ( 60. . ,monokai-red)
+       ( 80. . ,monokai-red+1)
+       (100. . ,monokai-orange)
+       (120. . ,monokai-orange+1)
+       (140. . ,monokai-green)
+       (160. . ,monokai-green+1)
+       (180. . ,monokai-yellow)
+       (200. . ,monokai-yellow+1)
+       (220. . ,monokai-blue)
+       (240. . ,monokai-blue+1)
+       (260. . ,monokai-purple)
+       (280. . ,monokai-purple+1)
+       (300. . ,monokai-cyan)
+       (320. . ,monokai-cyan+1)
+       (340. . ,monokai-magenta)
+       (360. . ,monokai-magenta+1)))
+   `(vc-annotate-very-old-color ,monokai-magenta)
+   `(vc-annotate-background ,monokai-bg)
+   ))
 
 ;;; Rainbow Support
 (declare-function rainbow-mode 'rainbow-mode)
@@ -848,9 +890,7 @@ This requires library `rainbow-mode'.")
      (boundp 'custom-theme-load-path)
      (add-to-list 'custom-theme-load-path
                   (file-name-as-directory
-                   (file-name-directory load-file-name)))
-     (when (not window-system)
-       (custom-set-faces '(default ((t (:background "nil")))))))
+                   (file-name-directory load-file-name))))
 
 (provide-theme 'monokai)
 
