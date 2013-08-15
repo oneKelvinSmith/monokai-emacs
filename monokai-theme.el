@@ -4,7 +4,7 @@
 
 ;; Author: Kelvin Smith <oneKelvinSmith@gmail.com>
 ;; URL: http://github.com/oneKelvinSmith/monokai-emacs
-;; Version: 1.2
+;; Version: 0.1.3
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -106,15 +106,15 @@
      (monokai-orange+1  . "#FFA54F")
      (monokai-orange+2  . "#FFD39B")
      (monokai-yellow-1  . "#968B26")
-     (monokai-yellow    . "#FFEC8B")
-     (monokai-yellow+1  . "#F3EA98")
+     (monokai-yellow    . "#CDC673")
+     (monokai-yellow+1  . "#FFF68F")
      (monokai-yellow+2  . "#F3ECB0")
      (monokai-blue-1    . "#21889B")
-     (monokai-blue      . "#00d7ff")
+     (monokai-blue      . "#5FD7FF")
      (monokai-blue+1    . "#8DE6F7")
      (monokai-blue+2    . "#A9EBF7")
      (monokai-purple-1  . "#562AA6")
-     (monokai-purple    . "#AE81FF")
+     (monokai-purple    . "#AF87FF")
      (monokai-purple+1  . "#C2A1FF")
      (monokai-purple+2  . "#D2BAFF")
      (monokai-magenta-1 . "#A41F99")
@@ -125,7 +125,7 @@
      (monokai-cyan      . "#5FFFFF")
      (monokai-cyan+1    . "#AFEEEE")
      (monokai-cyan+2    . "#CBF7F1")
-     (monokai-fg-1      . "#8b8970")
+     (monokai-fg-1      . "#8B8878")
      (monokai-fg        . "#F5F5F5")
      (monokai-fg+1      . "#FFFAFA")))
   "List of Monokai colors.
@@ -213,7 +213,7 @@ Each element has the form (NAME . HEX).
                 :weight bold))
 
  '(warning
-   (:foreground monokai-orange
+   (:foreground monokai-yellow-1
                 :weight bold))
 
  '(menu
@@ -285,7 +285,7 @@ Each element has the form (NAME . HEX).
    (:foreground monokai-blue))
 
  '(compilation-warning-face
-   (:foreground monokai-orange
+   (:foreground monokai-yellow-1
                 :weight bold
                 :underline t))
 
@@ -354,6 +354,14 @@ Each element has the form (NAME . HEX).
 
  '(font-lock-preprocessor-face
    (:foreground monokai-red))
+
+ '(font-lock-regexp-grouping-construct
+   (:foreground monokai-orange
+                :weight bold))
+
+ '(font-lock-regexp-grouping-backslash
+   (:foreground monokai-green
+                :weight bold))
 
  '(font-lock-string-face
    (:foreground monokai-yellow))
@@ -503,7 +511,7 @@ Each element has the form (NAME . HEX).
    (:foreground monokai-purple))
 
  '(android-mode-warning-face
-   (:foreground monokai-yellow))
+   (:foreground monokai-yellow-1))
 
 ;;;;; bm
  '(bm-face
@@ -706,6 +714,10 @@ Each element has the form (NAME . HEX).
    (:foreground monokai-cyan
                 :weight bold))
 
+;;;;; flx
+'(flx-highlight-face
+  (:foreground monokai-green
+               :weight bold))
 ;;;;; flycheck
  '(flycheck-error
    (supports :underline
@@ -715,14 +727,14 @@ Each element has the form (NAME . HEX).
  '(flycheck-warning
    (supports :underline
              (:style wave)
-             (:underline (:style wave :color monokai-orange))))
+             (:underline (:style wave :color monokai-yellow-1))))
 
  '(flycheck-fringe-error
-   (:foreground monokai-red-1
+   (:foreground monokai-red
                 :weight bold))
 
  '(flycheck-fringe-warning
-   (:foreground monokai-orange-1
+   (:foreground monokai-yellow-1
                 :weight bold))
 ;;;;; flymake
  '(flymake-errline
@@ -733,7 +745,7 @@ Each element has the form (NAME . HEX).
  '(flymake-warnline
    (supports :underline
              (:style wave)
-             (:underline (:style wave :color ,monokai-orange))))
+             (:underline (:style wave :color ,monokai-yellow-1))))
  '(flymake-infoline
    (supports :underline
              (:style wave)
@@ -1111,7 +1123,7 @@ Each element has the form (NAME . HEX).
 
  ;;;;; Js2-mode
   '(js2-warning-face
-    (:foreground monokai-orange
+    (:foreground monokai-yellow-1
                  :underline t))
 
   '(js2-error-face
@@ -1353,7 +1365,7 @@ Each element has the form (NAME . HEX).
                  :weight bold))
 
   '(mew-face-header-warning
-    (:foreground monokai-red))
+    (:foreground monokai-yellow-1))
 
   '(mew-face-header-xmew
     (:foreground monokai-green))
@@ -1365,7 +1377,7 @@ Each element has the form (NAME . HEX).
     (:foreground monokai-blue))
 
   '(mew-face-body-comment
-    (:foreground monokai-fg
+    (:foreground monokai-fg-1
                  :slant italic))
 
   '(mew-face-body-cite1
@@ -1606,7 +1618,7 @@ Each element has the form (NAME . HEX).
     (:inherit 'font-lock-keyword-face))
 
   '(org-warning
-    (:foreground monokai-red
+    (:foreground monokai-yellow-1
                  :weight bold
                  :underline t))
 
