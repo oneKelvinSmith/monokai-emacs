@@ -2120,9 +2120,5 @@ This requires library `rainbow-mode'.")
                   (file-name-as-directory
                    (file-name-directory load-file-name))))
 
-;;;###autoload
-(add-to-list 'safe-local-eval-forms
-             '(when (require 'rainbow-mode nil t) (rainbow-mode 1)))
-
 (provide-theme 'monokai)
 ;;; monokai-theme.el ends here
