@@ -2748,6 +2748,19 @@ Takes and optional `FRAME' as reference."
        ((,class (:background ,monokai-hl
                              :foreground ,monokai-fg))))
 
+     ;; powerline
+     `(powerline-active1
+       ((,class (:background ,gray))))
+
+     `(powerline-active2
+       ((,class (:background ,gray-l))))
+
+     `(powerline-inactive1
+       ((,class (:background ,gray-d))))
+
+     `(powerline-inactive2
+       ((,class (:background ,gray))))
+
      ;; rainbow-delimiters
      `(rainbow-delimiters-depth-1-face
        ((,class (:foreground ,cyan))))
