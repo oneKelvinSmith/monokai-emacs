@@ -112,6 +112,7 @@ Takes and optional `FRAME' as reference."
          (blue             (if (in-terminal) "#5FD7FF" "#66D9EF"))
          (cyan             (if (in-terminal) "#5FFFFF" "#A1EFE4"))
          (green            (if (in-terminal) "#87D700" "#A6E22E"))
+         (gray             (if (in-terminal) "#444444" "#474747"))
 
          ;; Darker and lighter accented colors
          ;;
@@ -133,6 +134,8 @@ Takes and optional `FRAME' as reference."
          (cyan-l           (if (in-terminal) "#AFEEEE" "#BBF7EF"))
          (green-d          (if (in-terminal) "#6B8E23" "#67930F"))
          (green-l          (if (in-terminal) "#B3EE3A" "#C1F161"))
+         (gray-d           (if (in-terminal) "#3a3a3a" "#333333"))
+         (gray-l           (if (in-terminal) "#6c6c6c" "#6b6b6b"))
 
          ;; Adaptive colors
          (monokai-fg       (if (in-terminal) "#F5F5F5" "#F8F8F2"))
