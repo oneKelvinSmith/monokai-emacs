@@ -1778,6 +1778,31 @@ Takes and optional `FRAME' as reference."
        ((,class (:background ,monokai-bg
                              :foreground ,magenta :bold t))))
 
+     ;; helm-ls-git
+     `(helm-ls-git-modified-not-staged-face
+       ((,class :foreground ,blue)))
+
+     `(helm-ls-git-modified-and-staged-face
+       ((,class :foreground ,blue-l)))
+
+     `(helm-ls-git-renamed-modified-face
+       ((,class :foreground ,blue-l)))
+
+     `(helm-ls-git-untracked-face
+       ((,class :foreground ,orange)))
+
+     `(helm-ls-git-added-copied-face
+       ((,class :foreground ,green)))
+
+     `(helm-ls-git-deleted-not-staged-face
+       ((,class :foreground ,red)))
+
+     `(helm-ls-git-deleted-and-staged-face
+       ((,class :foreground ,red-l)))
+
+     `(helm-ls-git-conflict-face
+       ((,class :foreground ,yellow)))
+
      ;; hi-lock-mode
      `(hi-yellow
        ((,class (:foreground ,yellow-lc
