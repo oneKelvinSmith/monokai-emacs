@@ -912,6 +912,12 @@ Takes and optional `FRAME' as reference."
        ((,class (:foreground ,monokai-emph
                              :underline t))))
 
+     `(company-scrollbar-bg
+       ((,class (:background ,gray-l))))
+
+     `(company-scrollbar-fg
+       ((,class (:background ,yellow-d))))
+
      ;; cscope
      `(cscope-file-face
        ((,class (:foreground ,green
