@@ -141,7 +141,7 @@ Takes and optional `FRAME' as reference."
          (monokai-fg       (if (in-terminal) "#F5F5F5" "#F8F8F2"))
          (monokai-bg       (if (in-terminal) "#1B1E1C" "#272822"))
          (monokai-hl-line  (if (in-terminal) "#212121" "#3E3D31"))
-         (monokai-hl       (if (in-terminal) "#303030" "#9D550F"))
+         (monokai-hl       (if (in-terminal) "#303030" "#49483E"))
          (monokai-emph     (if (in-terminal) "#FFFAFA" "#F8F8F0"))
          (monokai-comments (if (in-terminal) "#8B8878" "#75715E"))
 
