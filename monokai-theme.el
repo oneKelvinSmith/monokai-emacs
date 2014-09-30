@@ -1803,6 +1803,9 @@ Takes and optional `FRAME' as reference."
      `(helm-ls-git-added-copied-face
        ((,class :foreground ,green)))
 
+     `(helm-ls-git-added-modified-face
+       ((,class :foreground ,green-l)))
+
      `(helm-ls-git-deleted-not-staged-face
        ((,class :foreground ,red)))
 
