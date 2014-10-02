@@ -2084,6 +2084,17 @@ Takes and optional `FRAME' as reference."
      `(magit-log-sha1
        ((,class (:foreground ,yellow))))
 
+     ;; monky
+     `(monky-section-title
+       ((,class (:foreground ,yellow
+                             :weight bold))))
+
+     `(monky-diff-add
+       ((,class (:foreground ,green))))
+
+     `(monky-diff-del
+       ((,class (:foreground ,red))))
+
      ;; markdown-mode
      `(markdown-header-face
        ((,class (:foreground ,green))))
