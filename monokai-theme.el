@@ -44,7 +44,7 @@
 ;;
 ;;; Code:
 
-(unless (>= 24 emacs-major-version)
+(unless (>= emacs-major-version 24)
   (error "The monokai theme requires Emacs 24 or later!"))
 
 (deftheme monokai "The Monokai colour theme")
