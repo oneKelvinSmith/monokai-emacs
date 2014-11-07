@@ -614,7 +614,7 @@ Takes and optional `FRAME' as reference."
                              :inverse-video nil))))
 
      `(ace-jump-face-foreground
-       ((,class (:foreground ,red :background ,monokai-bg
+       ((,class (:foreground ,yellow :background ,monokai-bg
                              :inverse-video nil
                              :weight bold))))
 
