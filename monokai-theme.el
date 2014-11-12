@@ -5255,7 +5255,7 @@ Also affects 'linum-mode' background."
      ((,class (:underline t
                           :weight bold))
       (,terminal-class (:underline t
-                                   :weight terminal-bold))))
+                                   :weight bold))))
 
    ;; weechat
    `(weechat-error-face
