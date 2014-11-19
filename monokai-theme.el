@@ -4007,6 +4007,11 @@ Also affects 'linum-mode' background."
    `(paren-face
      ((,terminal-class (:foreground ,monokai-comments))))
 
+   ;; perspective
+   `(persp-selected-face
+     ((,class (:foreground ,blue
+                           :weight bold))))
+
    ;; pretty-mode
    `(pretty-mode-symbol-face
      ((,class (:foreground ,yellow
