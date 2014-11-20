@@ -4007,6 +4007,11 @@ Also affects 'linum-mode' background."
    `(paren-face
      ((,terminal-class (:foreground ,monokai-comments))))
 
+   ;; perspective
+   `(persp-selected-face
+     ((,class (:foreground ,blue
+                           :weight bold))))
+
    ;; pretty-mode
    `(pretty-mode-symbol-face
      ((,class (:foreground ,yellow
@@ -5381,6 +5386,7 @@ Also affects 'linum-mode' background."
 ;; Local Variables:
 ;; no-byte-compile: t
 ;; eval: (when (fboundp 'rainbow-mode) (rainbow-mode 1))
+;; eval: (when (fboundp 'aggressive-indent-mode) (aggressive-indent-mode -1))
 ;; fill-column: 95
 ;; End:
 
