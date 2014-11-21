@@ -4556,54 +4556,54 @@ Also affects 'linum-mode' background."
 
    ;; syslog-mode
    `(syslog-ip-face
-     '((,class (:background unspecified
-                            :foreground ,yellow))
-       (,terminal-class (:background unspecified
-                                     :foreground ,terminal-yellow))))
+     ((,class (:background unspecified
+                           :foreground ,yellow))
+      (,terminal-class (:background unspecified
+                                    :foreground ,terminal-yellow))))
 
    `(syslog-hour-face
-     '((,class (:background unspecified
-                            :foreground ,green))
-       (,terminal-class (:background unspecified
-                                     :foreground ,terminal-green))))
+     ((,class (:background unspecified
+                           :foreground ,green))
+      (,terminal-class (:background unspecified
+                                    :foreground ,terminal-green))))
 
    `(syslog-error-face
-     '((,class (:background unspecified
-                            :foreground ,red
-                            :weight bold))
-       (,terminal-class (:background unspecified
-                                     :foreground ,terminal-red
-                                     :weight bold))))
+     ((,class (:background unspecified
+                           :foreground ,red
+                           :weight bold))
+      (,terminal-class (:background unspecified
+                                    :foreground ,terminal-red
+                                    :weight bold))))
 
    `(syslog-warn-face
-     '((,class (:background unspecified
-                            :foreground ,orange
-                            :weight bold))
-       (,terminal-class (:background unspecified
-                                     :foreground ,terminal-orange
-                                     :weight bold))))
+     ((,class (:background unspecified
+                           :foreground ,orange
+                           :weight bold))
+      (,terminal-class (:background unspecified
+                                    :foreground ,terminal-orange
+                                    :weight bold))))
 
    `(syslog-info-face
-     '((,class (:background unspecified
-                            :foreground ,blue
-                            :weight bold))
-       (,terminal-class (:background unspecified
-                                     :foreground ,terminal-blue
-                                     :weight bold))))
+     ((,class (:background unspecified
+                           :foreground ,blue
+                           :weight bold))
+      (,terminal-class (:background unspecified
+                                    :foreground ,terminal-blue
+                                    :weight bold))))
 
    `(syslog-debug-face
-     '((,class (:background unspecified
-                            :foreground ,cyan
-                            :weight bold))
-       (,terminal-class (:background unspecified
-                                     :foreground ,terminal-cyan
-                                     :weight bold))))
+     ((,class (:background unspecified
+                           :foreground ,cyan
+                           :weight bold))
+      (,terminal-class (:background unspecified
+                                    :foreground ,terminal-cyan
+                                    :weight bold))))
 
    `(syslog-su-face
-     '((,class (:background unspecified
-                            :foreground ,magenta))
-       (,terminal-class (:background unspecified
-                                     :foreground ,terminal-magenta))))
+     ((,class (:background unspecified
+                           :foreground ,magenta))
+      (,terminal-class (:background unspecified
+                                    :foreground ,terminal-magenta))))
 
    ;; table
    `(table-cell
@@ -4661,11 +4661,11 @@ Also affects 'linum-mode' background."
       (,terminal-class (:foreground ,terminal-monokai-emph
                                     :background ,terminal-monokai-fg))))
 
-   '(term-default-fg-color
+   `(term-default-fg-color
      ((,class (:inherit term-color-white))
       (,terminal-class (:inherit term-color-white))))
 
-   '(term-default-bg-color
+   `(term-default-bg-color
      ((,class (:inherit term-color-black))
       (,terminal-class (:inherit term-color-black))))
 
@@ -5334,12 +5334,12 @@ Also affects 'linum-mode' background."
    `(magit-diff-use-overlays nil)
 
    ;; highlight-changes
-   `(highlight-changes-colors '(,magenta ,violet))
+   `(highlight-changes-colors (,magenta ,violet))
 
    ;; highlight-tail
    `(highlight-tail-colors
-     '((,monokai-hl . 0)(,green-lc . 20)(,cyan-lc . 30)(,blue-lc . 50)
-       (,yellow-lc . 60)(,orange-lc . 70)(,magenta-lc . 85)(,monokai-hl . 100)))
+     ((,monokai-hl . 0)(,green-lc . 20)(,cyan-lc . 30)(,blue-lc . 50)
+      (,yellow-lc . 60)(,orange-lc . 70)(,magenta-lc . 85)(,monokai-hl . 100)))
 
 
    ;; vc
@@ -5367,14 +5367,14 @@ Also affects 'linum-mode' background."
 
    ;; weechat
    `(weechat-color-list
-     '(unspecified ,monokai-bg ,monokai-hl
-                   ,red-d ,red
-                   ,green-d ,green
-                   ,yellow-d ,yellow
-                   ,blue-d ,blue
-                   ,magenta-d ,magenta
-                   ,cyan-d ,cyan
-                   ,monokai-fg ,monokai-emph))))
+     (unspecified ,monokai-bg ,monokai-hl
+                  ,red-d ,red
+                  ,green-d ,green
+                  ,yellow-d ,yellow
+                  ,blue-d ,blue
+                  ,magenta-d ,magenta
+                  ,cyan-d ,cyan
+                  ,monokai-fg ,monokai-emph))))
 
 ;;;###autoload
 (when (and (boundp 'custom-theme-load-path) load-file-name)
