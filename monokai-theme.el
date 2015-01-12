@@ -458,7 +458,7 @@ Also affects 'linum-mode' background."
                                     :foreground ,terminal-monokai-bg))))
 
    `(cua-rectangle
-     ((,class (:inherit region
+    ((,class (:inherit region
                         :background ,magenta
                         :foreground ,monokai-bg))
       (,terminal-class (:inherit region
@@ -850,9 +850,9 @@ Also affects 'linum-mode' background."
 
    `(font-lock-type-face
      ((,class (:foreground ,blue
-                           :italic t))
+                           :italic nil))
       (,terminal-class (:foreground ,terminal-blue
-                                    :italic t))))
+                                    :italic nil))))
 
    `(font-lock-variable-name-face
      ((,class (:foreground ,orange))
