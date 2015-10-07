@@ -1344,7 +1344,21 @@ Also affects 'linum-mode' background."
      ((,class (:background ,yellow-d))
       (,terminal-class (:background ,terminal-yellow-d))))
 
-   ;; cscope
+   ;; company-mode tooltip annnotations
+   `(company-tooltip-annotation
+     ((,class (:background ,monokai-hl
+                           :foreground ,green-l))
+      (,terminal-class (:background ,terminal-monokai-hl
+                                    :foreground ,terminal-green))))
+
+   ;; company-mode templates
+   `(company-template-field
+     ((,class (:background ,monokai-hl
+                           :foreground ,cyan))
+      (,terminal-class (:background ,terminal-monokai-hl
+                                    :foreground ,terminal-cyan))))
+
+   ;; CSCOPE
    `(cscope-file-face
      ((,class (:foreground ,green
                            :weight bold))
