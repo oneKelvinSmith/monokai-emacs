@@ -128,8 +128,8 @@ Also affects 'linum-mode' background."
        ;; Adaptive colors
        (monokai-fg               "#F8F8F2")
        (monokai-bg               "#272822")
-       (monokai-hl-line          "#3E3D31")
        (monokai-hl               "#49483E")
+       (monokai-hl-line          "#49483E")
        (monokai-emph             "#F8F8F0")
        (monokai-comments         "#75715E")
        ;; Adaptive higher/lower contrast accented colors
@@ -769,9 +769,11 @@ Also affects 'linum-mode' background."
                                                          :style unspecified)))))
 
    `(region
-     ((,class (:background ,monokai-hl
+     ((,class (:foreground ,monokai-bg
+                          :background ,blue
                            :inherit t))
-      (,terminal-class (:background ,terminal-monokai-hl
+      (,terminal-class (:foreground ,terminal-monokai-bg
+                                    :background ,terminal-blue
                                     :inherit t))))
 
    `(secondary-selection
