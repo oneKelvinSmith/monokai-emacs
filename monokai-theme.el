@@ -458,7 +458,7 @@ Also affects 'linum-mode' background."
                                     :foreground ,terminal-monokai-bg))))
 
    `(cua-rectangle
-    ((,class (:inherit region
+     ((,class (:inherit region
                         :background ,violet
                         :foreground ,monokai-bg))
       (,terminal-class (:inherit region
@@ -770,17 +770,13 @@ Also affects 'linum-mode' background."
 
    `(region
      ((,class (:foreground ,monokai-bg
-                          :background ,blue
-                           :inherit t))
+                           :background ,blue))
       (,terminal-class (:foreground ,terminal-monokai-bg
-                                    :background ,terminal-blue
-                                    :inherit t))))
+                                    :background ,terminal-blue))))
 
    `(secondary-selection
-     ((,class (:background ,monokai-hl
-                           :inherit t))
-      (,terminal-class (:background ,terminal-monokai-hl
-                                    :inherit t))))
+     ((,class (:background ,monokai-hl))
+      (,terminal-class (:background ,terminal-monokai-hl))))
 
 
    `(trailing-whitespace
@@ -2767,16 +2763,12 @@ Also affects 'linum-mode' background."
 
    ;; hl-line-mode
    `(hl-line
-     ((,class (:background ,monokai-hl-line
-                           :inherit t))
-      (,terminal-class (:background ,terminal-monokai-hl-line
-                                    :inherit t))))
+     ((,class (:background ,monokai-hl-line))
+      (,terminal-class (:background ,terminal-monokai-hl-line))))
 
    `(hl-line-face
-     ((,class (:background ,monokai-hl-line
-                           :inherit t))
-      (,terminal-class (:background ,terminal-monokai-hl-line
-                                    :inherit t))))
+     ((,class (:background ,monokai-hl-line))
+      (,terminal-class (:background ,terminal-monokai-hl-line))))
 
    ;; ido-mode
    `(ido-first-match
