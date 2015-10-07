@@ -3979,10 +3979,8 @@ Also affects 'linum-mode' background."
       (,terminal-class (:foreground ,terminal-orange))))
 
    `(org-mode-line-clock-overrun
-     ((,class (:inherit mode-line
-                        :background ,red))
-      (,terminal-class (:inherit mode-line
-                                 :background ,terminal-red))))
+     ((,class (:inherit mode-line))
+      (,terminal-class (:inherit mode-line))))
 
    ;; outline
    `(outline-1
