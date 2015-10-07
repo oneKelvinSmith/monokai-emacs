@@ -1,10 +1,10 @@
 ;;; monokai-theme.el --- A fruity color theme for Emacs.
 
-;; Copyright (C) 2011-2013
+;; Copyright (C) 2011-2015
 
 ;; Author: Kelvin Smith <oneKelvinSmith@gmail.com>
 ;; URL: http://github.com/oneKelvinSmith/monokai-emacs
-;; Version: 0.2.0
+;; Version: 0.2.1
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -5348,7 +5348,7 @@ Also affects 'linum-mode' background."
    `(magit-diff-use-overlays nil)
 
    ;; highlight-changes
-   `(highlight-changes-colors (,magenta ,violet))
+   `(highlight-changes-colors '(,magenta ,violet))
 
    ;; highlight-tail
    `(highlight-tail-colors
