@@ -4,7 +4,7 @@
 
 ;; Author: Kelvin Smith <oneKelvinSmith@gmail.com>
 ;; URL: http://github.com/oneKelvinSmith/monokai-emacs
-;; Version: 0.2.1
+;; Version: 0.2.2
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -3599,6 +3599,98 @@ Also affects 'linum-mode' background."
    `(nav-flash-face
      ((,class (:background ,monokai-hl))
       (,terminal-class (:background ,terminal-monokai-hl))))
+
+   ;; neo-tree
+   `(neo-banner-face
+     ((,class (:foreground ,blue
+                           :background ,monokai-bg
+                           :weight bold))
+      (,terminal-class (:foreground ,terminal-blue
+                                    :background ,terminal-monokai-bg
+                                    :weight bold))))
+
+
+   `(neo-header-face
+     ((,class (:foreground ,monokai-emph
+                           :background ,monokai-bg))
+      (,terminal-class (:foreground ,terminal-monokai-emph
+                                    :background ,terminal-monokai-bg))))
+
+   `(neo-root-dir-face
+     ((,class (:foreground ,green
+                           :background ,monokai-bg))
+      (,terminal-class (:foreground ,terminal-green
+                                    :background ,terminal-monokai-bg))))
+
+   `(neo-dir-link-face
+     ((,class (:foreground ,blue))
+      (,terminal-class (:foreground ,terminal-blue
+                                    :background ,terminal-monokai-bg))))
+
+   `(neo-file-link-face
+     ((,class (:foreground ,monokai-fg))
+      (,terminal-class (:foreground ,terminal-monokai-fg))))
+
+   `(neo-button-face
+     ((,class (:underline nil))
+      (,terminal-class (:underline nil))))
+
+   `(neo-expand-btn-face
+     ((,class (:foreground ,monokai-comments))
+      (,terminal-class (:foreground ,terminal-monokai-comments))))
+
+   `(neo-vc-default-face
+     ((,class (:foreground ,monokai-fg))
+      (,terminal-class (:foreground ,terminal-monokai-fg))))
+
+   `(neo-vc-user-face
+     ((,class (:foreground ,red
+                           :slant italic))
+      (,terminal-class (:foreground ,terminal-red
+                                    :slant italic))))
+
+   `(neo-vc-up-to-date-face
+     ((,class (:foreground ,monokai-comments))
+      (,terminal-class (:foreground ,terminal-monokai-comments))))
+
+   `(neo-vc-edited-face
+     ((,class (:foreground ,orange))
+      (,terminal-class (:foreground ,terminal-orange))))
+
+   `(neo-vc-needs-update-face
+     ((,class (:underline t))
+      (,terminal-class (:underline t))))
+
+   `(neo-vc-needs-merge-face
+     ((,class (:foreground ,red))
+      (,terminal-class (:foreground ,terminal-red))))
+
+   `(neo-vc-unlocked-changes-face
+     ((,class (:foreground ,red
+                           :background ,monokai-comments))
+      (,terminal-class (:foreground ,terminal-red
+                                    :background ,terminal-monokai-comments))))
+
+   `(neo-vc-added-face
+     ((,class (:foreground ,green))
+      (,terminal-class (:foreground ,terminal-green))))
+
+   `(neo-vc-removed-face
+     ((,class (:strike-through t))
+      (,terminal-class (:strike-through t))))
+
+   `(neo-vc-conflict-face
+     ((,class (:foreground ,red))
+      (,terminal-class (:foreground ,terminal-red))))
+
+   `(neo-vc-missing-face
+     ((,class (:foreground ,red))
+      (,terminal-class (:foreground ,terminal-red))))
+
+   `(neo-vc-ignored-face
+     ((,class (:foreground ,monokai-comments))
+      (,terminal-class (:foreground ,terminal-monokai-comments))))
+
 
    ;; org-mode
    `(org-agenda-structure
