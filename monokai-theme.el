@@ -4771,8 +4771,8 @@ Also affects 'linum-mode' background."
    ;; tooltip. (NOTE: This setting has no effect on the os widgets for me
    ;; zencoding uses this)
    `(tooltip
-     ((,class (:background ,yellow-lc
-                           :foreground ,yellow-hc
+     ((,class (:background ,green
+                           :foreground ,monokai-bg
                            :inherit ,s-variable-pitch))))
 
    ;; tuareg
@@ -5439,6 +5439,10 @@ Also affects 'linum-mode' background."
    `(highlight-tail-colors
      '((,monokai-hl . 0)(,green-lc . 20)(,cyan-lc . 30)(,blue-lc . 50)
        (,yellow-lc . 60)(,orange-lc . 70)(,magenta-lc . 85)(,monokai-hl . 100)))
+
+   ;; pos-tip
+   `(pos-tip-foreground-color ,monokai-bg)
+   `(pos-tip-background-color ,green)
 
    ;; vc
    `(vc-annotate-color-map
