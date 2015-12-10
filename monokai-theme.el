@@ -2446,6 +2446,10 @@ Also affects 'linum-mode' background."
 
 
    ;; helm (these probably need tweaking)
+   ;;
+   ;; TODO: make helm navigation look less jarring
+   ;; https://github.com/emacs-helm/helm/search?utf8=%E2%9C%93&q=defface&type=Code
+   ;;
    `(helm-apt-deinstalled
      ((,class (:foreground ,monokai-comments))
       (,terminal-class (:foreground ,terminal-monokai-comments))))
@@ -2985,6 +2989,34 @@ Also affects 'linum-mode' background."
                                     :weight bold))))
 
    ;; magit
+   ;;
+   ;; TODO: Add supports for all magit faces
+   ;; https://github.com/magit/magit/search?utf8=%E2%9C%93&q=face
+   ;;
+   `(magit-diff-added
+     ((,class (:foreground ,green
+                           :background ,monokai-bg))
+      (,terminal-class (:foreground ,terminal-green
+                                    :background ,terminal-monokai-bg))))
+
+   `(magit-diff-added-highlight
+     ((,class (:foreground ,green
+                           :background ,monokai-hl))
+      (,terminal-class (:foreground ,terminal-green
+                                    :background ,terminal-monokai-hl))))
+
+   `(magit-diff-removed
+     ((,class (:foreground ,red
+                           :background ,monokai-bg))
+      (,terminal-class (:foreground ,terminal-red
+                                    :background ,terminal-monokai-bg))))
+
+   `(magit-diff-removed-highlight
+     ((,class (:foreground ,red
+                           :background ,monokai-hl))
+      (,terminal-class (:foreground ,terminal-red
+                                    :background ,terminal-monokai-hl))))
+
    `(magit-section-title
      ((,class (:foreground ,yellow
                            :weight bold))
