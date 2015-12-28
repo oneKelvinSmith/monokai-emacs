@@ -131,7 +131,7 @@ Also affects 'linum-mode' background."
        ;; Adaptive colors
        (monokai-fg               "#F8F8F2")
        (monokai-bg               "#272822")
-       (monokai-hl               "#49483E")
+       (monokai-hl               "#3E3D31")
        (monokai-hl-line          "#49483E")
        (monokai-emph             "#F8F8F0")
        (monokai-comments         "#75715E")
@@ -163,7 +163,7 @@ Also affects 'linum-mode' background."
        (s-mode-line-fg           (if monokai-high-contrast-mode-line
                                      monokai-bg monokai-fg))
        (s-mode-line-bg           (if monokai-high-contrast-mode-line
-                                     monokai-fg monokai-hl-line))
+                                     monokai-fg monokai-hl))
        (s-mode-line-buffer-id-fg (if monokai-high-contrast-mode-line
                                      'unspecified green))
        (s-mode-line-inactive-fg  (if monokai-high-contrast-mode-line
@@ -171,7 +171,7 @@ Also affects 'linum-mode' background."
        (s-mode-line-inactive-bg  (if monokai-high-contrast-mode-line
                                      monokai-hl-line monokai-bg))
        (s-mode-line-inactive-bc  (if monokai-high-contrast-mode-line
-                                     monokai-fg monokai-hl-line))
+                                     monokai-fg monokai-hl))
 
        ;; Definitions for terminals that do not support 256 colors
        (terminal-class                    '((class color) (min-colors 89)))
@@ -239,7 +239,7 @@ Also affects 'linum-mode' background."
        (terminal-s-mode-line-fg           (if monokai-high-contrast-mode-line
                                               terminal-monokai-bg terminal-monokai-fg))
        (terminal-s-mode-line-bg           (if monokai-high-contrast-mode-line
-                                              terminal-monokai-fg terminal-monokai-hl-line))
+                                              terminal-monokai-fg terminal-monokai-hl))
        (terminal-s-mode-line-buffer-id-fg (if monokai-high-contrast-mode-line
                                               'unspecified terminal-green))
        (terminal-s-mode-line-inactive-fg  (if monokai-high-contrast-mode-line
@@ -247,7 +247,7 @@ Also affects 'linum-mode' background."
        (terminal-s-mode-line-inactive-bg  (if monokai-high-contrast-mode-line
                                               terminal-monokai-hl-line terminal-monokai-bg))
        (terminal-s-mode-line-inactive-bc  (if monokai-high-contrast-mode-line
-                                              terminal-monokai-fg terminal-monokai-hl-line)))
+                                              terminal-monokai-fg terminal-monokai-hl)))
 
   ;; Define faces
   (custom-theme-set-faces
