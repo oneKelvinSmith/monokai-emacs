@@ -169,9 +169,19 @@ Also affects 'linum-mode' background."
        (s-mode-line-inactive-fg  (if monokai-high-contrast-mode-line
                                      monokai-fg monokai-comments))
        (s-mode-line-inactive-bg  (if monokai-high-contrast-mode-line
-                                     monokai-hl-line monokai-bg))
+                                     gray-l monokai-bg))
        (s-mode-line-inactive-bc  (if monokai-high-contrast-mode-line
                                      monokai-fg monokai-hl))
+
+       ;; powerline
+       (s-powerline-active1-bg   (if monokai-high-contrast-mode-line
+                                     gray-l gray))
+       (s-powerline-active2-bg   (if monokai-high-contrast-mode-line
+                                     gray gray-l))
+       (s-powerline-inactive1-bg (if monokai-high-contrast-mode-line
+                                     gray gray-d))
+       (s-powerline-inactive2-bg (if monokai-high-contrast-mode-line
+                                     monokai-bg gray))
 
        ;; Definitions for terminals that do not support 256 colors
        (terminal-class                    '((class color) (min-colors 89)))
@@ -4197,19 +4207,19 @@ Also affects 'linum-mode' background."
 
    ;; powerline
    `(powerline-active1
-     ((,class (:background ,gray))
-      (,terminal-class (:background ,terminal-gray))))
+     ((,class (:background ,s-powerline-active1-bg :foreground ,monokai-fg))
+      (,terminal-class (:background ,terminal-gray :foreground ,monokai-fg))))
 
    `(powerline-active2
-     ((,class (:background ,gray-l))
-      (,terminal-class (:background ,terminal-gray-l))))
+     ((,class (:background ,s-powerline-active2-bg :foreground ,monokai-fg))
+      (,terminal-class (:background ,terminal-gray-l :foreground ,monokai-fg))))
 
    `(powerline-inactive1
-     ((,class (:background ,gray-d))
+     ((,class (:background ,s-powerline-inactive1-bg))
       (,terminal-class (:background ,terminal-gray-d))))
 
    `(powerline-inactive2
-     ((,class (:background ,gray))
+     ((,class (:background ,s-powerline-inactive2-bg))
       (,terminal-class (:background ,terminal-gray))))
 
    ;; rainbow-delimiters
