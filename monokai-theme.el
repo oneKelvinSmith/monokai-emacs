@@ -1328,7 +1328,7 @@ Also affects 'linum-mode' background."
 
    `(company-tooltip-common-selection
      ((,class (:foreground ,monokai-bg
-			   :background ,blue
+         :background ,blue
                            :underline t))
       (,terminal-class (:foreground ,terminal-monokai-bg
                                     :underline t))))
@@ -2938,6 +2938,14 @@ Also affects 'linum-mode' background."
    `(js2-jsdoc-html-tag-name
      ((,class (:foreground ,orange))
       (,terminal-class (:foreground ,terminal-orange))))
+   
+   `(js2-object-property
+     ((,class (:foreground ,orange))
+      (,terminal-class (:foreground ,terminal-orange))))
+
+   `(js2-function-call
+     ((,class (:foreground ,yellow)))
+       ((,terminal-class (:foreground ,terminal-yellow))))
 
    `(js2-jsdoc-tag
      ((,class (:foreground ,cyan))
