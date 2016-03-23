@@ -1328,7 +1328,7 @@ Also affects 'linum-mode' background."
 
    `(company-tooltip-common-selection
      ((,class (:foreground ,monokai-bg
-         :background ,blue
+      :background ,blue
                            :underline t))
       (,terminal-class (:foreground ,terminal-monokai-bg
                                     :underline t))))
