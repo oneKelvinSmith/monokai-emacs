@@ -3362,36 +3362,36 @@ Also affects 'linum-mode' background."
 
    ;; mmm
    `(mmm-init-submode-face
-     ((,class (:background ,monokai-violet-d))
-      (,terminal-class (:background ,terminal-monokai-violet-d))))
+     ((,class (:background ,violet-d))
+      (,terminal-class (:background ,terminal-violet-d))))
 
    `(mmm-cleanup-submode-face
-     ((,class (:background ,monokai-orange-d))
-      (,terminal-class (:background ,terminal-monokai-orange-d))))
+     ((,class (:background ,orange-d))
+      (,terminal-class (:background ,terminal-orange-d))))
 
    `(mmm-declaration-submode-face
-     ((,class (:background ,monokai-cyan-d))
-      (,terminal-class (:background ,terminal-monokai-cyan-d))))
+     ((,class (:background ,cyan-d))
+      (,terminal-class (:background ,terminal-cyan-d))))
 
    `(mmm-comment-submode-face
-     ((,class (:background ,monokai-blue-d))
-      (,terminal-class (:background ,terminal-monokai-blue-d))))
+     ((,class (:background ,blue-d))
+      (,terminal-class (:background ,terminal-blue-d))))
 
    `(mmm-output-submode-face
-     ((,class (:background ,monokai-red-d))
-      (,terminal-class (:background ,terminal-monokai-red-d))))
+     ((,class (:background ,red-d))
+      (,terminal-class (:background ,terminal-red-d))))
 
    `(mmm-special-submode-face
-     ((,class (:background ,monokai-green-d))
-      (,terminal-class (:background ,terminal-monokai-green-d))))
+     ((,class (:background ,green-d))
+      (,terminal-class (:background ,terminal-green-d))))
 
    `(mmm-code-submode-face
-     ((,class (:background ,monokai-gray))
-      (,terminal-class (:background ,terminal-monokai-gray))))
+     ((,class (:background ,gray))
+      (,terminal-class (:background ,terminal-gray))))
 
    `(mmm-default-submode-face
-     ((,class (:background ,monokai-gray-d))
-      (,terminal-class (:background ,terminal-monokai-gray-d))))
+     ((,class (:background ,gray-d))
+      (,terminal-class (:background ,terminal-gray-d))))
 
    ;; moccur
    `(moccur-current-line-face
