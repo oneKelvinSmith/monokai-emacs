@@ -1887,6 +1887,11 @@ Also affects 'linum-mode' background."
       (,terminal-class (:foreground ,terminal-cyan
                                     :weight bold))))
 
+   ;; evil-search-highlight-persist
+   `(evil-search-highlight-persist-highlight-face
+     ((,class (:inherit region))
+      (,terminal-class (:inherit region))))
+
    ;; fic
    `(fic-author-face
      ((,class (:background ,monokai-bg
