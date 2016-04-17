@@ -1200,7 +1200,7 @@ Also affects 'linum-mode' background."
 
    `(company-tooltip-common-selection
      ((,class (:foreground ,monokai-bg
-                          :background ,monokai-blue
+                           :background ,monokai-blue
                            :underline t))
       (,terminal-class (:foreground ,terminal-monokai-bg
                                     :underline t))))
@@ -2910,8 +2910,8 @@ Also affects 'linum-mode' background."
       (,terminal-class (:foreground ,terminal-monokai-green))))
 
    `(js2-instance-member
-     ((,class (:foreground ,monokai-magenta)))
-     ((,terminal-class (:foreground ,terminal-monokai-magenta))))
+     ((,class (:foreground ,monokai-magenta))
+      (,terminal-class (:foreground ,terminal-monokai-magenta))))
 
    `(js2-jsdoc-html-tag-delimiter
      ((,class (:foreground ,monokai-cyan))
@@ -2926,8 +2926,8 @@ Also affects 'linum-mode' background."
       (,terminal-class (:foreground ,terminal-monokai-orange))))
 
    `(js2-function-call
-     ((,class (:foreground ,monokai-yellow)))
-       ((,terminal-class (:foreground ,terminal-monokai-yellow))))
+     ((,class (:foreground ,monokai-yellow))
+      (,terminal-class (:foreground ,terminal-monokai-yellow))))
 
    `(js2-jsdoc-tag
      ((,class (:foreground ,monokai-cyan))
@@ -2946,8 +2946,8 @@ Also affects 'linum-mode' background."
       (,terminal-class (:underline t))))
 
    `(js2-private-function-call
-     ((,class (:foreground ,monokai-yellow)))
-     ((,terminal-class (:foreground ,terminal-monokai-yellow))))
+     ((,class (:foreground ,monokai-yellow))
+      (,terminal-class (:foreground ,terminal-monokai-yellow))))
 
    `(js2-private-member
      ((,class (:foreground ,monokai-blue))
