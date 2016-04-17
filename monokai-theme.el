@@ -131,6 +131,7 @@ Also affects 'linum-mode' background."
        ;; Adaptive colors
        (monokai-fg               "#F8F8F2")
        (monokai-bg               "#272822")
+       (monokai-highlight        "#FFB269")
        (monokai-hl               "#3E3D31")
        (monokai-hl-line          "#49483E")
        (monokai-emph             "#F8F8F0")
@@ -358,9 +359,9 @@ Also affects 'linum-mode' background."
 
    `(highlight
      ((,class (:foreground ,monokai-bg
-                           :background ,monokai-hl))
+                           :background ,monokai-highlight))
       (,terminal-class (:foreground ,terminal-monokai-bg
-                                    :background ,monokai-hl))))
+                                    :background ,monokai-highlight))))
 
    `(lazy-highlight
      ((,class (:inherit highlight
@@ -370,8 +371,9 @@ Also affects 'linum-mode' background."
 
    `(region
      ((,class (:inherit highlight
-                        :background ,monokai-hl))
-      (,terminal-class (:inherit highlight :background ,monokai-hl))))
+                        :background ,monokai-highlight))
+      (,terminal-class (:inherit highlight
+                                 :background ,monokai-highlight))))
 
    `(secondary-selection
      ((,class (:inherit region
