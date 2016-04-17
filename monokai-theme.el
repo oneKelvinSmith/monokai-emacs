@@ -4852,7 +4852,7 @@ Also affects 'linum-mode' background."
    ;; tooltip. (NOTE: This setting has no effect on the os widgets for me
    ;; zencoding uses this)
    `(tooltip
-     ((,class (:background ,green
+     ((,class (:background ,green-l
                            :foreground ,monokai-bg
                            :inherit ,s-variable-pitch))))
 
