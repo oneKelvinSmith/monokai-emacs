@@ -2938,7 +2938,7 @@ Also affects 'linum-mode' background."
    `(js2-jsdoc-html-tag-name
      ((,class (:foreground ,orange))
       (,terminal-class (:foreground ,terminal-orange))))
-   
+
    `(js2-object-property
      ((,class (:foreground ,orange))
       (,terminal-class (:foreground ,terminal-orange))))
@@ -3359,6 +3359,39 @@ Also affects 'linum-mode' background."
    `(mingus-stopped-face
      ((,class (:foreground ,red))
       (,terminal-class (:foreground ,terminal-red))))
+
+   ;; mmm
+   `(mmm-init-submode-face
+     ((,class (:background ,monokai-violet-d))
+      (,terminal-class (:background ,terminal-monokai-violet-d))))
+
+   `(mmm-cleanup-submode-face
+     ((,class (:background ,monokai-orange-d))
+      (,terminal-class (:background ,terminal-monokai-orange-d))))
+
+   `(mmm-declaration-submode-face
+     ((,class (:background ,monokai-cyan-d))
+      (,terminal-class (:background ,terminal-monokai-cyan-d))))
+
+   `(mmm-comment-submode-face
+     ((,class (:background ,monokai-blue-d))
+      (,terminal-class (:background ,terminal-monokai-blue-d))))
+
+   `(mmm-output-submode-face
+     ((,class (:background ,monokai-red-d))
+      (,terminal-class (:background ,terminal-monokai-red-d))))
+
+   `(mmm-special-submode-face
+     ((,class (:background ,monokai-green-d))
+      (,terminal-class (:background ,terminal-monokai-green-d))))
+
+   `(mmm-code-submode-face
+     ((,class (:background ,monokai-gray))
+      (,terminal-class (:background ,terminal-monokai-gray))))
+
+   `(mmm-default-submode-face
+     ((,class (:background ,monokai-gray-d))
+      (,terminal-class (:background ,terminal-monokai-gray-d))))
 
    ;; moccur
    `(moccur-current-line-face
