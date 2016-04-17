@@ -131,9 +131,9 @@ Also affects 'linum-mode' background."
        ;; Adaptive colors
        (monokai-fg               "#F8F8F2")
        (monokai-bg               "#272822")
+       (monokai-highlight-line   "#49483E")
        (monokai-highlight        "#FFB269")
        (monokai-hl               "#3E3D31")
-       (monokai-hl-line          "#49483E")
        (monokai-emph             "#F8F8F0")
        (monokai-comments         "#75715E")
        ;; Adaptive higher/lower contrast accented colors
@@ -218,7 +218,8 @@ Also affects 'linum-mode' background."
        ;; Adaptive colors
        (terminal-monokai-fg               "#F5F5F5")
        (terminal-monokai-bg               "#1B1E1C")
-       (terminal-monokai-hl-line          "#212121")
+       (terminal-monokai-highlight-line   "#212121")
+       (terminal-monokai-highlight        "#212121")
        (terminal-monokai-hl               "#303030")
        (terminal-monokai-emph             "#FFFAFA")
        (terminal-monokai-comments         "#8B8878")
@@ -256,7 +257,7 @@ Also affects 'linum-mode' background."
        (terminal-s-mode-line-inactive-fg  (if monokai-high-contrast-mode-line
                                               terminal-monokai-fg terminal-monokai-comments))
        (terminal-s-mode-line-inactive-bg  (if monokai-high-contrast-mode-line
-                                              terminal-monokai-hl-line terminal-monokai-bg))
+                                              terminal-monokai-highlight-line terminal-monokai-bg))
        (terminal-s-mode-line-inactive-bc  (if monokai-high-contrast-mode-line
                                               terminal-monokai-fg terminal-monokai-hl)))
 
@@ -599,9 +600,9 @@ Also affects 'linum-mode' background."
 
    ;; dropdown
    `(dropdown-list-face
-     ((,class (:background ,monokai-hl
+     ((,class (:background ,monokai-highlight-line
                            :foreground ,monokai-blue))
-      (,terminal-class (:background ,terminal-monokai-hl
+      (,terminal-class (:background ,terminal-monokai-highlight-line
                                     :foreground ,terminal-monokai-blue))))
 
    `(dropdown-list-selection-face
@@ -650,8 +651,8 @@ Also affects 'linum-mode' background."
                                  :foreground ,terminal-monokai-blue))))
 
    `(ecb-tag-header-face
-     ((,class (:background ,monokai-hl))
-      (,terminal-class (:background ,terminal-monokai-hl))))
+     ((,class (:background ,monokai-highlight-line))
+      (,terminal-class (:background ,terminal-monokai-highlight-line))))
 
    `(ecb-analyse-bucket-element-face
      ((,class (:inherit ecb-analyse-general-face
@@ -881,9 +882,9 @@ Also affects 'linum-mode' background."
 
    ;; auto-complete
    `(ac-candidate-face
-     ((,class (:background ,monokai-hl
+     ((,class (:background ,monokai-highlight-line
                            :foreground ,monokai-blue))
-      (,terminal-class (:background ,terminal-monokai-hl
+      (,terminal-class (:background ,terminal-monokai-highlight-line
                                     :foreground ,terminal-monokai-blue))))
 
    `(ac-selection-face
@@ -905,9 +906,9 @@ Also affects 'linum-mode' background."
                                     :underline t))))
 
    `(ac-gtags-candidate-face
-     ((,class (:background ,monokai-hl
+     ((,class (:background ,monokai-highlight-line
                            :foreground ,monokai-blue))
-      (,terminal-class (:background ,terminal-monokai-hl
+      (,terminal-class (:background ,terminal-monokai-highlight-line
                                     :foreground ,terminal-monokai-blue))))
 
    `(ac-gtags-selection-face
@@ -917,9 +918,9 @@ Also affects 'linum-mode' background."
                                     :foreground ,terminal-monokai-bg))))
 
    `(ac-yasnippet-candidate-face
-     ((,class (:background ,monokai-hl
+     ((,class (:background ,monokai-highlight-line
                            :foreground ,monokai-yellow))
-      (,terminal-class (:background ,terminal-monokai-hl
+      (,terminal-class (:background ,terminal-monokai-highlight-line
                                     :foreground ,terminal-monokai-yellow))))
 
    `(ac-yasnippet-selection-face
@@ -1030,8 +1031,8 @@ Also affects 'linum-mode' background."
 
    ;; calfw
    `(cfw:face-day-title
-     ((,class (:background ,monokai-hl))
-      (,terminal-class (:background ,terminal-monokai-hl))))
+     ((,class (:background ,monokai-highlight-line))
+      (,terminal-class (:background ,terminal-monokai-highlight-line))))
 
    `(cfw:face-annotation
      ((,class (:inherit cfw:face-day-title
@@ -1111,10 +1112,10 @@ Also affects 'linum-mode' background."
 
    `(cfw:face-today
      ((,class (:weight bold
-                       :background ,monokai-hl
+                       :background ,monokai-highlight-line
                        :foreground nil))
       (,terminal-class (:weight bold
-                                :background ,terminal-monokai-hl
+                                :background ,terminal-monokai-highlight-line
                                 :foreground nil))))
 
    `(cfw:face-today-title
@@ -1126,9 +1127,9 @@ Also affects 'linum-mode' background."
                                     :weight bold))))
 
    `(cfw:face-toolbar
-     ((,class (:background ,monokai-hl
+     ((,class (:background ,monokai-highlight-line
                            :foreground ,monokai-fg))
-      (,terminal-class (:background ,terminal-monokai-hl
+      (,terminal-class (:background ,terminal-monokai-highlight-line
                                     :foreground ,terminal-monokai-fg))))
 
    `(cfw:face-toolbar-button-off
@@ -1175,9 +1176,9 @@ Also affects 'linum-mode' background."
 
    ;; company-mode
    `(company-tooltip
-     ((,class (:background ,monokai-hl
+     ((,class (:background ,monokai-highlight-line
                            :foreground ,monokai-emph))
-      (,terminal-class (:background ,terminal-monokai-hl
+      (,terminal-class (:background ,terminal-monokai-highlight-line
                                     :foreground ,terminal-monokai-emph))))
 
    `(company-tooltip-selection
@@ -1206,9 +1207,9 @@ Also affects 'linum-mode' background."
                                     :underline t))))
 
    `(company-preview
-     ((,class (:background ,monokai-hl
+     ((,class (:background ,monokai-highlight-line
                            :foreground ,monokai-emph))
-      (,terminal-class (:background ,terminal-monokai-hl
+      (,terminal-class (:background ,terminal-monokai-highlight-line
                                     :foreground ,terminal-monokai-emph))))
 
    `(company-preview-common
@@ -1226,15 +1227,15 @@ Also affects 'linum-mode' background."
       (,terminal-class (:background ,terminal-monokai-comments))))
 
    `(company-tooltip-annotation
-     ((,class (:background ,monokai-hl
+     ((,class (:background ,monokai-highlight-line
                            :foreground ,monokai-green))
-      (,terminal-class (:background ,terminal-monokai-hl
+      (,terminal-class (:background ,terminal-monokai-highlight-line
                                     :foreground ,terminal-monokai-green))))
 
    `(company-template-field
-     ((,class (:background ,monokai-hl
+     ((,class (:background ,monokai-highlight-line
                            :foreground ,monokai-blue))
-      (,terminal-class (:background ,terminal-monokai-hl
+      (,terminal-class (:background ,terminal-monokai-highlight-line
                                     :foreground ,terminal-monokai-blue))))
 
    ;; compilation
@@ -1740,9 +1741,9 @@ Also affects 'linum-mode' background."
 
    `(erc-highlight-face
      ((,class (:inherit erc-default-face
-                        :background ,monokai-hl))
+                        :background ,monokai-highlight))
       (,terminal-class (:inherit erc-default-face
-                                 :background ,terminal-monokai-hl))))
+                                 :background ,terminal-monokai-highlight))))
 
    `(erc-direct-msg-face
      ((,class (:inherit erc-default-face))
@@ -2095,10 +2096,10 @@ Also affects 'linum-mode' background."
                                     :weight bold))))
 
    `(git-gutter:unchanged
-     ((,class (:background ,monokai-hl
+     ((,class (:background ,monokai-highlight-line
                            :foreground ,monokai-bg
                            :weight bold))
-      (,terminal-class (:background ,terminal-monokai-hl
+      (,terminal-class (:background ,terminal-monokai-highlight-line
                                     :foreground ,terminal-monokai-bg
                                     :weight bold))))
 
@@ -2147,10 +2148,10 @@ Also affects 'linum-mode' background."
                                     :weight bold))))
 
    `(git-gutter+-unchanged
-     ((,class (:background ,monokai-hl
+     ((,class (:background ,monokai-highlight-line
                            :foreground ,monokai-bg
                            :weight bold))
-      (,terminal-class (:background ,terminal-monokai-hl
+      (,terminal-class (:background ,terminal-monokai-highlight-line
                                     :foreground ,terminal-monokai-bg
                                     :weight bold))))
 
@@ -2495,10 +2496,10 @@ Also affects 'linum-mode' background."
       (,terminal-class (:foreground ,terminal-monokai-comments))))
 
    `(helm-candidate-number
-     ((,class (:background ,monokai-hl
+     ((,class (:background ,monokai-highlight-line
                            :foreground ,monokai-emph
                            :bold t))
-      (,terminal-class (:background ,terminal-monokai-hl
+      (,terminal-class (:background ,terminal-monokai-highlight-line
                                     :foreground ,terminal-monokai-emph
                                     :bold t))))
 
@@ -2568,10 +2569,10 @@ Also affects 'linum-mode' background."
 
    `(helm-lisp-show-completion
      ((,class (:foreground ,monokai-yellow
-                           :background ,monokai-hl
+                           :background ,monokai-highlight-line
                            :bold t))
       (,terminal-class (:foreground ,terminal-monokai-yellow
-                                    :background ,terminal-monokai-hl
+                                    :background ,terminal-monokai-highlight-line
                                     :bold t))))
 
    `(helm-M-x-key
@@ -2591,16 +2592,16 @@ Also affects 'linum-mode' background."
       (,terminal-class (:inherit match))))
 
    `(helm-selection
-     ((,class (:background ,monokai-hl
+     ((,class (:background ,monokai-highlight-line
                            :underline t))
-      (,terminal-class (:background ,terminal-monokai-hl
+      (,terminal-class (:background ,terminal-monokai-highlight-line
                                     :underline t))))
 
    `(helm-selection-line
-     ((,class (:background ,monokai-hl
+     ((,class (:background ,monokai-highlight-line
                            :foreground ,monokai-emph
                            :underline nil))
-      (,terminal-class (:background ,terminal-monokai-hl
+      (,terminal-class (:background ,terminal-monokai-highlight-line
                                     :foreground ,terminal-monokai-emph
                                     :underline nil))))
 
@@ -2617,12 +2618,12 @@ Also affects 'linum-mode' background."
                                     :underline nil))))
 
    `(helm-swoop-target-line-face
-     ((,class (:background ,monokai-hl))
-      (,terminal-class (:background ,terminal-monokai-hl))))
+     ((,class (:background ,monokai-highlight-line))
+      (,terminal-class (:background ,terminal-monokai-highlight-line))))
 
    `(helm-swoop-target-line-block-face
-     ((,class (:background ,monokai-hl))
-      (,terminal-class (:background ,terminal-monokai-hl))))
+     ((,class (:background ,monokai-highlight-line))
+      (,terminal-class (:background ,terminal-monokai-highlight-line))))
 
    `(helm-swoop-target-word-face
      ((,class (:foreground ,monokai-magenta
@@ -2760,12 +2761,12 @@ Also affects 'linum-mode' background."
 
    ;; hl-line-mode
    `(hl-line
-     ((,class (:background ,monokai-hl-line))
-      (,terminal-class (:background ,terminal-monokai-hl-line))))
+     ((,class (:background ,monokai-highlight-line))
+      (,terminal-class (:background ,terminal-monokai-highlight-line))))
 
    `(hl-line-face
-     ((,class (:background ,monokai-hl-line))
-      (,terminal-class (:background ,terminal-monokai-hl-line))))
+     ((,class (:background ,monokai-highlight-line))
+      (,terminal-class (:background ,terminal-monokai-highlight-line))))
 
    ;; ido-mode
    `(ido-first-match
@@ -3001,9 +3002,9 @@ Also affects 'linum-mode' background."
 
    `(magit-diff-added-highlight
      ((,class (:foreground ,monokai-green
-                           :background ,monokai-hl))
+                           :background ,monokai-highlight-line))
       (,terminal-class (:foreground ,terminal-monokai-green
-                                    :background ,terminal-monokai-hl))))
+                                    :background ,terminal-monokai-highlight-line))))
 
    `(magit-diff-removed
      ((,class (:foreground ,monokai-red
@@ -3013,9 +3014,9 @@ Also affects 'linum-mode' background."
 
    `(magit-diff-removed-highlight
      ((,class (:foreground ,monokai-red
-                           :background ,monokai-hl))
+                           :background ,monokai-highlight-line))
       (,terminal-class (:foreground ,terminal-monokai-red
-                                    :background ,terminal-monokai-hl))))
+                                    :background ,terminal-monokai-highlight-line))))
 
    `(magit-section-title
      ((,class (:foreground ,monokai-yellow
@@ -3030,9 +3031,9 @@ Also affects 'linum-mode' background."
                                     :weight bold))))
 
    `(magit-item-highlight
-     ((,class (:background ,monokai-hl
+     ((,class (:background ,monokai-highlight-line
                            :weight unspecified))
-      (,terminal-class (:background ,terminal-monokai-hl
+      (,terminal-class (:background ,terminal-monokai-highlight-line
                                     :weight unspecified))))
 
    `(magit-log-author
@@ -3060,9 +3061,9 @@ Also affects 'linum-mode' background."
                                     :box 1))))
 
    `(magit-log-head-label-default
-     ((,class (:background ,monokai-hl
+     ((,class (:background ,monokai-highlight-line
                            :box 1))
-      (,terminal-class (:background ,terminal-monokai-hl
+      (,terminal-class (:background ,terminal-monokai-highlight-line
                                     :box 1))))
 
    `(magit-log-head-label-local
@@ -3410,34 +3411,34 @@ Also affects 'linum-mode' background."
                                     :foreground ,terminal-monokai-bg))))
 
    `(moccur-edit-file-face
-     ((,class (:background ,monokai-hl))
-      (,terminal-class (:background ,terminal-monokai-hl))))
+     ((,class (:background ,monokai-highlight-line))
+      (,terminal-class (:background ,terminal-monokai-highlight-line))))
 
    `(moccur-edit-reject-face
      ((,class (:foreground ,monokai-red))
       (,terminal-class (:foreground ,terminal-monokai-red))))
 
    `(moccur-face
-     ((,class (:background ,monokai-hl
+     ((,class (:background ,monokai-highlight-line
                            :foreground ,monokai-emph
                            :weight bold))
-      (,terminal-class (:background ,terminal-monokai-hl
+      (,terminal-class (:background ,terminal-monokai-highlight-line
                                     :foreground ,terminal-monokai-emph
                                     :weight bold))))
 
    `(search-buffers-face
-     ((,class (:background ,monokai-hl
+     ((,class (:background ,monokai-highlight-line
                            :foreground ,monokai-emph
                            :weight bold))
-      (,terminal-class (:background ,terminal-monokai-hl
+      (,terminal-class (:background ,terminal-monokai-highlight-line
                                     :foreground ,terminal-monokai-emph
                                     :weight bold))))
 
    `(search-buffers-header-face
-     ((,class (:background ,monokai-hl
+     ((,class (:background ,monokai-highlight-line
                            :foreground ,monokai-yellow
                            :weight bold))
-      (,terminal-class (:background ,terminal-monokai-hl
+      (,terminal-class (:background ,terminal-monokai-highlight-line
                                     :foreground ,terminal-monokai-yellow
                                     :weight bold))))
 
@@ -3521,12 +3522,12 @@ Also affects 'linum-mode' background."
    `(mu4e-header-highlight-face
      ((,class (:inherit unspecified
                         :foreground unspecified
-                        :background ,monokai-hl
+                        :background ,monokai-highlight-line
                         :underline ,monokai-emph
                         :weight normal))
       (,terminal-class (:inherit unspecified
                                  :foreground unspecified
-                                 :background ,terminal-monokai-hl
+                                 :background ,terminal-monokai-highlight-line
                                  :underline ,terminal-monokai-emph
                                  :weight normal))))
 
@@ -3647,8 +3648,8 @@ Also affects 'linum-mode' background."
 
    ;; mumamo
    `(mumamo-background-chunk-submode1
-     ((,class (:background ,monokai-hl))
-      (,terminal-class (:background ,terminal-monokai-hl))))
+     ((,class (:background ,monokai-highlight-line))
+      (,terminal-class (:background ,terminal-monokai-highlight-line))))
 
    ;; nav
    `(nav-face-heading
@@ -3677,8 +3678,8 @@ Also affects 'linum-mode' background."
 
    ;; nav-flash
    `(nav-flash-face
-     ((,class (:background ,monokai-hl))
-      (,terminal-class (:background ,terminal-monokai-hl))))
+     ((,class (:background ,monokai-highlight-line))
+      (,terminal-class (:background ,terminal-monokai-highlight-line))))
 
    ;; neo-tree
    `(neo-banner-face
@@ -3775,7 +3776,7 @@ Also affects 'linum-mode' background."
    ;; org-mode
    `(org-agenda-structure
      ((,class (:foreground ,monokai-emph
-                           :background ,monokai-hl
+                           :background ,monokai-highlight-line
                            :weight bold
                            :slant normal
                            :inverse-video nil
@@ -3783,7 +3784,7 @@ Also affects 'linum-mode' background."
                            :underline nil
                            :box (:line-width 2 :color ,monokai-bg)))
       (,terminal-class (:foreground ,terminal-monokai-emph
-                                    :background ,terminal-monokai-hl
+                                    :background ,terminal-monokai-highlight-line
                                     :weight bold
                                     :slant normal
                                     :inverse-video nil
@@ -4092,13 +4093,13 @@ Also affects 'linum-mode' background."
       (,terminal-class (:background ,terminal-monokai-yellow))))
 
    `(org-column
-     ((,class (:background ,monokai-hl
+     ((,class (:background ,monokai-highlight-line
                            :strike-through nil
                            :underline nil
                            :slant normal
                            :weight normal
                            :inherit default))
-      (,terminal-class (:background ,terminal-monokai-hl
+      (,terminal-class (:background ,terminal-monokai-highlight-line
                                     :strike-through nil
                                     :underline nil
                                     :slant normal
@@ -4106,10 +4107,10 @@ Also affects 'linum-mode' background."
                                     :inherit default))))
 
    `(org-column-title
-     ((,class (:background ,monokai-hl
+     ((,class (:background ,monokai-highlight-line
                            :underline t
                            :weight bold))
-      (,terminal-class (:background ,terminal-monokai-hl
+      (,terminal-class (:background ,terminal-monokai-highlight-line
                                     :underline t
                                     :weight bold))))
 
@@ -4200,9 +4201,9 @@ Also affects 'linum-mode' background."
 
    ;; popup
    `(popup-face
-     ((,class (:background ,monokai-hl
+     ((,class (:background ,monokai-highlight-line
                            :foreground ,monokai-fg))
-      (,terminal-class (:background ,terminal-monokai-hl
+      (,terminal-class (:background ,terminal-monokai-highlight-line
                                     :foreground ,terminal-monokai-fg))))
 
    `(popup-isearch-match
@@ -4210,9 +4211,9 @@ Also affects 'linum-mode' background."
       (,terminal-class (:background ,terminal-monokai-green))))
 
    `(popup-menu-face
-     ((,class (:background ,monokai-hl
+     ((,class (:background ,monokai-highlight-line
                            :foreground ,monokai-fg))
-      (,terminal-class (:background ,terminal-monokai-hl
+      (,terminal-class (:background ,terminal-monokai-highlight-line
                                     :foreground ,terminal-monokai-fg))))
 
    `(popup-menu-mouse-face
@@ -4236,9 +4237,9 @@ Also affects 'linum-mode' background."
       (,terminal-class (:background ,terminal-monokai-emph))))
 
    `(popup-tip-face
-     ((,class (:background ,monokai-hl
+     ((,class (:background ,monokai-highlight-line
                            :foreground ,monokai-fg))
-      (,terminal-class (:background ,terminal-monokai-hl
+      (,terminal-class (:background ,terminal-monokai-highlight-line
                                     :foreground ,terminal-monokai-fg))))
 
    ;; powerline
@@ -4459,16 +4460,16 @@ Also affects 'linum-mode' background."
 
    ;; smartparens
    `(sp-pair-overlay-face
-     ((,class (:background ,monokai-hl))
-      (,terminal-class (:background ,terminal-monokai-hl))))
+     ((,class (:background ,monokai-highlight-line))
+      (,terminal-class (:background ,terminal-monokai-highlight-line))))
 
    `(sp-wrap-overlay-face
-     ((,class (:background ,monokai-hl))
-      (,terminal-class (:background ,terminal-monokai-hl))))
+     ((,class (:background ,monokai-highlight-line))
+      (,terminal-class (:background ,terminal-monokai-highlight-line))))
 
    `(sp-wrap-tag-overlay-face
-     ((,class (:background ,monokai-hl))
-      (,terminal-class (:background ,terminal-monokai-hl))))
+     ((,class (:background ,monokai-highlight-line))
+      (,terminal-class (:background ,terminal-monokai-highlight-line))))
 
    `(sp-show-pair-enclosing
      ((,class (:inherit highlight))
@@ -4572,9 +4573,9 @@ Also affects 'linum-mode' background."
 
    `(speedbar-highlight-face
      ((,class (:inherit ,s-variable-pitch
-                        :background ,monokai-hl))
+                        :background ,monokai-highlight-line))
       (,terminal-class (:inherit ,terminal-s-variable-pitch
-                                 :background ,terminal-monokai-hl))))
+                                 :background ,terminal-monokai-highlight-line))))
 
    `(speedbar-selected-face
      ((,class (:inherit ,s-variable-pitch
@@ -4785,16 +4786,16 @@ Also affects 'linum-mode' background."
    ;; table
    `(table-cell
      ((,class (:foreground ,monokai-fg
-                           :background ,monokai-hl))
+                           :background ,monokai-highlight-line))
       (,terminal-class (:foreground ,terminal-monokai-fg
-                                    :background ,terminal-monokai-hl))))
+                                    :background ,terminal-monokai-highlight-line))))
 
    ;; term
    `(term-color-black
      ((,class (:foreground ,monokai-bg
-                           :background ,monokai-hl))
+                           :background ,monokai-highlight-line))
       (,terminal-class (:foreground ,terminal-monokai-bg
-                                    :background ,terminal-monokai-hl))))
+                                    :background ,terminal-monokai-highlight-line))))
 
    `(term-color-red
      ((,class (:foreground ,monokai-red
@@ -4862,10 +4863,10 @@ Also affects 'linum-mode' background."
 
    `(tuareg-font-lock-multistage-face
      ((,class (:foreground ,monokai-blue
-                           :background ,monokai-hl
+                           :background ,monokai-highlight-line
                            :weight bold))
       (,terminal-class (:foreground ,terminal-monokai-blue
-                                    :background ,terminal-monokai-hl
+                                    :background ,terminal-monokai-highlight-line
                                     :weight bold))))
 
    `(tuareg-font-lock-operator-face
@@ -4940,16 +4941,16 @@ Also affects 'linum-mode' background."
                                     :foreground ,terminal-monokai-fg))))
 
    `(w3m-header-line-location-title
-     ((,class (:background ,monokai-hl
+     ((,class (:background ,monokai-highlight-line
                            :foreground ,monokai-yellow))
-      (,terminal-class (:background ,terminal-monokai-hl
+      (,terminal-class (:background ,terminal-monokai-highlight-line
                                     :foreground ,terminal-monokai-yellow))))
 
    `(w3m-header-line-location-content
 
-     ((,class (:background ,monokai-hl
+     ((,class (:background ,monokai-highlight-line
                            :foreground ,monokai-fg))
-      (,terminal-class (:background ,terminal-monokai-hl
+      (,terminal-class (:background ,terminal-monokai-highlight-line
                                     :foreground ,terminal-monokai-fg))))
 
    `(w3m-bold
@@ -4977,8 +4978,8 @@ Also affects 'linum-mode' background."
       (,terminal-class (:foreground ,terminal-monokai-emph))))
 
    `(w3m-lnum-match
-     ((,class (:background ,monokai-hl))
-      (,terminal-class (:background ,terminal-monokai-hl))))
+     ((,class (:background ,monokai-highlight-line))
+      (,terminal-class (:background ,terminal-monokai-highlight-line))))
 
    `(w3m-lnum
      ((,class (:underline nil
@@ -5013,41 +5014,41 @@ Also affects 'linum-mode' background."
                                     :foreground ,terminal-monokai-fg))))
 
    `(w3m-tab-mouse
-     ((,class (:background ,monokai-hl
+     ((,class (:background ,monokai-highlight-line
                            :foreground ,monokai-yellow))
-      (,terminal-class (:background ,terminal-monokai-hl
+      (,terminal-class (:background ,terminal-monokai-highlight-line
                                     :foreground ,terminal-monokai-yellow))))
 
    `(w3m-tab-selected
-     ((,class (:background ,monokai-hl
+     ((,class (:background ,monokai-highlight-line
                            :foreground ,monokai-emph
                            :bold t))
-      (,terminal-class (:background ,terminal-monokai-hl
+      (,terminal-class (:background ,terminal-monokai-highlight-line
                                     :foreground ,terminal-monokai-emph
                                     :bold t))))
 
    `(w3m-tab-unselected
-     ((,class (:background ,monokai-hl
+     ((,class (:background ,monokai-highlight-line
                            :foreground ,monokai-fg))
-      (,terminal-class (:background ,terminal-monokai-hl
+      (,terminal-class (:background ,terminal-monokai-highlight-line
                                     :foreground ,terminal-monokai-fg))))
 
    `(w3m-tab-selected-retrieving
-     ((,class (:background ,monokai-hl
+     ((,class (:background ,monokai-highlight-line
                            :foreground ,monokai-red))
-      (,terminal-class (:background ,terminal-monokai-hl
+      (,terminal-class (:background ,terminal-monokai-highlight-line
                                     :foreground ,terminal-monokai-red))))
 
    `(w3m-tab-unselected-retrieving
-     ((,class (:background ,monokai-hl
+     ((,class (:background ,monokai-highlight-line
                            :foreground ,monokai-orange))
-      (,terminal-class (:background ,terminal-monokai-hl
+      (,terminal-class (:background ,terminal-monokai-highlight-line
                                     :foreground ,terminal-monokai-orange))))
 
    `(w3m-tab-unselected-unseen
-     ((,class (:background ,monokai-hl
+     ((,class (:background ,monokai-highlight-line
                            :foreground ,monokai-violet))
-      (,terminal-class (:background ,terminal-monokai-hl
+      (,terminal-class (:background ,terminal-monokai-highlight-line
                                     :foreground ,terminal-monokai-violet))))
 
    ;; web-mode
@@ -5068,10 +5069,10 @@ Also affects 'linum-mode' background."
    `(web-mode-current-element-highlight-face
      ((,class (:underline unspecified
                           :weight unspecified
-                          :background ,monokai-hl))
+                          :background ,monokai-highlight-line))
       (,terminal-class (:underline unspecified
                                    :weight unspecified
-                                   :background ,terminal-monokai-hl))))
+                                   :background ,terminal-monokai-highlight-line))))
 
    `(web-mode-css-at-rule-face
      ((,class (:foreground ,monokai-violet
@@ -5491,9 +5492,9 @@ Also affects 'linum-mode' background."
 
    ;; zencoding
    `(zencoding-preview-input
-     ((,class (:background ,monokai-hl
+     ((,class (:background ,monokai-highlight-line
                            :box ,monokai-emph))
-      (,terminal-class (:background ,terminal-monokai-hl
+      (,terminal-class (:background ,terminal-monokai-highlight-line
                                     :box ,terminal-monokai-emph)))))
 
   (custom-theme-set-variables
@@ -5505,7 +5506,7 @@ Also affects 'linum-mode' background."
    `(compilation-message-face 'default)
 
    ;; fill-column-indicator
-   `(fci-rule-color ,monokai-hl)
+   `(fci-rule-color ,monokai-highlight-line)
 
    ;; magit
    `(magit-diff-use-overlays nil)
@@ -5515,8 +5516,14 @@ Also affects 'linum-mode' background."
 
    ;; highlight-tail
    `(highlight-tail-colors
-     '((,monokai-hl . 0)(,monokai-green-lc . 20)(,monokai-cyan-lc . 30)(,monokai-blue-lc . 50)
-       (,monokai-yellow-lc . 60)(,monokai-orange-lc . 70)(,monokai-magenta-lc . 85)(,monokai-hl . 100)))
+     '((,monokai-highlight-line . 0)
+       (,monokai-green-lc . 20)
+       (,monokai-cyan-lc . 30)
+       (,monokai-blue-lc . 50)
+       (,monokai-yellow-lc . 60)
+       (,monokai-orange-lc . 70)
+       (,monokai-magenta-lc . 85)
+       (,monokai-highlight-line . 100)))
 
    ;; pos-tip
    `(pos-tip-foreground-color ,monokai-bg)
@@ -5547,7 +5554,7 @@ Also affects 'linum-mode' background."
 
    ;; weechat
    `(weechat-color-list
-     (unspecified ,monokai-bg ,monokai-hl
+     (unspecified ,monokai-bg ,monokai-highlight-line
                   ,monokai-red-d ,monokai-red
                   ,monokai-green-d ,monokai-green
                   ,monokai-yellow-d ,monokai-yellow
