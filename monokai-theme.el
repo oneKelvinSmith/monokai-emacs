@@ -1505,16 +1505,16 @@ Also affects 'linum-mode' background."
                                     :weight bold))))
 
    `(diff-refine-added
-     ((,class :foreground ,monokai-bg
-              :background ,green)
-      (,terminal-class :foreground ,terminal-monokai-bg
-                       :background ,terminal-green)))
+     ((,class (:foreground ,monokai-bg
+                           :background ,green))
+      (,terminal-class (:foreground ,terminal-monokai-bg
+                                    :background ,terminal-green))))
 
    `(diff-refine-change
-     ((,class :foreground ,monokai-bg
-              :background ,blue)
-      (,terminal-class :foreground ,terminal-monokai-bg
-                       :background ,terminal-blue)))
+     ((,class (:foreground ,monokai-bg
+                           :background ,blue))
+      (,terminal-class (:foreground ,terminal-monokai-bg
+                                    :background ,terminal-blue))))
 
    `(diff-refine-removed
      ((,class (:foreground ,monokai-bg
