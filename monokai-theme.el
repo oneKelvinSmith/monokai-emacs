@@ -262,22 +262,130 @@ Also affects 'linum-mode' background."
   ;; Define faces
   (custom-theme-set-faces
    'monokai
+
+   ;; font lock for syntax highlighting
+   `(font-lock-builtin-face
+     ((,class (:foreground ,red
+                           :weight normal))
+      (,terminal-class (:foreground ,terminal-red
+                                    :weight normal))))
+
+   `(font-lock-comment-delimiter-face
+     ((,class (:foreground ,monokai-comments))
+      (,terminal-class (:foreground ,terminal-monokai-comments))))
+
+   `(font-lock-comment-face
+     ((,class (:foreground ,monokai-comments
+                           :background nil))
+      (,terminal-class (:foreground ,terminal-monokai-comments))))
+
+   `(font-lock-constant-face
+     ((,class (:foreground ,violet))
+      (,terminal-class (:foreground ,terminal-violet))))
+
+   `(font-lock-doc-face
+     ((,class (:foreground ,monokai-comments))
+      (,terminal-class (:foreground ,terminal-monokai-comments))))
+
+   `(font-lock-function-name-face
+     ((,class (:foreground ,green))
+      (,terminal-class (:foreground ,terminal-green))))
+
+   `(font-lock-keyword-face
+     ((,class (:foreground ,red
+                           :weight normal))
+      (,terminal-class (:foreground ,terminal-red
+                                    :weight normal))))
+
+   `(font-lock-negation-char-face
+     ((,class (:foreground ,yellow
+                           :weight bold))
+      (,terminal-class (:foreground ,terminal-yellow
+                                    :weight bold))))
+
+   `(font-lock-preprocessor-face
+     ((,class (:foreground ,red))
+      (,terminal-class (:foreground ,terminal-red))))
+
+   `(font-lock-regexp-grouping-construct
+     ((,class (:foreground ,yellow
+                           :weight normal))
+      (,terminal-class (:foreground ,terminal-yellow
+                                    :weight normal))))
+
+   `(font-lock-regexp-grouping-backslash
+     ((,class (:foreground ,violet
+                           :weight normal))
+      (,terminal-class (:foreground ,terminal-violet
+                                    :weight normal))))
+
+   `(font-lock-string-face
+     ((,class (:foreground ,yellow))
+      (,terminal-class (:foreground ,terminal-yellow))))
+
+   `(font-lock-type-face
+     ((,class (:foreground ,blue
+                           :italic nil))
+      (,terminal-class (:foreground ,terminal-blue
+                                    :italic nil))))
+
+   `(font-lock-variable-name-face
+     ((,class (:foreground ,orange))
+      (,terminal-class (:foreground ,terminal-orange))))
+
+   `(font-lock-warning-face
+     ((,class (:foreground ,orange
+                           :weight bold
+                           :italic t
+                           :underline t))
+      (,terminal-class (:foreground ,terminal-orange
+                                    :weight bold
+                                    :italic t
+                                    :underline t))))
+
+   `(c-annotation-face
+     ((,class (:inherit font-lock-constant-face))
+      (,terminal-class (:inherit font-lock-constant-face))))
+
+   ;; general colouring
    '(button ((t (:underline t))))
 
-   ;; basic coloring
    `(default
       ((,class (:foreground ,monokai-fg
                             :background ,monokai-bg))
        (,terminal-class (:foreground ,terminal-monokai-fg
                                      :background ,terminal-monokai-bg))))
 
+   `(highlight
+     ((,class (:foreground ,monokai-bg
+                           :background ,monokai-hl))
+      (,terminal-class (:foreground ,terminal-monokai-bg
+                                    :background ,monokai-hl))))
+
+   `(lazy-highlight
+     ((,class (:inherit highlight
+                        :background ,blue))
+      (,terminal-class (:inherit highlight
+                                 :background ,terminal-blue))))
+
+   `(region
+     ((,class (:inherit highlight
+                        :background ,monokai-hl))
+      (,terminal-class (:inherit highlight :background ,monokai-hl))))
+
+   `(secondary-selection
+     ((,class (:inherit region
+                        :background ,blue))
+      (,terminal-class (:inherit region
+                                 :background ,terminal-blue))))
+
    `(shadow
      ((,class (:foreground ,monokai-comments))
       (,terminal-class (:foreground ,terminal-monokai-comments))))
 
    `(match
-     ((,class (:background ,monokai-hl
-                           :foreground ,monokai-emph
+     ((,class (:background ,green
+                           :foreground ,monokai-bg
                            :weight bold))
       (,terminal-class (:background ,terminal-green
                                     :foreground ,terminal-monokai-bg
@@ -299,19 +407,19 @@ Also affects 'linum-mode' background."
                                     :background ,terminal-monokai-fg
                                     :inverse-video t))))
 
+   `(escape-glyph
+     ((,class (:foreground ,monokai-comments))
+      (,terminal-class (:foreground ,terminal-monokai-comments))))
+
    `(escape-glyph-face
-     ((,class (:foreground ,red)))
-     ((,terminal-class (:foreground ,terminal-red))))
+     ((,class (:foreground ,monokai-comments))
+      (,terminal-class (:foreground ,terminal-monokai-comments))))
 
    `(fringe
      ((,class (:foreground ,monokai-fg
                            :background ,s-fringe-bg))
       (,terminal-class (:foreground ,terminal-monokai-fg
                                     :background ,terminal-s-fringe-bg))))
-
-   `(highlight
-     ((,class (:background ,monokai-hl))
-      (,terminal-class (:background ,terminal-monokai-hl))))
 
    `(link
      ((,class (:foreground ,blue
@@ -338,127 +446,81 @@ Also affects 'linum-mode' background."
       (,terminal-class (:foreground ,terminal-yellow ))))
 
    `(error
-     ((,class (:foreground ,orange))
-      (,terminal-class (:foreground ,terminal-orange))))
+     ((,class (:foreground ,red))
+      (,terminal-class (:foreground ,terminal-red))))
 
-   `(lazy-highlight
-     ((,class (:foreground ,monokai-bg
-                           :background ,monokai-comments
-                           :weight normal))
-      (,terminal-class (:foreground ,terminal-monokai-bg
-                                    :background ,terminal-yellow
-                                    :weight normal))))
+   `(trailing-whitespace
+     ((,class (:background ,red))
+      (,terminal-class (:background ,terminal-red))))
 
-   `(escape-glyph
-     ((,class (:foreground ,violet))
-      (,terminal-class (:foreground ,terminal-violet))))
+   `(vertical-border
+     ((,class (:foreground ,monokai-hl))
+      (,terminal-class (:foreground ,terminal-monokai-hl))))
 
-   ;; compilation
-   `(compilation-column-face
-     ((,class (:foreground ,cyan
-                           :underline nil))
-      (,terminal-class (:foreground ,terminal-cyan
-                                    :underline nil))))
-
-   `(compilation-column-number
-     ((,class (:inherit font-lock-doc-face
-                        :foreground ,cyan
-                        :underline nil))
-      (,terminal-class (:inherit font-lock-doc-face
-                                 :foreground ,terminal-cyan
-                                 :underline nil))))
-
-   `(compilation-enter-directory-face
-     ((,class (:foreground ,green
-                           :underline nil))
-      (,terminal-class (:foreground ,terminal-green
-                                    :underline nil))))
-
-   `(compilation-error
-     ((,class (:inherit error
-                        :underline nil))
-      (,terminal-class (:inherit error
-                                 :underline nil))))
-
-   `(compilation-error-face
-     ((,class (:foreground ,red
-                           :underline nil))
-      (,terminal-class (:foreground ,terminal-red
-                                    :underline nil))))
-
-   `(compilation-face
+   `(menu
      ((,class (:foreground ,monokai-fg
-                           :underline nil))
+                           :background ,monokai-bg))
       (,terminal-class (:foreground ,terminal-monokai-fg
-                                    :underline nil))))
+                                    :background ,terminal-monokai-bg))))
 
-   `(compilation-info
-     ((,class (:foreground ,monokai-comments
-                           :underline nil
-                           :bold nil))
-      (,terminal-class (:foreground ,terminal-monokai-comments
-                                    :underline nil
-                                    :bold nil))))
+   `(minibuffer-prompt
+     ((,class (:foreground ,blue))
+      (,terminal-class (:foreground ,terminal-blue))))
 
-   `(compilation-info-face
-     ((,class (:foreground ,blue
-                           :underline nil))
-      (,terminal-class (:foreground ,terminal-blue
-                                    :underline nil))))
+   ;; menus and mode line
+   `(mode-line
+     ((,class (:inverse-video unspecified
+                              :underline unspecified
+                              :foreground ,s-mode-line-fg
+                              :background ,s-mode-line-bg
+                              :box (:line-width 1
+                                                :color ,s-mode-line-bg
+                                                :style unspecified)))
+      (,terminal-class (:inverse-video unspecified
+                                       :underline unspecified
+                                       :foreground ,terminal-s-mode-line-fg
+                                       :background ,terminal-s-mode-line-bg
+                                       :box (:line-width 1
+                                                         :color ,terminal-s-mode-line-bg
+                                                         :style unspecified)))))
 
-   `(compilation-leave-directory-face
-     ((,class (:foreground ,green
-                           :underline nil))
-      (,terminal-class (:foreground ,terminal-green
-                                    :underline nil))))
-
-   `(compilation-line-face
-     ((,class (:foreground ,green
-                           :underline nil))
-      (,terminal-class (:foreground ,terminal-green
-                                    :underline nil))))
-
-   `(compilation-line-number
-     ((,class (:foreground ,green
-                           :underline nil))
-      (,terminal-class (:foreground ,terminal-green
-                                    :underline nil))))
-
-   `(compilation-warning
-     ((,class (:inherit warning
-                        :underline nil))
-      (,terminal-class (:inherit warning
-                                 :underline nil))))
-
-   `(compilation-warning-face
-     ((,class (:foreground ,yellow
-                           :weight normal
-                           :underline nil))
-      (,terminal-class (:foreground ,terminal-yellow
-                                    :weight normal
-                                    :underline nil))))
-
-   `(compilation-mode-line-exit
-     ((,class (:inherit compilation-info
-                        :foreground ,green
-                        :weight bold))
-      (,terminal-class (:inherit compilation-info
-                                 :foreground ,terminal-green
-                                 :weight bold))))
-
-   `(compilation-mode-line-fail
-     ((,class (:inherit compilation-error
-                        :foreground ,red
-                        :weight bold))
-      (,terminal-class (:inherit compilation-error
-                                 :foreground ,terminal-red
-                                 :weight bold))))
-
-   `(compilation-mode-line-run
-     ((,class (:foreground ,orange
+   `(mode-line-buffer-id
+     ((,class (:foreground ,s-mode-line-buffer-id-fg
                            :weight bold))
-      (,terminal-class (:foreground ,terminal-orange
+      (,terminal-class (:foreground ,terminal-s-mode-line-buffer-id-fg
                                     :weight bold))))
+
+   `(mode-line-inactive
+     ((,class (:inverse-video unspecified
+                              :underline unspecified
+                              :foreground ,s-mode-line-inactive-fg
+                              :background ,s-mode-line-inactive-bg
+                              :box (:line-width 1
+                                                :color ,s-mode-line-inactive-bc
+                                                :style unspecified)))
+      (,terminal-class (:inverse-video unspecified
+                                       :underline unspecified
+                                       :foreground ,terminal-s-mode-line-inactive-fg
+                                       :background ,terminal-s-mode-line-inactive-bg
+                                       :box (:line-width 1
+                                                         :color ,terminal-s-mode-line-inactive-bc
+                                                         :style unspecified)))))
+
+   `(header-line
+     ((,class (:inverse-video unspecified
+                              :underline unspecified
+                              :foreground ,monokai-emph
+                              :background ,monokai-hl
+                              :box (:line-width 1
+                                                :color ,monokai-hl
+                                                :style unspecified)))
+      (,terminal-class (:inverse-video unspecified
+                                       :underline unspecified
+                                       :foreground ,terminal-monokai-emph
+                                       :background ,terminal-monokai-hl
+                                       :box (:line-width 1
+                                                         :color ,terminal-monokai-hl
+                                                         :style unspecified)))))
 
    ;; cua
    `(cua-global-mark
@@ -468,20 +530,12 @@ Also affects 'linum-mode' background."
                                     :foreground ,terminal-monokai-bg))))
 
    `(cua-rectangle
-     ((,class (:inherit region
-                        :background ,violet
-                        :foreground ,monokai-bg))
-      (,terminal-class (:inherit region
-                                 :background ,terminal-magenta
-                                 :foreground ,terminal-monokai-bg))))
+     ((,class (:inherit region))
+      (,terminal-class (:inherit region))))
 
    `(cua-rectangle-noselect
-     ((,class (:inherit region
-                        :background ,monokai-hl
-                        :foreground ,monokai-comments))
-      (,terminal-class (:inherit region
-                                 :background ,terminal-monokai-hl
-                                 :foreground ,terminal-monokai-comments))))
+     ((,class (:inherit secondary-selection))
+      (,terminal-class (:inherit secondary-selection))))
 
    ;; diary
    `(diary
@@ -672,216 +726,32 @@ Also affects 'linum-mode' background."
                                     :underline t))))
 
    `(grep-hit-face
-     ((,class (:foreground ,blue))
-      (,terminal-class (:foreground ,terminal-blue))))
+     ((,class (:foreground ,orange))
+      (,terminal-class (:foreground ,terminal-orange))))
 
    `(grep-match-face
-     ((,class (:foreground ,orange
+     ((,class (:foreground ,green
                            :weight bold))
-      (,terminal-class (:foreground ,terminal-orange
+      (,terminal-class (:foreground ,terminal-green
                                     :weight bold))))
 
-   ;; faces used by isearch
+   ;; isearch
    `(isearch
-     ((,class (:foreground ,monokai-bg
-                           :background ,violet
-                           :weight normal))
-      (,terminal-class (:foreground ,terminal-monokai-bg
-                                    :background ,terminal-magenta
-                                    :weight normal))))
+     ((,class (:inherit region
+                        :background ,green))
+      (,terminal-class (:inherit region
+                                 :background ,terminal-green))))
 
    `(isearch-fail
-     ((,class (:foreground ,red
-                           :background ,monokai-bg
-                           :bold t))
-      (,terminal-class (:foreground ,terminal-red
-                                    :background ,terminal-monokai-bg
-                                    :bold t))))
+     ((,class (:inherit isearch
+                        :foreground ,red
+                        :background ,monokai-bg
+                        :bold t))
+      (,terminal-class (:inherit isearch
+                                 :foreground ,terminal-red
+                                 :background ,terminal-monokai-bg
+                                 :bold t))))
 
-   ;; man
-   `(Man-overstrike
-     ((,class (:foreground ,blue
-                           :weight bold))
-      (,terminal-class (:foreground ,terminal-blue
-                                    :weight bold))))
-
-   `(Man-reverse
-     ((,class (:foreground ,orange))
-      (,terminal-class (:foreground ,terminal-orange))))
-
-   `(Man-underline
-     ((,class (:foreground ,green :underline t))
-      (,terminal-class (:foreground ,terminal-green :underline t))))
-
-   ;; misc faces
-   `(menu
-     ((,class (:foreground ,monokai-fg
-                           :background ,monokai-bg))
-      (,terminal-class (:foreground ,terminal-monokai-fg
-                                    :background ,terminal-monokai-bg))))
-
-   `(minibuffer-prompt
-     ((,class (:foreground ,blue))
-      (,terminal-class (:foreground ,terminal-blue))))
-
-   `(mode-line
-     ((,class (:inverse-video unspecified
-                              :underline unspecified
-                              :foreground ,s-mode-line-fg
-                              :background ,s-mode-line-bg
-                              :box (:line-width 1
-                                                :color ,s-mode-line-bg
-                                                :style unspecified)))
-      (,terminal-class (:inverse-video unspecified
-                                       :underline unspecified
-                                       :foreground ,terminal-s-mode-line-fg
-                                       :background ,terminal-s-mode-line-bg
-                                       :box (:line-width 1
-                                                         :color ,terminal-s-mode-line-bg
-                                                         :style unspecified)))))
-
-   `(mode-line-buffer-id
-     ((,class (:foreground ,s-mode-line-buffer-id-fg
-                           :weight bold))
-      (,terminal-class (:foreground ,terminal-s-mode-line-buffer-id-fg
-                                    :weight bold))))
-
-   `(mode-line-inactive
-     ((,class (:inverse-video unspecified
-                              :underline unspecified
-                              :foreground ,s-mode-line-inactive-fg
-                              :background ,s-mode-line-inactive-bg
-                              :box (:line-width 1
-                                                :color ,s-mode-line-inactive-bc
-                                                :style unspecified)))
-      (,terminal-class (:inverse-video unspecified
-                                       :underline unspecified
-                                       :foreground ,terminal-s-mode-line-inactive-fg
-                                       :background ,terminal-s-mode-line-inactive-bg
-                                       :box (:line-width 1
-                                                         :color ,terminal-s-mode-line-inactive-bc
-                                                         :style unspecified)))))
-
-   `(header-line
-     ((,class (:inverse-video unspecified
-                              :underline unspecified
-                              :foreground ,monokai-emph
-                              :background ,monokai-hl
-                              :box (:line-width 1
-                                                :color ,monokai-hl
-                                                :style unspecified)))
-      (,terminal-class (:inverse-video unspecified
-                                       :underline unspecified
-                                       :foreground ,terminal-monokai-emph
-                                       :background ,terminal-monokai-hl
-                                       :box (:line-width 1
-                                                         :color ,terminal-monokai-hl
-                                                         :style unspecified)))))
-
-   `(region
-     ((,class (:foreground ,monokai-bg
-                           :background ,blue))
-      (,terminal-class (:foreground ,terminal-monokai-bg
-                                    :background ,terminal-blue))))
-
-   `(secondary-selection
-     ((,class (:background ,monokai-hl))
-      (,terminal-class (:background ,terminal-monokai-hl))))
-
-
-   `(trailing-whitespace
-     ((,class (:background ,red))
-      (,terminal-class (:background ,terminal-red))))
-
-   `(vertical-border
-     ((,class (:foreground ,monokai-hl))
-      (,terminal-class (:foreground ,terminal-monokai-hl))))
-
-   ;; font lock
-   `(font-lock-builtin-face
-     ((,class (:foreground ,red
-                           :weight normal))
-      (,terminal-class (:foreground ,terminal-red
-                                    :weight normal))))
-
-   `(font-lock-comment-delimiter-face
-     ((,class (:foreground ,monokai-comments))
-      (,terminal-class (:foreground ,terminal-monokai-comments))))
-
-   `(font-lock-comment-face
-     ((,class (:foreground ,monokai-comments))
-      (,terminal-class (:foreground ,terminal-monokai-comments))))
-
-   `(font-lock-constant-face
-     ((,class (:foreground ,violet))
-      (,terminal-class (:foreground ,terminal-violet))))
-
-   `(font-lock-doc-face
-     ((,class (:foreground ,monokai-comments))
-      (,terminal-class (:foreground ,terminal-monokai-comments))))
-
-   `(font-lock-function-name-face
-     ((,class (:foreground ,green))
-      (,terminal-class (:foreground ,terminal-green))))
-
-   `(font-lock-keyword-face
-     ((,class (:foreground ,red
-                           :weight normal))
-      (,terminal-class (:foreground ,terminal-red
-                                    :weight normal))))
-
-   `(font-lock-negation-char-face
-     ((,class (:foreground ,yellow
-                           :weight bold))
-      (,terminal-class (:foreground ,terminal-yellow
-                                    :weight bold))))
-
-   `(font-lock-preprocessor-face
-     ((,class (:foreground ,red))
-      (,terminal-class (:foreground ,terminal-red))))
-
-   `(font-lock-regexp-grouping-construct
-     ((,class (:foreground ,yellow
-                           :weight normal))
-      (,terminal-class (:foreground ,terminal-yellow
-                                    :weight normal))))
-
-   `(font-lock-regexp-grouping-backslash
-     ((,class (:foreground ,violet
-                           :weight normal))
-      (,terminal-class (:foreground ,terminal-violet
-                                    :weight normal))))
-
-   `(font-lock-string-face
-     ((,class (:foreground ,yellow))
-      (,terminal-class (:foreground ,terminal-yellow))))
-
-   `(font-lock-type-face
-     ((,class (:foreground ,blue
-                           :italic nil))
-      (,terminal-class (:foreground ,terminal-blue
-                                    :italic nil))))
-
-   `(font-lock-variable-name-face
-     ((,class (:foreground ,orange))
-      (,terminal-class (:foreground ,terminal-orange))))
-
-   `(font-lock-warning-face
-     ((,class (:foreground ,orange
-                           :weight bold
-                           :italic t
-                           :underline t))
-      (,terminal-class (:foreground ,terminal-orange
-                                    :weight bold
-                                    :italic t
-                                    :underline t))))
-
-   `(c-annotation-face
-     ((,class (:inherit font-lock-constant-face))
-      (,terminal-class (:inherit font-lock-constant-face))))
-
-
-   ;;; external
 
    ;; ace-jump-mode
    `(ace-jump-face-background
@@ -1353,19 +1223,124 @@ Also affects 'linum-mode' background."
      ((,class (:background ,monokai-comments))
       (,terminal-class (:background ,terminal-monokai-comments))))
 
-   ;; company-mode tooltip annnotations
    `(company-tooltip-annotation
      ((,class (:background ,monokai-hl
                            :foreground ,green))
       (,terminal-class (:background ,terminal-monokai-hl
                                     :foreground ,terminal-green))))
 
-   ;; company-mode templates
    `(company-template-field
      ((,class (:background ,monokai-hl
                            :foreground ,blue))
       (,terminal-class (:background ,terminal-monokai-hl
                                     :foreground ,terminal-blue))))
+
+   ;; compilation
+   `(compilation-column-face
+     ((,class (:foreground ,cyan
+                           :underline nil))
+      (,terminal-class (:foreground ,terminal-cyan
+                                    :underline nil))))
+
+   `(compilation-column-number
+     ((,class (:inherit font-lock-doc-face
+                        :foreground ,cyan
+                        :underline nil))
+      (,terminal-class (:inherit font-lock-doc-face
+                                 :foreground ,terminal-cyan
+                                 :underline nil))))
+
+   `(compilation-enter-directory-face
+     ((,class (:foreground ,green
+                           :underline nil))
+      (,terminal-class (:foreground ,terminal-green
+                                    :underline nil))))
+
+   `(compilation-error
+     ((,class (:inherit error
+                        :underline nil))
+      (,terminal-class (:inherit error
+                                 :underline nil))))
+
+   `(compilation-error-face
+     ((,class (:foreground ,red
+                           :underline nil))
+      (,terminal-class (:foreground ,terminal-red
+                                    :underline nil))))
+
+   `(compilation-face
+     ((,class (:foreground ,monokai-fg
+                           :underline nil))
+      (,terminal-class (:foreground ,terminal-monokai-fg
+                                    :underline nil))))
+
+   `(compilation-info
+     ((,class (:foreground ,monokai-comments
+                           :underline nil
+                           :bold nil))
+      (,terminal-class (:foreground ,terminal-monokai-comments
+                                    :underline nil
+                                    :bold nil))))
+
+   `(compilation-info-face
+     ((,class (:foreground ,blue
+                           :underline nil))
+      (,terminal-class (:foreground ,terminal-blue
+                                    :underline nil))))
+
+   `(compilation-leave-directory-face
+     ((,class (:foreground ,green
+                           :underline nil))
+      (,terminal-class (:foreground ,terminal-green
+                                    :underline nil))))
+
+   `(compilation-line-face
+     ((,class (:foreground ,green
+                           :underline nil))
+      (,terminal-class (:foreground ,terminal-green
+                                    :underline nil))))
+
+   `(compilation-line-number
+     ((,class (:foreground ,green
+                           :underline nil))
+      (,terminal-class (:foreground ,terminal-green
+                                    :underline nil))))
+
+   `(compilation-warning
+     ((,class (:inherit warning
+                        :underline nil))
+      (,terminal-class (:inherit warning
+                                 :underline nil))))
+
+   `(compilation-warning-face
+     ((,class (:foreground ,yellow
+                           :weight normal
+                           :underline nil))
+      (,terminal-class (:foreground ,terminal-yellow
+                                    :weight normal
+                                    :underline nil))))
+
+   `(compilation-mode-line-exit
+     ((,class (:inherit compilation-info
+                        :foreground ,green
+                        :weight bold))
+      (,terminal-class (:inherit compilation-info
+                                 :foreground ,terminal-green
+                                 :weight bold))))
+
+   `(compilation-mode-line-fail
+     ((,class (:inherit compilation-error
+                        :foreground ,red
+                        :weight bold))
+      (,terminal-class (:inherit compilation-error
+                                 :foreground ,terminal-red
+                                 :weight bold))))
+
+   `(compilation-mode-line-run
+     ((,class (:foreground ,orange
+                           :weight bold))
+      (,terminal-class (:foreground ,terminal-orange
+                                    :weight bold))))
 
    ;; CSCOPE
    `(cscope-file-face
@@ -3123,6 +3098,21 @@ Also affects 'linum-mode' background."
    `(magit-log-sha1
      ((,class (:foreground ,yellow))
       (,terminal-class (:foreground ,terminal-yellow))))
+
+   ;; man
+   `(Man-overstrike
+     ((,class (:foreground ,blue
+                           :weight bold))
+      (,terminal-class (:foreground ,terminal-blue
+                                    :weight bold))))
+
+   `(Man-reverse
+     ((,class (:foreground ,orange))
+      (,terminal-class (:foreground ,terminal-orange))))
+
+   `(Man-underline
+     ((,class (:foreground ,green :underline t))
+      (,terminal-class (:foreground ,terminal-green :underline t))))
 
    ;; monky
    `(monky-section-title
