@@ -279,8 +279,8 @@ Also affects 'linum-mode' background."
      ((,class (:background ,monokai-hl
                            :foreground ,monokai-emph
                            :weight bold))
-      (,terminal-class (:background ,terminal-monokai-hl
-                                    :foreground ,terminal-monokai-emph
+      (,terminal-class (:background ,terminal-green
+                                    :foreground ,terminal-monokai-bg
                                     :weight bold))))
 
    `(cursor
