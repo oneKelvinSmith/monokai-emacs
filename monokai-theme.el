@@ -4209,10 +4209,8 @@ Also affects 'linum-mode' background."
                                     :foreground ,terminal-monokai-fg))))
 
    `(popup-isearch-match
-     ((,class (:background ,yellow
-                           :foreground ,monokai-bg))
-      (,terminal-class (:background ,terminal-yellow
-                                    :foreground ,terminal-monokai-bg))))
+     ((,class (:background ,green))
+      (,terminal-class (:background ,terminal-green))))
 
    `(popup-menu-face
      ((,class (:background ,monokai-hl
@@ -4480,11 +4478,11 @@ Also affects 'linum-mode' background."
       (,terminal-class (:inherit highlight))))
 
    `(sp-show-pair-match-face
-     ((,class (:foreground ,orange
+     ((,class (:foreground ,green
                            :background ,monokai-bg
                            :weight normal
                            :inverse-video t))
-      (,terminal-class (:foreground ,terminal-orange
+      (,terminal-class (:foreground ,terminal-green
                                     :background ,terminal-monokai-bg
                                     :weight normal
                                     :inverse-video t))))
@@ -4501,11 +4499,11 @@ Also affects 'linum-mode' background."
 
    ;; show-paren
    `(show-paren-match
-     ((,class (:foreground ,orange
+     ((,class (:foreground ,green
                            :background ,monokai-bg
                            :weight normal
                            :inverse-video t))
-      (,terminal-class (:foreground ,terminal-orange
+      (,terminal-class (:foreground ,terminal-green
                                     :background ,terminal-monokai-bg
                                     :weight normal
                                     :inverse-video t))))
@@ -4522,11 +4520,11 @@ Also affects 'linum-mode' background."
 
    ;; mic-paren
    `(paren-face-match
-     ((,class (:foreground ,orange
+     ((,class (:foreground ,green
                            :background ,monokai-bg
                            :weight normal
                            :inverse-video t))
-      (,terminal-class (:foreground ,terminal-orange
+      (,terminal-class (:foreground ,terminal-green
                                     :background ,terminal-monokai-bg
                                     :weight normal
                                     :inverse-video t))))
