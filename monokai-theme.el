@@ -2263,6 +2263,15 @@ Also affects 'linum-mode' background."
       (,terminal-class (:foreground ,terminal-monokai-blue
                                     :weight bold))))
 
+   ;; git-timemachine
+   `(git-timemachine-minibuffer-detail-face
+     ((,class (:foreground ,monokai-blue
+                           :background ,monokai-highlight-line
+                           :inherit bold))
+      (,terminal-class (:foreground ,monokai-blue
+                           :background ,terminal-monokai-highlight-line
+                           :inherit bold))))
+
    ;; guide-key
    `(guide-key/highlight-command-face
      ((,class (:foreground ,monokai-blue))
