@@ -941,42 +941,40 @@ Also affects 'linum-mode' background."
 
    ;; auto highlight symbol
    `(ahs-definition-face
-     ((,class (:foreground ,monokai-magenta
-                           :background unspecified
-                           :slant normal))
-      (,terminal-class (:foreground ,terminal-monokai-magenta
-                                    :background unspecified
-                                    :slant normal))))
+     ((,class (:foreground ,monokai-bg
+                           :background ,monokai-blue))
+      (,terminal-class (:foreground ,terminal-monokai-bg
+                                    :background ,terminal-monokai-blue))))
 
    `(ahs-edit-mode-face
      ((,class (:foreground ,monokai-bg
-                           :background ,monokai-magenta))
+                           :background ,monokai-highlight))
       (,terminal-class (:foreground ,terminal-monokai-bg
-                                    :background ,terminal-monokai-magenta))))
+                                    :background ,terminal-monokai-highlight))))
 
    `(ahs-face
-     ((,class (:foreground ,monokai-magenta
-                           :background unspecified))
+     ((,class (:foreground ,monokai-bg
+                           :background ,monokai-yellow))
       (,terminal-class (:foreground ,terminal-monokai-magenta
                                     :background unspecified))))
 
    `(ahs-plugin-bod-face
-     ((,class (:foreground ,monokai-magenta
-                           :background unspecified ))
-      (,terminal-class (:foreground ,terminal-monokai-magenta
-                                    :background unspecified ))))
+     ((,class (:foreground ,monokai-bg
+                           :background ,monokai-violet ))
+      (,terminal-class (:foreground ,terminal-monokai-bg
+                                    :background ,terminal-monokai-cyan ))))
 
-   `(ahs-plugin-default-face
-     ((,class (:foreground ,monokai-magenta
-                           :background unspecified))
-      (,terminal-class (:foreground ,terminal-monokai-magenta
-                                    :background unspecified))))
+   `(ahs-plugin-defalt-face
+     ((,class (:foreground ,monokai-bg
+                           :background ,monokai-orange))
+      (,terminal-class (:foreground ,terminal-monokai-bg
+                                    :background ,terminal-monokai-orange))))
 
    `(ahs-plugin-whole-buffer-face
-     ((,class (:foreground ,monokai-magenta
-                           :background unspecified))
-      (,terminal-class (:foreground ,terminal-monokai-magenta
-                                    :background unspecified))))
+     ((,class (:foreground ,monokai-bg
+                           :background ,monokai-green))
+      (,terminal-class (:foreground ,terminal-monokai-bg
+                                    :background ,terminal-monokai-green))))
 
    `(ahs-warning-face
      ((,class (:foreground ,monokai-red
