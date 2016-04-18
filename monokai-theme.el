@@ -1941,6 +1941,20 @@ Also affects 'linum-mode' background."
       (,terminal-class (:foreground ,terminal-monokai-cyan
                                     :inherit bold))))
 
+   ;; evil-ex-substitute
+   `(evil-ex-substitute-matches
+     ((,class (:background ,monokai-highlight-line
+                           :foreground ,monokai-red-l
+                           :inherit italic))
+      (,terminal-class (:background ,terminal-monokai-highlight-line
+                                    :foreground ,terminal-monokai-red-l
+                                    :inherit italic))))
+   `(evil-ex-substitute-replacement
+     ((,class (:background ,monokai-highlight-line
+                           :foreground ,monokai-green-l
+                           :inherit italic))
+      (,terminal-class (:background ,terminal-monokai-highlight-line :foreground ,terminal-monokai-green-l :inherit italic))))
+
    ;; evil-search-highlight-persist
    `(evil-search-highlight-persist-highlight-face
      ((,class (:inherit region))
