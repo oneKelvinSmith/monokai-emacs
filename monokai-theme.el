@@ -1558,6 +1558,31 @@ Also affects 'linum-mode' background."
       (,terminal-class (:foreground ,terminal-monokai-bg
                                     :background ,terminal-monokai-red))))
 
+   ;; diff-hl
+   `(diff-hl-change
+     ((,class (:background ,monokai-blue-lc
+                           :foreground ,monokai-blue-hc))
+      (,terminal-class (:background ,terminal-monokai-blue-lc
+                                    :foreground ,terminal-monokai-blue-hc))))
+
+   `(diff-hl-delete
+     ((,class (:background ,monokai-red-lc
+                           :foreground ,monokai-red-hc))
+      (,terminal-class (:background ,terminal-monokai-red-lc
+                                    :foreground ,terminal-monokai-red-hc))))
+
+   `(diff-hl-insert
+     ((,class (:background ,monokai-green-lc
+                           :foreground ,monokai-green-hc))
+      (,terminal-class (:background ,terminal-monokai-green-lc
+                                    :foreground ,terminal-monokai-green-hc))))
+
+   `(diff-hl-unknown
+     ((,class (:background ,monokai-violet-lc
+                           :foreground ,monokai-violet-hc))
+      (,terminal-class (:background ,terminal-monokai-violet-lc
+                                    :foreground ,terminal-monokai-violet-hc))))
+
    ;; ediff
    `(ediff-fine-diff-A
      ((,class (:background ,monokai-orange-lc))
@@ -1610,31 +1635,6 @@ Also affects 'linum-mode' background."
                            :foreground ,monokai-bg ))
       (,terminal-class (:background ,terminal-monokai-comments
                                     :foreground ,terminal-monokai-bg ))))
-
-   ;; diff-hl
-   `(diff-hl-change
-     ((,class (:background ,monokai-blue-lc
-                           :foreground ,monokai-blue-hc))
-      (,terminal-class (:background ,terminal-monokai-blue-lc
-                                    :foreground ,terminal-monokai-blue-hc))))
-
-   `(diff-hl-delete
-     ((,class (:background ,monokai-red-lc
-                           :foreground ,monokai-red-hc))
-      (,terminal-class (:background ,terminal-monokai-red-lc
-                                    :foreground ,terminal-monokai-red-hc))))
-
-   `(diff-hl-insert
-     ((,class (:background ,monokai-green-lc
-                           :foreground ,monokai-green-hc))
-      (,terminal-class (:background ,terminal-monokai-green-lc
-                                    :foreground ,terminal-monokai-green-hc))))
-
-   `(diff-hl-unknown
-     ((,class (:background ,monokai-cyan-lc
-                           :foreground ,monokai-cyan-hc))
-      (,terminal-class (:background ,terminal-monokai-cyan-lc
-                                    :foreground ,terminal-monokai-cyan-hc))))
 
    ;; edts
    `(edts-face-error-line
