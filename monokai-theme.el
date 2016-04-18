@@ -2164,86 +2164,86 @@ Also affects 'linum-mode' background."
    `(git-gutter:added
      ((,class (:background ,monokai-green
                            :foreground ,monokai-bg
-                           :weight bold))
+                           :inherit bold))
       (,terminal-class (:background ,terminal-monokai-green
                                     :foreground ,terminal-monokai-bg
-                                    :weight bold))))
+                                    :inherit bold))))
 
    `(git-gutter:deleted
      ((,class (:background ,monokai-red
                            :foreground ,monokai-bg
-                           :weight bold))
+                           :inherit bold))
       (,terminal-class (:background ,terminal-monokai-red
                                     :foreground ,terminal-monokai-bg
-                                    :weight bold))))
+                                    :inherit bold))))
 
    `(git-gutter:modified
      ((,class (:background ,monokai-blue
                            :foreground ,monokai-bg
-                           :weight bold))
+                           :inherit bold))
       (,terminal-class (:background ,terminal-monokai-blue
                                     :foreground ,terminal-monokai-bg
-                                    :weight bold))))
+                                    :inherit bold))))
 
    `(git-gutter:unchanged
      ((,class (:background ,monokai-highlight-line
                            :foreground ,monokai-bg
-                           :weight bold))
+                           :inherit bold))
       (,terminal-class (:background ,terminal-monokai-highlight-line
                                     :foreground ,terminal-monokai-bg
-                                    :weight bold))))
+                                    :inherit bold))))
 
    ;; git-gutter-fr
    `(git-gutter-fr:added
      ((,class (:foreground ,monokai-green
-                           :weight bold))
+                           :inherit bold))
       (,terminal-class (:foreground ,terminal-monokai-green
-                                    :weight bold))))
+                                    :inherit bold))))
 
    `(git-gutter-fr:deleted
      ((,class (:foreground ,monokai-red
-                           :weight bold))
+                           :inherit bold))
       (,terminal-class (:foreground ,terminal-monokai-red
-                                    :weight bold))))
+                                    :inherit bold))))
 
    `(git-gutter-fr:modified
      ((,class (:foreground ,monokai-blue
-                           :weight bold))
+                           :inherit bold))
       (,terminal-class (:foreground ,terminal-monokai-blue
-                                    :weight bold))))
+                                    :inherit bold))))
 
    ;; git-gutter+ and git-gutter+-fr
    `(git-gutter+-added
      ((,class (:background ,monokai-green
                            :foreground ,monokai-bg
-                           :weight bold))
+                           :inherit bold))
       (,terminal-class (:background ,terminal-monokai-green
                                     :foreground ,terminal-monokai-bg
-                                    :weight bold))))
+                                    :inherit bold))))
 
    `(git-gutter+-deleted
      ((,class (:background ,monokai-red
                            :foreground ,monokai-bg
-                           :weight bold))
+                           :inherit bold))
       (,terminal-class (:background ,terminal-monokai-red
                                     :foreground ,terminal-monokai-bg
-                                    :weight bold))))
+                                    :inherit bold))))
 
    `(git-gutter+-modified
      ((,class (:background ,monokai-blue
                            :foreground ,monokai-bg
-                           :weight bold))
+                           :inherit bold))
       (,terminal-class (:background ,terminal-monokai-blue
                                     :foreground ,terminal-monokai-bg
-                                    :weight bold))))
+                                    :inherit bold))))
 
    `(git-gutter+-unchanged
      ((,class (:background ,monokai-highlight-line
                            :foreground ,monokai-bg
-                           :weight bold))
+                           :inherit bold))
       (,terminal-class (:background ,terminal-monokai-highlight-line
                                     :foreground ,terminal-monokai-bg
-                                    :weight bold))))
+                                    :inherit bold))))
 
    `(git-gutter-fr+-added
      ((,class (:foreground ,monokai-green
