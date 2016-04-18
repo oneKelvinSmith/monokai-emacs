@@ -450,6 +450,18 @@ Also affects 'linum-mode' background."
      ((,class (:foreground ,monokai-red))
       (,terminal-class (:foreground ,terminal-monokai-red))))
 
+   `(eval-sexp-fu-flash
+     ((,class (:foreground ,monokai-bg
+                           :background ,monokai-green))
+      (,terminal-class (:foreground ,terminal-monokai-bg
+                                    :background ,terminal-monokai-green))))
+
+   `(eval-sexp-fu-flash-error
+     ((,class (:foreground ,monokai-bg
+                           :background ,monokai-red))
+      (,terminal-class (:foreground ,terminal-monokai-bg
+                                    :background ,terminal-monokai-red))))
+
    `(trailing-whitespace
      ((,class (:background ,monokai-red))
       (,terminal-class (:background ,terminal-monokai-red))))
