@@ -1886,16 +1886,16 @@ Also affects 'linum-mode' background."
 
    ;; eshell
    `(eshell-prompt
-     ((,class (:foreground ,monokai-yellow
-                           :weight bold))
-      (,terminal-class (:foreground ,terminal-monokai-yellow
-                                    :weight bold))))
+     ((,class (:foreground ,monokai-blue
+                           :inherit bold))
+      (,terminal-class (:foreground ,terminal-monokai-blue
+                                    :inherit bold))))
 
    `(eshell-ls-archive
      ((,class (:foreground ,monokai-red
                            :weight bold))
       (,terminal-class (:foreground ,terminal-monokai-red
-                                    :weight bold))))
+                                    :inherit bold))))
 
    `(eshell-ls-backup
      ((,class (:inherit font-lock-comment-face))
@@ -1907,15 +1907,15 @@ Also affects 'linum-mode' background."
 
    `(eshell-ls-directory
      ((,class (:foreground ,monokai-blue
-                           :weight bold))
+                           :inherit bold))
       (,terminal-class (:foreground ,terminal-monokai-blue
-                                    :weight bold))))
+                                    :inherit bold))))
 
    `(eshell-ls-executable
-     ((,class (:foreground ,monokai-red
-                           :weight bold))
-      (,terminal-class (:foreground ,terminal-monokai-red
-                                    :weight bold))))
+     ((,class (:foreground ,monokai-green
+                           :inherit bold))
+      (,terminal-class (:foreground ,terminal-monokai-green
+                                    :inherit bold))))
 
    `(eshell-ls-unreadable
      ((,class (:foreground ,monokai-fg))
@@ -1931,15 +1931,15 @@ Also affects 'linum-mode' background."
 
    `(eshell-ls-special
      ((,class (:foreground ,monokai-yellow
-                           :weight bold))
+                           :inherit bold))
       (,terminal-class (:foreground ,terminal-monokai-yellow
-                                    :weight bold))))
+                                    :inherit bold))))
 
    `(eshell-ls-symlink
      ((,class (:foreground ,monokai-cyan
-                           :weight bold))
+                           :inherit bold))
       (,terminal-class (:foreground ,terminal-monokai-cyan
-                                    :weight bold))))
+                                    :inherit bold))))
 
    ;; evil-search-highlight-persist
    `(evil-search-highlight-persist-highlight-face
