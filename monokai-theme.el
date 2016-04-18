@@ -1007,9 +1007,9 @@ Also affects 'linum-mode' background."
 
    ;; anzu-mode
    `(anzu-mode-line
-     ((,class (:foreground ,monokai-magenta
+     ((,class (:foreground ,monokai-violet
                            :weight bold))
-      (,terminal-class (:foreground ,terminal-monokai-magenta
+      (,terminal-class (:foreground ,terminal-monokai-violet
                                     :weight bold))))
 
    ;; bm
