@@ -2278,12 +2278,12 @@ Also affects 'linum-mode' background."
       (,terminal-class (:foreground ,terminal-monokai-blue))))
 
    `(guide-key/key-face
-     ((,class (:foreground ,monokai-comments))
-      (,terminal-class (:foreground ,terminal-monokai-comments))))
+     ((,class (:foreground ,monokai-orange))
+      (,terminal-class (:foreground ,terminal-monokai-orange))))
 
    `(guide-key/prefix-command-face
-     ((,class (:foreground ,monokai-green))
-      (,terminal-class (:foreground ,terminal-monokai-green))))
+     ((,class (:foreground ,monokai-violet))
+      (,terminal-class (:foreground ,terminal-monokai-violet))))
 
    ;; gnus
    `(gnus-group-mail-1
