@@ -1156,6 +1156,56 @@ Also affects 'linum-mode' background."
                                     :foreground ,terminal-monokai-yellow-lc
                                     :weight bold))))
 
+   ;; cider
+   `(cider-enlightened
+     ((,class (:foreground ,monokai-yellow
+                           :background nil
+                           :box (:color ,monokai-yellow :line-width -1 :style nil)))
+      (,terminal-class (:foreground ,terminal-monokai-yellow
+                                    :background nil
+                                    :box (:color ,terminal-monokai-yellow :line-width -1 :style nil))) ))
+
+   `(cider-enlightened-local
+     ((,class (:foreground ,monokai-yellow))
+      (,terminal-class (:foreground ,terminal-monokai-yellow))))
+
+   `(cider-instrumented-face
+     ((,class (:foreground ,monokai-violet
+                           :background nil
+                           :box (:color ,monokai-violet :line-width -1 :style nil)))
+      (,terminal-class (:foreground ,terminal-monokai-violet
+                                    :background nil
+                                    :box (:color ,terminal-monokai-violet :line-width -1 :style nil)))))
+
+   `(cider-result-overlay-face
+     ((,class (:foreground ,monokai-blue
+                           :background nil
+                           :box (:color ,monokai-blue :line-width -1 :style nil)))
+      (,terminal-class (:foreground ,terminal-monokai-blue
+                                    :background nil
+                                    :box (:color ,terminal-monokai-blue :line-width -1 :style nil)))))
+
+   `(cider-test-error-face
+     ((,class (:foreground ,monokai-bg
+                           :background ,monokai-orange))
+      (,terminal-class (:foreground ,terminal-monokai-bg
+                                    :background ,terminal-monokai-orange))))
+
+   `(cider-test-failure-face
+     ((,class (:foreground ,monokai-bg
+                           :background ,monokai-red))
+      (,terminal-class (:foreground ,terminal-monokai-bg
+                                    :background ,terminal-monokai-red))))
+
+   `(cider-test-success-face
+     ((,class (:foreground ,monokai-bg
+                           :background ,monokai-green))
+      (,terminal-class (:foreground ,terminal-monokai-bg
+                                    :background ,terminal-monokai-green))))
+
+   `(cider-traced-face
+     ((,class :box (:color ,monokai-blue :line-width -1 :style nil))
+      (,terminal-class :box (:color ,terminal-monokai-blue :line-width -1 :style nil))))
 
    ;; clojure-test-mode
    `(clojure-test-failure-face
