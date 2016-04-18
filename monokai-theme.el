@@ -1749,6 +1749,7 @@ Also affects 'linum-mode' background."
      ((,class (:inherit font-lock-keyword-face))
       (,terminal-class (:inherit font-lock-keyword-face))))
 
+   ;; erm-syn
    `(erm-syn-errline
      ((,(append '((supports :underline (:style wave))) class)
        (:underline (:style wave :color ,monokai-red)
