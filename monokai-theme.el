@@ -1715,6 +1715,23 @@ Also affects 'linum-mode' background."
      ((,class (:foreground ,monokai-cyan))
       (,terminal-class (:foreground ,terminal-monokai-cyan))))
 
+   ;; ein
+   `(ein:cell-input-area
+     ((,class (:background ,monokai-highlight-line))
+      (,terminal-class (:background ,terminal-monokai-highlight-line))))
+   `(ein:cell-input-prompt
+     ((,class (:foreground ,monokai-green))
+      (,terminal-class (:foreground ,terminal-monokai-green))))
+   `(ein:cell-output-prompt
+     ((,class (:foreground ,monokai-red))
+      (,terminal-class (:foreground ,terminal-monokai-red))))
+   `(ein:notification-tab-normal
+     ((,class (:foreground ,monokai-blue))
+      (,terminal-class (:foreground ,terminal-monokai-blue))))
+   `(ein:notification-tab-selected
+     ((,class (:foreground ,monokai-orange :inherit bold))
+      (,terminal-class (:foreground ,terminal-monokai-orange :inherit bold))))
+
    ;; enhanced ruby mode
    `(enh-ruby-string-delimiter-face
      ((,class (:inherit font-lock-string-face))
