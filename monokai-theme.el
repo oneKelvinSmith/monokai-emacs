@@ -1207,17 +1207,17 @@ Also affects 'linum-mode' background."
      ((,class :box (:color ,monokai-blue :line-width -1 :style nil))
       (,terminal-class :box (:color ,terminal-monokai-blue :line-width -1 :style nil))))
 
-   ;; clojure-test-mode
+   ;; clojure-test
    `(clojure-test-failure-face
-     ((,class (:foreground ,monokai-orange
+     ((,class (:foreground ,monokai-red
                            :weight bold
                            :underline t))
-      (,terminal-class (:foreground ,terminal-monokai-orange
+      (,terminal-class (:foreground ,terminal-monokai-red
                                     :weight bold
                                     :underline t))))
 
    `(clojure-test-error-face
-     ((,class (:foreground ,monokai-red
+     ((,class (:foreground ,monokai-orange
                            :weight bold
                            :underline t))
       (,terminal-class (:foreground ,terminal-monokai-red
