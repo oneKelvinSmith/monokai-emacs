@@ -2535,11 +2535,7 @@ Also affects 'linum-mode' background."
                                     :foreground ,terminal-monokai-bg))))
 
 
-   ;; helm (these probably need tweaking)
-   ;;
-   ;; TODO: make helm navigation look less jarring
-   ;; https://github.com/emacs-helm/helm/search?utf8=%E2%9C%93&q=defface&type=Code
-   ;;
+   ;; helm
    `(helm-apt-deinstalled
      ((,class (:foreground ,monokai-comments))
       (,terminal-class (:foreground ,terminal-monokai-comments))))
@@ -2576,9 +2572,17 @@ Also affects 'linum-mode' background."
      ((,class (:foreground ,monokai-orange))
       (,terminal-class (:foreground ,terminal-monokai-orange))))
 
-   `(helm-buffer-not-saved
-     ((,class (:foreground ,monokai-orange))
-      (,terminal-class (:foreground ,terminal-monokai-orange))))
+   `(helm-buffer-file
+     ((,class (:foreground ,monokai-fg))
+      (,terminal-class (:foreground ,terminal-monokai-fg))))
+
+   `(helm-buffer-directory
+     ((,class (:foreground ,monokai-blue))
+      (,terminal-class (:foreground ,terminal-monokai-blue))))
+
+   `(helm-buffer-process
+     ((,class (:foreground ,monokai-comments))
+      (,terminal-class (:foreground ,terminal-monokai-comments))))
 
    `(helm-buffer-saved-out
      ((,class (:foreground ,monokai-red
@@ -2601,10 +2605,8 @@ Also affects 'linum-mode' background."
                                     :bold t))))
 
    `(helm-ff-directory
-     ((,class (:background ,monokai-bg
-                           :foreground ,monokai-blue))
-      (,terminal-class (:background ,terminal-monokai-bg
-                                    :foreground ,terminal-monokai-blue))))
+     ((,class (:foreground ,monokai-blue))
+      (,terminal-class (:foreground ,terminal-monokai-blue))))
 
    `(helm-ff-executable
      ((,class (:foreground ,monokai-green))
@@ -2625,9 +2627,9 @@ Also affects 'linum-mode' background."
                                     :slant italic))))
 
    `(helm-ff-prefix
-     ((,class (:background ,monokai-yellow
+     ((,class (:background ,monokai-green
                            :foreground ,monokai-bg))
-      (,terminal-class (:background ,terminal-monokai-yellow
+      (,terminal-class (:background ,terminal-monokai-green
                                     :foreground ,terminal-monokai-bg))))
 
    `(helm-ff-symlink
@@ -2649,8 +2651,8 @@ Also affects 'linum-mode' background."
       (,terminal-class (:foreground ,terminal-monokai-orange))))
 
    `(helm-grep-match
-     ((,class (:inherit match)))
-     ((,terminal-class (:inherit match))))
+     ((,class (:inherit helm-match)))
+     ((,terminal-class (:inherit helm-match))))
 
    `(helm-grep-running
      ((,class (:foreground ,monokai-red))
@@ -2685,14 +2687,20 @@ Also affects 'linum-mode' background."
                                     :underline t))))
 
    `(helm-match
-     ((,class (:inherit match))
-      (,terminal-class (:inherit match))))
+     ((,class (:foreground ,monokai-green :inherit bold))
+      (,terminal-class (:foreground ,terminal-monokai-green :inherit bold))))
+
+   `(helm-match-item
+     ((,class (:inherit helm-match))
+      (,terminal-class (:inherit helm-match))))
 
    `(helm-selection
      ((,class (:background ,monokai-highlight-line
-                           :underline t))
+                           :inherit bold
+                           :underline nil))
       (,terminal-class (:background ,terminal-monokai-highlight-line
-                                    :underline t))))
+                                    :inherit bold
+                                    :underline nil))))
 
    `(helm-selection-line
      ((,class (:background ,monokai-highlight-line
@@ -2703,14 +2711,14 @@ Also affects 'linum-mode' background."
                                     :underline nil))))
 
    `(helm-separator
-     ((,class (:foreground ,monokai-red))
-      (,terminal-class (:foreground ,terminal-monokai-red))))
+     ((,class (:foreground ,monokai-gray))
+      (,terminal-class (:foreground ,terminal-monokai-gray))))
 
    `(helm-source-header
-     ((,class (:background ,monokai-blue-lc
+     ((,class (:background ,monokai-violet-l
                            :foreground ,monokai-bg
                            :underline nil))
-      (,terminal-class (:background ,terminal-monokai-blue-lc
+      (,terminal-class (:background ,terminal-monokai-violet-l
                                     :foreground ,terminal-monokai-bg
                                     :underline nil))))
 
@@ -2723,10 +2731,8 @@ Also affects 'linum-mode' background."
       (,terminal-class (:background ,terminal-monokai-highlight-line))))
 
    `(helm-swoop-target-word-face
-     ((,class (:foreground ,monokai-magenta
-                           :background unspecified))
-      (,terminal-class (:foreground ,terminal-monokai-magenta
-                                    :background unspecified))))
+     ((,class (:foreground ,monokai-green))
+      (,terminal-class (:foreground ,terminal-monokai-green))))
 
    `(helm-time-zone-current
      ((,class (:foreground ,monokai-green))
