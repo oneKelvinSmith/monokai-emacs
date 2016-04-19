@@ -557,36 +557,36 @@ Also affects 'linum-mode' background."
 
    ;; dired
    `(dired-directory
-     ((,class (:foreground ,monokai-blue
-                           :weight normal))
-      (,terminal-class (:foreground ,terminal-monokai-blue
-                                    :weight normal))))
+     ((,class (:foreground ,monokai-blue))
+      (,terminal-class (:foreground ,terminal-monokai-blue))))
 
    `(dired-flagged
      ((,class (:foreground ,monokai-red))
       (,terminal-class (:foreground ,terminal-monokai-red))))
 
    `(dired-header
-     ((,class (:foreground ,monokai-bg
-                           :background ,monokai-blue))
-      (,terminal-class (:foreground ,terminal-monokai-bg
-                                    :background ,terminal-monokai-blue))))
+     ((,class (:foreground ,monokai-blue
+                           :background ,monokai-bg
+                           :inherit bold))
+      (,terminal-class (:foreground ,terminal-monokai-blue
+                                    :background ,terminal-monokai-bg
+                                    :inherit bold))))
 
    `(dired-ignored
      ((,class (:inherit shadow))
       (,terminal-class (:inherit shadow))))
 
    `(dired-mark
-     ((,class (:foreground ,monokai-yellow
+     ((,class (:foreground ,monokai-green
                            :weight bold))
-      (,terminal-class (:foreground ,terminal-monokai-yellow
+      (,terminal-class (:foreground ,terminal-monokai-green
                                     :weight bold))))
 
    `(dired-marked
-     ((,class (:foreground ,monokai-magenta
-                           :weight bold))
-      (,terminal-class (:foreground ,terminal-monokai-magenta
-                                    :weight bold))))
+     ((,class (:foreground ,monokai-violet
+                           :inherit bold))
+      (,terminal-class (:foreground ,terminal-monokai-violet
+                                    :inherit bold))))
 
    `(dired-perm-write
      ((,class (:foreground ,monokai-fg
@@ -596,10 +596,8 @@ Also affects 'linum-mode' background."
 
    `(dired-symlink
      ((,class (:foreground ,monokai-cyan
-                           :weight normal
                            :slant italic))
       (,terminal-class (:foreground ,terminal-monokai-cyan
-                                    :weight normal
                                     :slant italic))))
 
    `(dired-warning
