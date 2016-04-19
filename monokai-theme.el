@@ -553,7 +553,7 @@ Also affects 'linum-mode' background."
    ;; diary
    `(diary
      ((,class (:foreground ,monokai-yellow))
-      (,class (:foreground ,terminal-monokai-yellow))))
+      (,terminal-class (:foreground ,terminal-monokai-yellow))))
 
    ;; dired
    `(dired-directory
