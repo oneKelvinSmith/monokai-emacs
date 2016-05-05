@@ -175,7 +175,7 @@ Also affects 'linum-mode' background."
 
        ;; powerline
        (s-powerline-active1-bg   (if monokai-high-contrast-mode-line
-                                     monokai-gray-l monokai-gray))
+                                     monokai-gray-l monokai-highlight-line))
        (s-powerline-active2-bg   (if monokai-high-contrast-mode-line
                                      monokai-gray monokai-gray-l))
        (s-powerline-inactive1-bg (if monokai-high-contrast-mode-line
