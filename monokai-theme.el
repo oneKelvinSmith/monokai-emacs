@@ -2908,6 +2908,58 @@ Also affects 'linum-mode' background."
      ((,class (:foreground ,monokai-cyan))
       (,terminal-class (:foreground ,terminal-monokai-cyan))))
 
+
+   ;; info
+   `(info-header-xref
+     ((,class (:foreground ,monokai-green
+                           :inherit bold
+                           :underline t))
+     (,terminal-class (:foreground ,terminal-monokai-green
+                                   :inherit bold
+                                   :underline t))))
+
+   `(info-menu
+     ((,class (:foreground ,monokai-blue))
+      (,terminal-class (:foreground ,terminal-monokai-blue))))
+
+   `(info-node
+     ((,class (:foreground ,monokai-violet
+                           :inherit bold))
+      (,terminal-class (:foreground ,terminal-monokai-violet
+                                    :inherit bold))))
+
+   `(info-quoted-name
+     ((,class (:foreground ,monokai-orange))
+      (,terminal-class (:foreground ,terminal-monokai-orange))))
+
+   `(info-reference-item
+     ((,class (:background nil
+                           :underline t
+                           :inherit bold))
+      (,terminal-class (:background nil
+                                    :underline t
+                                    :inherit bold))))
+
+   `(info-string
+     ((,class (:foreground ,monokai-yellow))
+      (,terminal-class (:foreground ,terminal-monokai-yellow))))
+
+   `(info-title-1
+     ((,class (:height ,monokai-height-plus-4))
+      (,terminal-class (:height ,monokai-height-plus-4))))
+
+   `(info-title-2
+     ((,class (:height ,monokai-height-plus-3))
+      (,terminal-class (:height ,monokai-height-plus-3))))
+
+   `(info-title-3
+     ((,class (:height ,monokai-height-plus-2))
+      (,terminal-class (:height ,monokai-height-plus-2))))
+
+   `(info-title-4
+     ((,class (:height ,monokai-height-plus-1))
+      (,terminal-class (:height ,monokai-height-plus-1))))
+
    `(jabber-activity-face
      ((,class (:weight bold
                        :foreground ,monokai-red))
