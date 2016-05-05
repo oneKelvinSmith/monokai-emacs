@@ -3972,13 +3972,25 @@ Also affects 'linum-mode' background."
                                     :weight normal))))
 
    `(org-block
-     ((,class (:foreground ,monokai-comments))
-      (,terminal-class (:foreground ,terminal-monokai-comments))))
+     ((,class (:foreground ,monokai-emph
+                           :background ,monokai-gray))
+      (,terminal-class (:foreground ,terminal-monokai-emph
+                                    :background ,terminal-monokai-gray))))
 
    `(org-block-begin-line
      ((,class (:foreground ,monokai-comments
+                           :background ,monokai-gray-d
                            :slant italic))
-      (,terminal-class (:foreground ,terminal-monokai-comments
+      (,terminal-class (:foreground ,terminal-monokai-emph
+                                    :background ,terminal-monokai-gray-d
+                                    :slant italic))))
+
+   `(org-block-end-line
+     ((,class (:foreground ,monokai-comments
+                           :background ,monokai-gray-d
+                           :slant italic))
+      (,terminal-class (:foreground ,terminal-monokai-emph
+                                    :background ,terminal-monokai-gray-d
                                     :slant italic))))
 
    `(org-checkbox
@@ -4078,9 +4090,9 @@ Also affects 'linum-mode' background."
                                  :foreground ,terminal-monokai-blue))))
 
    `(org-link
-     ((,class (:foreground ,monokai-yellow
+     ((,class (:foreground ,monokai-blue
                            :underline t))
-      (,terminal-class (:foreground ,terminal-monokai-yellow
+      (,terminal-class (:foreground ,terminal-monokai-blue
                                     :underline t))))
 
    `(org-sexp-date
