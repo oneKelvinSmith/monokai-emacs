@@ -4029,6 +4029,10 @@ Also affects 'linum-mode' background."
       (,terminal-class (:foreground ,terminal-monokai-emph
                                     :background ,terminal-monokai-gray))))
 
+   `(org-block-background
+     ((,class (:background ,monokai-gray))
+      (,terminal-class (:background ,terminal-monokai-gray))))
+
    `(org-block-begin-line
      ((,class (:foreground ,monokai-comments
                            :background ,monokai-gray-d
