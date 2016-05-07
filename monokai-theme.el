@@ -68,11 +68,6 @@ Also affects 'linum-mode' background."
   :type 'boolean
   :group 'monokai)
 
-(defcustom monokai-high-contrast-mode-line nil
-  "Make the active/inactive mode line stand out more."
-  :type 'boolean
-  :group 'monokai)
-
 (defcustom monokai-height-minus-1 0.8
   "Font size -1."
   :type 'number
@@ -161,33 +156,10 @@ Also affects 'linum-mode' background."
        (monokai-cyan-lc          "#4BBEAE")
        (monokai-green-hc         "#CCF47C")
        (monokai-green-lc         "#679A01")
-       ;; customize based face properties
-       (s-variable-pitch         (if monokai-use-variable-pitch
-                                     'variable-pitch 'default))
-       (s-fringe-bg              (if monokai-distinct-fringe-background
-                                     monokai-gray monokai-bg))
-       (s-mode-line-fg           (if monokai-high-contrast-mode-line
-                                     monokai-bg monokai-fg))
-       (s-mode-line-bg           (if monokai-high-contrast-mode-line
-                                     monokai-fg monokai-gray))
-       (s-mode-line-buffer-id-fg (if monokai-high-contrast-mode-line
-                                     'unspecified monokai-green))
-       (s-mode-line-inactive-fg  (if monokai-high-contrast-mode-line
-                                     monokai-fg monokai-comments))
-       (s-mode-line-inactive-bg  (if monokai-high-contrast-mode-line
-                                     monokai-gray-l monokai-bg))
-       (s-mode-line-inactive-bc  (if monokai-high-contrast-mode-line
-                                     monokai-fg monokai-gray))
-
-       ;; powerline
-       (s-powerline-active1-bg   (if monokai-high-contrast-mode-line
-                                     monokai-gray-l monokai-gray))
-       (s-powerline-active2-bg   (if monokai-high-contrast-mode-line
-                                     monokai-gray monokai-gray-l))
-       (s-powerline-inactive1-bg (if monokai-high-contrast-mode-line
-                                     monokai-gray monokai-gray-d))
-       (s-powerline-inactive2-bg (if monokai-high-contrast-mode-line
-                                     monokai-bg monokai-gray))
+       ;; Distinct fringe
+       (monokai-fringe-bg (if monokai-distinct-fringe-background
+                              monokai-gray
+                            monokai-bg))
 
        ;; Definitions for terminals that do not support 256 colors
        (terminal-class                    '((class color) (min-colors 89)))
@@ -247,23 +219,10 @@ Also affects 'linum-mode' background."
        (terminal-monokai-cyan-lc          terminal-monokai-cyan-l)
        (terminal-monokai-green-hc         terminal-monokai-green-d)
        (terminal-monokai-green-lc         terminal-monokai-green-l)
-       ;; customize based face properties
-       (terminal-s-variable-pitch         (if monokai-use-variable-pitch
-                                              'variable-pitch 'default))
-       (terminal-s-fringe-bg              (if monokai-distinct-fringe-background
-                                              terminal-monokai-gray terminal-monokai-bg))
-       (terminal-s-mode-line-fg           (if monokai-high-contrast-mode-line
-                                              terminal-monokai-bg terminal-monokai-fg))
-       (terminal-s-mode-line-bg           (if monokai-high-contrast-mode-line
-                                              terminal-monokai-fg terminal-monokai-gray))
-       (terminal-s-mode-line-buffer-id-fg (if monokai-high-contrast-mode-line
-                                              'unspecified terminal-monokai-green))
-       (terminal-s-mode-line-inactive-fg  (if monokai-high-contrast-mode-line
-                                              terminal-monokai-fg terminal-monokai-comments))
-       (terminal-s-mode-line-inactive-bg  (if monokai-high-contrast-mode-line
-                                              terminal-monokai-highlight-line terminal-monokai-bg))
-       (terminal-s-mode-line-inactive-bc  (if monokai-high-contrast-mode-line
-                                              terminal-monokai-fg terminal-monokai-gray)))
+       ;; Distinct fringe
+       (terminal-monokai-fringe-bg (if monokai-distinct-fringe-background
+                                       terminal-monokai-gray
+                                     terminal-monokai-bg)))
 
   ;; Define faces
   (custom-theme-set-faces
@@ -424,9 +383,9 @@ Also affects 'linum-mode' background."
 
    `(fringe
      ((,class (:foreground ,monokai-fg
-                           :background ,s-fringe-bg))
+                           :background ,monokai-fringe-bg))
       (,terminal-class (:foreground ,terminal-monokai-fg
-                                    :background ,terminal-s-fringe-bg))))
+                                    :background ,terminal-monokai-fringe-bg))))
 
    `(link
      ((,class (:foreground ,monokai-blue
