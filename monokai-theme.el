@@ -2959,6 +2959,40 @@ Also affects 'linum-mode' background."
      ((,class (:height ,monokai-height-plus-1))
       (,terminal-class (:height ,monokai-height-plus-1))))
 
+   ;; ivy
+   `(ivy-current-match
+     ((,class (:background highlight
+                           :inherit bold))
+      (,terminal-class (:background highlight
+                                    :inherit bold))))
+
+   `(ivy-minibuffer-match-face-1
+     ((,class (:inherit bold))
+      (,terminal-class (:inherit bold))))
+
+   `(ivy-minibuffer-match-face-2
+     ((,class (:foreground ,monokai-violet
+                           :underline t))
+      (,terminal-class (:foreground ,terminal-monokai-violet
+                                    :underline t))))
+
+   `(ivy-minibuffer-match-face-3
+     ((,class (:foreground ,monokai-green
+                           :underline t))
+      (,terminal-class (:foreground ,terminal-monokai-green
+                                    :underline t))))
+
+   `(ivy-minibuffer-match-face-4
+     ((,class (:foreground ,monokai-yellow
+                           :underline t))
+      (,terminal-class (:foreground ,terminal-monokai-yellow
+                                    :underline t))))
+
+   `(ivy-remote
+     ((,class (:foreground ,monokai-blue))
+      (,terminal-class (:foreground ,terminal-monokai-blue))))
+
+   ;; jabber
    `(jabber-activity-face
      ((,class (:weight bold
                        :foreground ,monokai-red))
