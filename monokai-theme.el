@@ -98,7 +98,13 @@ Also affects 'linum-mode' background."
   :type 'number
   :group 'monokai)
 
-(let* ((class                    '((class color) (min-colors 257)))
+(let* (;; Variable pitch
+       (monokai-pitch (if monokai-use-variable-pitch
+                          'variable-pitch
+                        'default))
+
+       ;; Definitions for guis that support 256 colors
+       (class                    '((class color) (min-colors 257)))
        ;; Primary colors
        (monokai-yellow           "#E6DB74")
        (monokai-orange           "#FD971F")
@@ -843,10 +849,10 @@ Also affects 'linum-mode' background."
                                  :height ,monokai-height-plus-1))))
 
    `(font-latex-sectioning-5-face
-     ((,class (:inherit ,s-variable-pitch
+     ((,class (:inherit ,monokai-pitch
                         :foreground ,monokai-yellow
                         :weight bold))
-      (,terminal-class (:inherit ,terminal-s-variable-pitch :
+      (,terminal-class (:inherit ,monokai-pitch :
                                  foreground ,terminal-monokai-yellow
                                  :weight bold))))
 
@@ -855,10 +861,10 @@ Also affects 'linum-mode' background."
       (,terminal-class (:foreground ,terminal-monokai-emph))))
 
    `(font-latex-slide-title-face
-     ((,class (:inherit (,s-variable-pitch font-lock-type-face)
+     ((,class (:inherit (,monokai-pitch font-lock-type-face)
                         :weight bold
                         :height ,monokai-height-plus-3))
-      (,terminal-class (:inherit (,terminal-s-variable-pitch font-lock-type-face)
+      (,terminal-class (:inherit (,monokai-pitch font-lock-type-face)
                                  :weight bold
                                  :height ,monokai-height-plus-3))))
 
@@ -1107,11 +1113,11 @@ Also affects 'linum-mode' background."
                                     :weight bold))))
 
    `(cfw:face-title
-     ((,class (:inherit ,s-variable-pitch
+     ((,class (:inherit ,monokai-pitch
                         :foreground ,monokai-yellow
                         :weight bold
                         :height ,monokai-height-plus-4))
-      (,terminal-class (:inherit ,terminal-s-variable-pitch
+      (,terminal-class (:inherit ,monokai-pitch
                                  :foreground ,terminal-monokai-yellow
                                  :weight bold
                                  :height ,monokai-height-plus-4))))
@@ -1466,20 +1472,20 @@ Also affects 'linum-mode' background."
 
    ;; custom
    `(custom-face-tag
-     ((,class (:inherit ,s-variable-pitch
+     ((,class (:inherit ,monokai-pitch
                         :height ,monokai-height-plus-3
                         :foreground ,monokai-violet
                         :weight bold))
-      (,terminal-class (:inherit ,terminal-s-variable-pitch
+      (,terminal-class (:inherit ,monokai-pitch
                                  :height ,monokai-height-plus-3
                                  :foreground ,terminal-monokai-violet
                                  :weight bold))))
 
    `(custom-variable-tag
-     ((,class (:inherit ,s-variable-pitch
+     ((,class (:inherit ,monokai-pitch
                         :foreground ,monokai-cyan
                         :height ,monokai-height-plus-3))
-      (,terminal-class (:inherit ,terminal-s-variable-pitch
+      (,terminal-class (:inherit ,monokai-pitch
                                  :foreground ,terminal-monokai-cyan
                                  :height ,monokai-height-plus-3))))
 
@@ -1488,18 +1494,18 @@ Also affects 'linum-mode' background."
       (,terminal-class (:foreground ,terminal-monokai-comments))))
 
    `(custom-group-tag
-     ((,class (:inherit ,s-variable-pitch
+     ((,class (:inherit ,monokai-pitch
                         :foreground ,monokai-blue
                         :height ,monokai-height-plus-3))
-      (,terminal-class (:inherit ,terminal-s-variable-pitch
+      (,terminal-class (:inherit ,monokai-pitch
                                  :foreground ,terminal-monokai-blue
                                  :height ,monokai-height-plus-3))))
 
    `(custom-group-tag-1
-     ((,class (:inherit ,s-variable-pitch
+     ((,class (:inherit ,monokai-pitch
                         :foreground ,monokai-red
                         :height ,monokai-height-plus-3))
-      (,terminal-class (:inherit ,terminal-s-variable-pitch
+      (,terminal-class (:inherit ,monokai-pitch
                                  :foreground ,terminal-monokai-red
                                  :height ,monokai-height-plus-3))))
 
@@ -3154,9 +3160,9 @@ Also affects 'linum-mode' background."
    ;; linum-mode
    `(linum
      ((,class (:foreground ,monokai-comments
-                           :background ,s-fringe-bg))
+                           :background ,monokai-fringe-bg))
       (,terminal-class (:foreground ,terminal-monokai-comments
-                                    :background ,terminal-s-fringe-bg))))
+                                    :background ,terminal-monokai-fringe-bg))))
 
    ;; lusty-explorer
    `(lusty-directory-face
@@ -4123,59 +4129,59 @@ Also affects 'linum-mode' background."
       (,terminal-class (:foreground ,terminal-monokai-bg))))
 
    `(org-level-1
-     ((,class (:inherit ,s-variable-pitch
+     ((,class (:inherit ,monokai-pitch
                         :height ,monokai-height-plus-4
                         :foreground ,monokai-orange))
-      (,terminal-class (:inherit ,terminal-s-variable-pitch
+      (,terminal-class (:inherit ,monokai-pitch
                                  :height ,monokai-height-plus-4
                                  :foreground ,terminal-monokai-orange))))
 
    `(org-level-2
-     ((,class (:inherit ,s-variable-pitch
+     ((,class (:inherit ,monokai-pitch
                         :height ,monokai-height-plus-3
                         :foreground ,monokai-green))
-      (,terminal-class (:inherit ,terminal-s-variable-pitch
+      (,terminal-class (:inherit ,monokai-pitch
                                  :height ,monokai-height-plus-3
                                  :foreground ,terminal-monokai-green))))
 
    `(org-level-3
-     ((,class (:inherit ,s-variable-pitch
+     ((,class (:inherit ,monokai-pitch
                         :height ,monokai-height-plus-2
                         :foreground ,monokai-blue))
-      (,terminal-class (:inherit ,terminal-s-variable-pitch
+      (,terminal-class (:inherit ,monokai-pitch
                                  :height ,monokai-height-plus-2
                                  :foreground ,terminal-monokai-blue))))
 
    `(org-level-4
-     ((,class (:inherit ,s-variable-pitch
+     ((,class (:inherit ,monokai-pitch
                         :height ,monokai-height-plus-1
                         :foreground ,monokai-yellow))
-      (,terminal-class (:inherit ,terminal-s-variable-pitch
+      (,terminal-class (:inherit ,monokai-pitch
                                  :height ,monokai-height-plus-1
                                  :foreground ,terminal-monokai-yellow))))
 
    `(org-level-5
-     ((,class (:inherit ,s-variable-pitch
+     ((,class (:inherit ,monokai-pitch
                         :foreground ,monokai-cyan))
-      (,terminal-class (:inherit ,terminal-s-variable-pitch
+      (,terminal-class (:inherit ,monokai-pitch
                                  :foreground ,terminal-monokai-cyan))))
 
    `(org-level-6
-     ((,class (:inherit ,s-variable-pitch
+     ((,class (:inherit ,monokai-pitch
                         :foreground ,monokai-green))
-      (,terminal-class (:inherit ,terminal-s-variable-pitch
+      (,terminal-class (:inherit ,monokai-pitch
                                  :foreground ,terminal-monokai-green))))
 
    `(org-level-7
-     ((,class (:inherit ,s-variable-pitch
+     ((,class (:inherit ,monokai-pitch
                         :foreground ,monokai-red))
-      (,terminal-class (:inherit ,terminal-s-variable-pitch
+      (,terminal-class (:inherit ,monokai-pitch
                                  :foreground ,terminal-monokai-red))))
 
    `(org-level-8
-     ((,class (:inherit ,s-variable-pitch
+     ((,class (:inherit ,monokai-pitch
                         :foreground ,monokai-blue))
-      (,terminal-class (:inherit ,terminal-s-variable-pitch
+      (,terminal-class (:inherit ,monokai-pitch
                                  :foreground ,terminal-monokai-blue))))
 
    `(org-link
@@ -4758,51 +4764,51 @@ Also affects 'linum-mode' background."
 
    ;; speedbar
    `(speedbar-button-face
-     ((,class (:inherit ,s-variable-pitch
+     ((,class (:inherit ,monokai-pitch
                         :foreground ,monokai-comments))
-      (,terminal-class (:inherit ,terminal-s-variable-pitch
+      (,terminal-class (:inherit ,monokai-pitch
                                  :foreground ,terminal-monokai-comments))))
 
    `(speedbar-directory-face
-     ((,class (:inherit ,s-variable-pitch
+     ((,class (:inherit ,monokai-pitch
                         :foreground ,monokai-blue))
-      (,terminal-class (:inherit ,terminal-s-variable-pitch
+      (,terminal-class (:inherit ,monokai-pitch
                                  :foreground ,terminal-monokai-blue))))
 
    `(speedbar-file-face
-     ((,class (:inherit ,s-variable-pitch
+     ((,class (:inherit ,monokai-pitch
                         :foreground ,monokai-fg))
-      (,terminal-class (:inherit ,terminal-s-variable-pitch
+      (,terminal-class (:inherit ,monokai-pitch
                                  :foreground ,terminal-monokai-fg))))
 
    `(speedbar-highlight-face
-     ((,class (:inherit ,s-variable-pitch
+     ((,class (:inherit ,monokai-pitch
                         :background ,monokai-highlight-line))
-      (,terminal-class (:inherit ,terminal-s-variable-pitch
+      (,terminal-class (:inherit ,monokai-pitch
                                  :background ,terminal-monokai-highlight-line))))
 
    `(speedbar-selected-face
-     ((,class (:inherit ,s-variable-pitch
+     ((,class (:inherit ,monokai-pitch
                         :foreground ,monokai-yellow
                         :underline t))
-      (,terminal-class (:inherit ,terminal-s-variable-pitch
+      (,terminal-class (:inherit ,monokai-pitch
                                  :foreground ,terminal-monokai-yellow
                                  :underline t))))
 
    `(speedbar-separator-face
-     ((,class (:inherit ,s-variable-pitch
+     ((,class (:inherit ,monokai-pitch
                         :background ,monokai-blue
                         :foreground ,monokai-bg
                         :overline ,monokai-cyan-lc))
-      (,terminal-class (:inherit ,terminal-s-variable-pitch
+      (,terminal-class (:inherit ,monokai-pitch
                                  :background ,terminal-monokai-blue
                                  :foreground ,terminal-monokai-bg
                                  :overline ,terminal-monokai-cyan-lc))))
 
    `(speedbar-tag-face
-     ((,class (:inherit ,s-variable-pitch
+     ((,class (:inherit ,monokai-pitch
                         :foreground ,monokai-green))
-      (,terminal-class (:inherit ,terminal-s-variable-pitch
+      (,terminal-class (:inherit ,monokai-pitch
                                  :foreground ,terminal-monokai-green))))
 
    ;; sunrise commander headings
@@ -5056,7 +5062,7 @@ Also affects 'linum-mode' background."
    `(tooltip
      ((,class (:background ,monokai-green-l
                            :foreground ,monokai-bg
-                           :inherit ,s-variable-pitch))))
+                           :inherit ,monokai-pitch))))
 
    ;; tuareg
    `(tuareg-font-lock-governing-face
