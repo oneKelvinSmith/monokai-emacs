@@ -2267,8 +2267,8 @@ Also affects 'linum-mode' background."
                            :background ,monokai-highlight-line
                            :inherit bold))
       (,terminal-class (:foreground ,monokai-blue
-                           :background ,terminal-monokai-highlight-line
-                           :inherit bold))))
+                                    :background ,terminal-monokai-highlight-line
+                                    :inherit bold))))
 
    ;; guide-key
    `(guide-key/highlight-command-face
@@ -2908,15 +2908,14 @@ Also affects 'linum-mode' background."
      ((,class (:foreground ,monokai-cyan))
       (,terminal-class (:foreground ,terminal-monokai-cyan))))
 
-
    ;; info
    `(info-header-xref
      ((,class (:foreground ,monokai-green
                            :inherit bold
                            :underline t))
-     (,terminal-class (:foreground ,terminal-monokai-green
-                                   :inherit bold
-                                   :underline t))))
+      (,terminal-class (:foreground ,terminal-monokai-green
+                                    :inherit bold
+                                    :underline t))))
 
    `(info-menu
      ((,class (:foreground ,monokai-blue))
