@@ -486,60 +486,64 @@ Also affects 'linum-mode' background."
      ((,class (:foreground ,monokai-blue))
       (,terminal-class (:foreground ,terminal-monokai-blue))))
 
-   ;; menus and mode line
-   `(mode-line
-     ((,class (:inverse-video unspecified
-                              :underline unspecified
-                              :foreground ,s-mode-line-fg
-                              :background ,s-mode-line-bg
-                              :box (:line-width 1
-                                                :color ,s-mode-line-bg
-                                                :style unspecified)))
-      (,terminal-class (:inverse-video unspecified
-                                       :underline unspecified
-                                       :foreground ,terminal-s-mode-line-fg
-                                       :background ,terminal-s-mode-line-bg
-                                       :box (:line-width 1
-                                                         :color ,terminal-s-mode-line-bg
-                                                         :style unspecified)))))
-
+   ;; mode-line and powerline
    `(mode-line-buffer-id
-     ((,class (:foreground ,s-mode-line-buffer-id-fg
+     ((,class (:foreground ,monokai-green
                            :weight bold))
-      (,terminal-class (:foreground ,terminal-s-mode-line-buffer-id-fg
+      (,terminal-class (:foreground ,terminal-monokai-green
                                     :weight bold))))
 
-   `(mode-line-inactive
-     ((,class (:inverse-video unspecified
-                              :underline unspecified
-                              :foreground ,s-mode-line-inactive-fg
-                              :background ,s-mode-line-inactive-bg
-                              :box (:line-width 1
-                                                :color ,s-mode-line-inactive-bc
-                                                :style unspecified)))
-      (,terminal-class (:inverse-video unspecified
-                                       :underline unspecified
-                                       :foreground ,terminal-s-mode-line-inactive-fg
-                                       :background ,terminal-s-mode-line-inactive-bg
-                                       :box (:line-width 1
-                                                         :color ,terminal-s-mode-line-inactive-bc
-                                                         :style unspecified)))))
+   `(mode-line
+     ((,class (:foreground ,monokai-emph
+                           :background ,monokai-highlight-line
+                           :box (:color ,monokai-gray
+                                        :line-width 1)))
+      (,terminal-class (:foreground ,terminal-monokai-fg
+                                    :background ,terminal-monokai-bg
+                                    :box (:color ,terminal-monokai-highlight-line
+                                                 :style unspecified
+                                                 :line-width 1)))))
 
+   `(powerline-active1
+     ((,class (:background ,monokai-gray-d))
+      (,terminal-class (:background ,terminal-monokai-gray-d))))
+
+   `(powerline-active2
+     ((,class (:background ,monokai-bg))
+      (,terminal-class (:background ,terminal-monokai-bg))))
+
+
+   `(mode-line-inactive
+     ((,class (:foreground ,monokai-comments
+                           :background ,monokai-gray
+                           :box (:color ,monokai-gray
+                                        :line-width 1)))
+      (,terminal-class (:foreground ,terminal-monokai-comments
+                                    :background ,terminal-monokai-gray
+                                    :box (:color ,terminal-monokai-gray
+                                                 :style unspecified
+                                                 :line-width 1)))))
+
+   `(powerline-inactive1
+     ((,class (:background ,monokai-gray-d))
+      (,terminal-class (:background ,terminal-monokai-gray-d))))
+
+   `(powerline-inactive2
+     ((,class (:background ,monokai-gray))
+      (,terminal-class (:background ,terminal-monokai-gray))))
+
+   ;; header-line
    `(header-line
-     ((,class (:inverse-video unspecified
-                              :underline unspecified
-                              :foreground ,monokai-emph
-                              :background ,monokai-highlight-line
-                              :box (:line-width 1
-                                                :color ,monokai-gray
-                                                :style unspecified)))
-      (,terminal-class (:inverse-video unspecified
-                                       :underline unspecified
-                                       :foreground ,terminal-monokai-emph
-                                       :background ,terminal-monokai-highlight-line
-                                       :box (:line-width 1
-                                                         :color ,terminal-monokai-gray
-                                                         :style unspecified)))))
+     ((,class (:foreground ,monokai-emph
+                           :background ,monokai-highlight-line
+                           :box (:color ,monokai-gray
+                                        :line-width 1
+                                        :style unspecified)))
+      (,terminal-class (:foreground ,terminal-monokai-emph
+                                    :background ,terminal-monokai-highlight-line
+                                    :box (:color ,terminal-monokai-gray
+                                                 :line-width 1
+                                                 :style unspecified)))))
 
    ;; cua
    `(cua-global-mark
@@ -4451,23 +4455,6 @@ Also affects 'linum-mode' background."
                            :foreground ,monokai-fg))
       (,terminal-class (:background ,terminal-monokai-highlight-line
                                     :foreground ,terminal-monokai-fg))))
-
-   ;; powerline
-   `(powerline-active1
-     ((,class (:background ,s-powerline-active1-bg :foreground ,monokai-fg))
-      (,terminal-class (:background ,terminal-monokai-gray :foreground ,monokai-fg))))
-
-   `(powerline-active2
-     ((,class (:background ,s-powerline-active2-bg :foreground ,monokai-fg))
-      (,terminal-class (:background ,terminal-monokai-gray-l :foreground ,monokai-fg))))
-
-   `(powerline-inactive1
-     ((,class (:background ,s-powerline-inactive1-bg))
-      (,terminal-class (:background ,terminal-monokai-gray-d))))
-
-   `(powerline-inactive2
-     ((,class (:background ,s-powerline-inactive2-bg))
-      (,terminal-class (:background ,terminal-monokai-gray))))
 
    ;; rainbow-delimiters
    `(rainbow-delimiters-depth-1-face
