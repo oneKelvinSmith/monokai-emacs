@@ -5741,8 +5741,6 @@ Also affects 'linum-mode' background."
 
 ;; Local Variables:
 ;; no-byte-compile: t
-;; eval: (when (fboundp 'rainbow-mode) (rainbow-mode 1))
-;; eval: (when (fboundp 'aggressive-indent-mode) (aggressive-indent-mode -1))
 ;; fill-column: 95
 ;; End:
 
