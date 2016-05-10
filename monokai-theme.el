@@ -2930,10 +2930,8 @@ Also affects 'linum-mode' background."
 
    ;; ivy
    `(ivy-current-match
-     ((,class (:background highlight
-                           :inherit bold))
-      (,terminal-class (:background highlight
-                                    :inherit bold))))
+     ((,class (:background ,monokai-gray :inherit bold))
+      (,terminal-class (:background ,monokai-gray-l :inherit bold))))
 
    `(ivy-minibuffer-match-face-1
      ((,class (:inherit bold))
@@ -2960,6 +2958,21 @@ Also affects 'linum-mode' background."
    `(ivy-remote
      ((,class (:foreground ,monokai-blue))
       (,terminal-class (:foreground ,terminal-monokai-blue))))
+
+   `(swiper-line-face
+     ((,class (:background ,monokai-highlight-line))))
+
+   `(swiper-match-face-1
+     ((,class (:background ,monokai-gray-d))))
+
+   `(swiper-match-face-2
+     ((,class (:background ,monokai-green))))
+
+   `(swiper-match-face-3
+     ((,class (:background ,monokai-orange))))
+
+   `(swiper-match-face-4
+     ((,class (:background ,monokai-magenta))))
 
    ;; jabber
    `(jabber-activity-face
