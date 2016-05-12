@@ -453,15 +453,20 @@ Also affects 'linum-mode' background."
                                     :weight bold))))
 
    `(mode-line
-     ((,class (:foreground ,monokai-emph
-                           :background ,monokai-highlight-line
-                           :box (:color ,monokai-gray
-                                        :line-width 1)))
-      (,terminal-class (:foreground ,terminal-monokai-fg
-                                    :background ,terminal-monokai-bg
-                                    :box (:color ,terminal-monokai-highlight-line
-                                                 :style unspecified
-                                                 :line-width 1)))))
+     ((,class (:inverse-video unspecified
+                              :underline unspecified
+                              :foreground ,monokai-emph
+                              :background ,monokai-highlight-line
+                              :box (:line-width 1
+                                                :color ,monokai-gray
+                                                :style unspecified)))
+      (,terminal-class (:inverse-video unspecified
+                                       :underline unspecified
+                                       :foreground ,terminal-monokai-fg
+                                       :background ,terminal-monokai-bg
+                                       :box (:line-width 1
+                                                         :color ,terminal-monokai-highlight-line
+                                                         :style unspecified)))))
 
    `(powerline-active1
      ((,class (:background ,monokai-gray-d))
@@ -473,15 +478,20 @@ Also affects 'linum-mode' background."
 
 
    `(mode-line-inactive
-     ((,class (:foreground ,monokai-comments
-                           :background ,monokai-gray
-                           :box (:color ,monokai-gray
-                                        :line-width 1)))
-      (,terminal-class (:foreground ,terminal-monokai-comments
-                                    :background ,terminal-monokai-gray
-                                    :box (:color ,terminal-monokai-gray
-                                                 :style unspecified
-                                                 :line-width 1)))))
+     ((,class (:inverse-video unspecified
+                              :underline unspecified
+                              :foreground ,monokai-comments
+                              :background ,monokai-gray
+                              :box (:line-width 1
+                                                :color ,monokai-gray
+                                                :style unspecified)))
+      (,terminal-class (:inverse-video unspecified
+                                       :underline unspecified
+                                       :foreground ,terminal-monokai-comments
+                                       :background ,terminal-monokai-gray
+                                       :box (:line-width 1
+                                                         :color ,terminal-monokai-gray
+                                                         :style unspecified)))))
 
    `(powerline-inactive1
      ((,class (:background ,monokai-gray-d))
