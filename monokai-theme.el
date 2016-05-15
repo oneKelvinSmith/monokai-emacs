@@ -1239,6 +1239,7 @@ Also affects 'linum-mode' background."
                            :background ,monokai-blue
                            :underline t))
       (,terminal-class (:foreground ,terminal-monokai-bg
+                                    :background ,terminal-monokai-blue
                                     :underline t))))
 
    `(company-preview
