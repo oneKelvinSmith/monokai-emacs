@@ -3087,49 +3087,49 @@ Also affects 'linum-mode' background."
      ((,class (:foreground ,monokai-orange))
       (,terminal-class (:foreground ,terminal-monokai-orange))))
 
+   `(js2-function-call
+     ((,class (:foreground ,monokai-fg))
+      (,terminal-class (:foreground ,terminal-monokai-fg))))
+
    `(js2-function-param
+     ((,class (:foreground ,monokai-orange))
+      (,terminal-class (:foreground ,terminal-monokai-orange))))
+
+   `(js2-instance-member
+     ((,class (:foreground ,monokai-violet))
+      (,terminal-class (:foreground ,terminal-monokai-violet))))
+
+   `(js2-jsdoc-html-tag-delimiter
      ((,class (:foreground ,monokai-green))
       (,terminal-class (:foreground ,terminal-monokai-green))))
 
-   `(js2-instance-member
-     ((,class (:foreground ,monokai-magenta))
-      (,terminal-class (:foreground ,terminal-monokai-magenta))))
-
-   `(js2-jsdoc-html-tag-delimiter
-     ((,class (:foreground ,monokai-cyan))
-      (,terminal-class (:foreground ,terminal-monokai-cyan))))
-
    `(js2-jsdoc-html-tag-name
-     ((,class (:foreground ,monokai-orange))
-      (,terminal-class (:foreground ,terminal-monokai-orange))))
-
-   `(js2-object-property
-     ((,class (:foreground ,monokai-orange))
-      (,terminal-class (:foreground ,terminal-monokai-orange))))
-
-   `(js2-function-call
-     ((,class (:foreground ,monokai-yellow))
-      (,terminal-class (:foreground ,terminal-monokai-yellow))))
+     ((,class (:foreground ,monokai-green))
+      (,terminal-class (:foreground ,terminal-monokai-green))))
 
    `(js2-jsdoc-tag
-     ((,class (:foreground ,monokai-cyan))
-      (,terminal-class (:foreground ,terminal-monokai-cyan))))
+     ((,class (:foreground ,monokai-violet))
+      (,terminal-class (:foreground ,terminal-monokai-violet))))
 
    `(js2-jsdoc-type
      ((,class (:foreground ,monokai-blue))
       (,terminal-class (:foreground ,terminal-monokai-blue))))
 
    `(js2-jsdoc-value
-     ((,class (:foreground ,monokai-violet))
-      (,terminal-class (:foreground ,terminal-monokai-violet))))
+     ((,class (:foreground ,monokai-orange))
+      (,terminal-class (:foreground ,terminal-monokai-orange))))
 
    `(js2-magic-paren
      ((,class (:underline t))
       (,terminal-class (:underline t))))
 
+   `(js2-object-property
+     ((,class (:foreground ,monokai-fg))
+      (,terminal-class (:foreground ,terminal-monokai-fg))))
+
    `(js2-private-function-call
-     ((,class (:foreground ,monokai-yellow))
-      (,terminal-class (:foreground ,terminal-monokai-yellow))))
+     ((,class (:foreground ,monokai-violet))
+      (,terminal-class (:foreground ,terminal-monokai-violet))))
 
    `(js2-private-member
      ((,class (:foreground ,monokai-blue))
