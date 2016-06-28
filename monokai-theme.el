@@ -5652,6 +5652,34 @@ Also affects 'linum-mode' background."
      ((,class (:foreground ,monokai-green))
       (,terminal-class (:foreground ,terminal-monokai-green))))
 
+   ;; which-key
+   `(which-key-key-face
+     ((,class (:foreground ,monokai-green
+			   :weight bold))
+      (,terminal-class (:foreground ,terminal-monokai-green
+				    :weight bold))))
+
+   `(which-key-separator-face
+     ((,class (:foreground ,monokai-comments))
+      (,terminal-class (:foreground ,terminal-monokai-comments))))
+
+   `(which-key-note-face
+     ((,class (:foreground ,monokai-comments))
+      (,terminal-class (:foreground ,terminal-monokai-comments))))
+
+   `(which-key-command-description-face
+     ((,class (:foreground ,monokai-fg))
+      (,terminal-class (:foreground ,terminal-monokai-fg))))
+
+   `(which-key-local-map-description-face
+     ((,class (:foreground ,monokai-yellow-hc))
+      (,terminal-class (:foreground ,terminal-monokai-yellow-hc))))
+
+   `(which-key-group-description-face
+     ((,class (:foreground ,monokai-red
+			   :weight bold))
+      (,terminal-class (:foreground ,terminal-monokai-red
+				    :weight bold))))
    ;; window-number-mode
    `(window-number-face
      ((,class (:foreground ,monokai-green))
