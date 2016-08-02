@@ -49,6 +49,24 @@ To load it automatically on Emacs startup add this to your init file:
 (load-theme 'monokai t)
 ```
 
+## Customization
+
+Please see full list of variables in the `defcustom` section.
+
+i.e.:
+```lisp
+  (setq monokai-fg "#ABB2BF"
+        monokai-bg "#282C34"
+        monokai-blue "#61AFEF"
+        monokai-cyan "#56B6C2"
+        monokai-green "#98C379"
+        monokai-gray "#3E4451"
+        monokai-violet "#C678DD"
+        monokai-red "#E06C75"
+        monokai-orange "#D19A66"
+        monokai-yellow "#E5C07B")
+```
+
 # Bugs & Improvements
 
 Please, report any problems that you find on the projects integrated
