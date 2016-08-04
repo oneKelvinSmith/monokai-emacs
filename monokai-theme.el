@@ -93,6 +93,62 @@ Also affects 'linum-mode' background."
   :type 'number
   :group 'monokai)
 
+;; Primary colors
+(defcustom monokai-yellow "#E6DB74"
+  "Primary colors - yellow"
+  :type 'string
+  :group 'monokai)
+
+(defcustom monokai-orange "#FD971F"
+  "Primary colors - orange"
+  :type 'string
+  :group 'monokai)
+
+(defcustom monokai-red "#F92672"
+  "Primary colors - red"
+  :type 'string
+  :group 'monokai)
+
+(defcustom monokai-magenta "#FD5FF0"
+  "Primary colors - magenta"
+  :type 'string
+  :group 'monokai)
+
+(defcustom monokai-blue "#66D9EF"
+  "Primary colors - blue"
+  :type 'string
+  :group 'monokai)
+
+(defcustom monokai-green "#A6E22E"
+  "Primary colors - green"
+  :type 'string
+  :group 'monokai)
+
+(defcustom monokai-cyan "#A1EFE4"
+  "Primary colors - cyan"
+  :type 'string
+  :group 'monokai)
+
+(defcustom monokai-violet "#AE81FF"
+  "Primary colors - violet"
+  :type 'string
+  :group 'monokai)
+
+(defcustom monokai-gray "#3E3D31"
+  "Primary colors - gray"
+  :type 'string
+  :group 'monokai)
+
+(defcustom monokai-fg "#F8F8F2"
+  "Adaptive colors - foreground"
+  :type 'string
+  :group 'monokai)
+
+(defcustom monokai-bg "#272822"
+  "Adaptive colors - background"
+  :type 'string
+  :group 'monokai)
+
 (let* (;; Variable pitch
        (monokai-pitch (if monokai-use-variable-pitch
                           'variable-pitch
@@ -100,16 +156,6 @@ Also affects 'linum-mode' background."
 
        ;; Definitions for guis that support 256 colors
        (class                    '((class color) (min-colors 257)))
-       ;; Primary colors
-       (monokai-yellow           "#E6DB74")
-       (monokai-orange           "#FD971F")
-       (monokai-red              "#F92672")
-       (monokai-magenta          "#FD5FF0")
-       (monokai-violet           "#AE81FF")
-       (monokai-blue             "#66D9EF")
-       (monokai-cyan             "#A1EFE4")
-       (monokai-green            "#A6E22E")
-       (monokai-gray             "#3E3D31")
        ;; Darker and lighter accented colors
        (monokai-yellow-d         "#BEB244")
        (monokai-yellow-l         "#FFF7A8")
@@ -130,8 +176,6 @@ Also affects 'linum-mode' background."
        (monokai-gray-d           "#35331D")
        (monokai-gray-l           "#7B7962")
        ;; Adaptive colors
-       (monokai-fg               "#F8F8F2")
-       (monokai-bg               "#272822")
        (monokai-highlight-line   "#49483E")
        (monokai-highlight        "#FFB269")
        (monokai-emph             "#F8F8F0")
