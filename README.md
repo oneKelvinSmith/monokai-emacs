@@ -76,12 +76,6 @@ i.e.:
         monokai-yellow         "#E5C07B")
 ```
 
-
-(defcustom monokai-linum "#8F908A"
-  "Adaptive colors - line number"
-  :type 'string
-  :group 'monokai)
-
 ## Windows
 
 If your're experiencing font issues using `org-mode` on Windows with emacs 25 try add this to
