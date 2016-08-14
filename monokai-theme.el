@@ -149,6 +149,31 @@ Also affects 'linum-mode' background."
   :type 'string
   :group 'monokai)
 
+(defcustom monokai-highlight "#49483E"
+  "Adaptive colors - highlight"
+  :type 'string
+  :group 'monokai)
+
+(defcustom monokai-highlight-alt "#3E3D31"
+  "Adaptive colors - highlight"
+  :type 'string
+  :group 'monokai)
+
+(defcustom monokai-highlight-line "#3E3D31"
+  "Adaptive colors - line highlight"
+  :type 'string
+  :group 'monokai)
+
+(defcustom monokai-comments "#75715E"
+  "Adaptive colors - comments"
+  :type 'string
+  :group 'monokai)
+
+(defcustom monokai-emph "#F8F8F0"
+  "Adaptive colors - emphasis"
+  :type 'string
+  :group 'monokai)
+
 (let* (;; Variable pitch
        (monokai-pitch (if monokai-use-variable-pitch
                           'variable-pitch
@@ -175,11 +200,6 @@ Also affects 'linum-mode' background."
        (monokai-green-l          "#BBEF53")
        (monokai-gray-d           "#35331D")
        (monokai-gray-l           "#7B7962")
-       ;; Adaptive colors
-       (monokai-highlight-line   "#49483E")
-       (monokai-highlight        "#FFB269")
-       (monokai-emph             "#F8F8F0")
-       (monokai-comments         "#75715E")
        ;; Adaptive higher/lower contrast accented colors
        (monokai-fg-hc            "#141414")
        (monokai-fg-lc            "#171A0B")
@@ -240,7 +260,8 @@ Also affects 'linum-mode' background."
        (terminal-monokai-fg               "#F5F5F5")
        (terminal-monokai-bg               "#1B1E1C")
        (terminal-monokai-highlight-line   "#474747")
-       (terminal-monokai-highlight        "#F4A460")
+       (terminal-monokai-highlight-alt    "#3E3d31")
+       (terminal-monokai-highlight        "#474747")
        (terminal-monokai-emph             "#FFFAFA")
        (terminal-monokai-comments         "#8B8878")
        ;; Adaptive higher/lower contrast accented colors
@@ -366,10 +387,8 @@ Also affects 'linum-mode' background."
                                      :background ,terminal-monokai-bg))))
 
    `(highlight
-     ((,class (:foreground ,monokai-bg
-                           :background ,monokai-highlight))
-      (,terminal-class (:foreground ,terminal-monokai-bg
-                                    :background ,terminal-monokai-highlight))))
+     ((,class (:background ,monokai-highlight))
+      (,terminal-class (:background ,terminal-monokai-highlight))))
 
    `(lazy-highlight
      ((,class (:inherit highlight
