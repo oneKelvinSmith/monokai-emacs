@@ -55,17 +55,32 @@ Please see full list of variables in the `defcustom` section.
 
 i.e.:
 ```lisp
-  (setq monokai-fg "#ABB2BF"
-        monokai-bg "#282C34"
-        monokai-blue "#61AFEF"
-        monokai-cyan "#56B6C2"
-        monokai-green "#98C379"
-        monokai-gray "#3E4451"
-        monokai-violet "#C678DD"
-        monokai-red "#E06C75"
-        monokai-orange "#D19A66"
-        monokai-yellow "#E5C07B")
+  (setq ;; foreground and background
+        monokai-fg             "#ABB2BF"
+        monokai-bg             "#282C34"
+        ;; highlights and comments
+        monokai-comments       "#F8F8F0"
+        monokai-emph           "#282C34"
+        monokai-highlight      "#FFB269"
+        monokai-highlight-alt  "#66D9EF"
+        monokai-highlight-line "#1B1D1E"
+        monokai-linum          "#F8F8F0"
+        ;; colours
+        monokai-blue           "#61AFEF"
+        monokai-cyan           "#56B6C2"
+        monokai-green          "#98C379"
+        monokai-gray           "#3E4451"
+        monokai-violet         "#C678DD"
+        monokai-red            "#E06C75"
+        monokai-orange         "#D19A66"
+        monokai-yellow         "#E5C07B")
 ```
+
+
+(defcustom monokai-linum "#8F908A"
+  "Adaptive colors - line number"
+  :type 'string
+  :group 'monokai)
 
 ## Windows
 

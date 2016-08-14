@@ -149,6 +149,21 @@ Also affects 'linum-mode' background."
   :type 'string
   :group 'monokai)
 
+(defcustom monokai-comments "#75715E"
+  "Adaptive colors - comments"
+  :type 'string
+  :group 'monokai)
+
+(defcustom monokai-emph "#F8F8F0"
+  "Adaptive colors - emphasis"
+  :type 'string
+  :group 'monokai)
+
+(defcustom monokai-linum "#8F908A"
+  "Adaptive colors - line number"
+  :type 'string
+  :group 'monokai)
+
 (defcustom monokai-highlight "#49483E"
   "Adaptive colors - highlight"
   :type 'string
@@ -159,18 +174,8 @@ Also affects 'linum-mode' background."
   :type 'string
   :group 'monokai)
 
-(defcustom monokai-highlight-line "#3E3D31"
+(defcustom monokai-highlight-line "#20240E"
   "Adaptive colors - line highlight"
-  :type 'string
-  :group 'monokai)
-
-(defcustom monokai-comments "#75715E"
-  "Adaptive colors - comments"
-  :type 'string
-  :group 'monokai)
-
-(defcustom monokai-emph "#F8F8F0"
-  "Adaptive colors - emphasis"
   :type 'string
   :group 'monokai)
 
@@ -259,11 +264,12 @@ Also affects 'linum-mode' background."
        ;; Adaptive colors
        (terminal-monokai-fg               "#F5F5F5")
        (terminal-monokai-bg               "#1B1E1C")
-       (terminal-monokai-highlight-line   "#474747")
-       (terminal-monokai-highlight-alt    "#3E3d31")
-       (terminal-monokai-highlight        "#474747")
-       (terminal-monokai-emph             "#FFFAFA")
        (terminal-monokai-comments         "#8B8878")
+       (terminal-monokai-emph             "#FFFAFA")
+       (terminal-monokai-linum            "#8F908A")
+       (terminal-monokai-highlight        "#474747")
+       (terminal-monokai-highlight-alt    "#3E3E3E")
+       (terminal-monokai-highlight-line   "#000000")
        ;; Adaptive higher/lower contrast accented colors
        (terminal-monokai-fg-hc            "#171A0B")
        (terminal-monokai-fg-lc            "#141414")
@@ -305,8 +311,7 @@ Also affects 'linum-mode' background."
       (,terminal-class (:foreground ,terminal-monokai-comments))))
 
    `(font-lock-comment-face
-     ((,class (:foreground ,monokai-comments
-                           :background nil))
+     ((,class (:foreground ,monokai-comments))
       (,terminal-class (:foreground ,terminal-monokai-comments))))
 
    `(font-lock-constant-face
@@ -387,8 +392,10 @@ Also affects 'linum-mode' background."
                                      :background ,terminal-monokai-bg))))
 
    `(highlight
-     ((,class (:background ,monokai-highlight))
-      (,terminal-class (:background ,terminal-monokai-highlight))))
+     ((,class (:inherit t
+                        :background ,monokai-highlight))
+      (,terminal-class (:inherit t
+                                 :background ,terminal-monokai-highlight))))
 
    `(lazy-highlight
      ((,class (:inherit highlight
@@ -404,9 +411,9 @@ Also affects 'linum-mode' background."
 
    `(secondary-selection
      ((,class (:inherit region
-                        :background ,monokai-blue))
+                        :background ,monokai-highlight-alt))
       (,terminal-class (:inherit region
-                                 :background ,terminal-monokai-blue))))
+                                 :background ,terminal-monokai-highlight-alt))))
 
    `(shadow
      ((,class (:foreground ,monokai-comments))
@@ -519,7 +526,7 @@ Also affects 'linum-mode' background."
      ((,class (:inverse-video unspecified
                               :underline unspecified
                               :foreground ,monokai-emph
-                              :background ,monokai-highlight-line
+                              :background ,monokai-highlight
                               :box (:line-width 1
                                                 :color ,monokai-gray
                                                 :style unspecified)))
@@ -528,7 +535,7 @@ Also affects 'linum-mode' background."
                                        :foreground ,terminal-monokai-fg
                                        :background ,terminal-monokai-bg
                                        :box (:line-width 1
-                                                         :color ,terminal-monokai-highlight-line
+                                                         :color ,terminal-monokai-highlight
                                                          :style unspecified)))))
 
    `(powerline-active1
@@ -567,12 +574,12 @@ Also affects 'linum-mode' background."
    ;; header-line
    `(header-line
      ((,class (:foreground ,monokai-emph
-                           :background ,monokai-highlight-line
+                           :background ,monokai-highlight
                            :box (:color ,monokai-gray
                                         :line-width 1
                                         :style unspecified)))
       (,terminal-class (:foreground ,terminal-monokai-emph
-                                    :background ,terminal-monokai-highlight-line
+                                    :background ,terminal-monokai-highlight
                                     :box (:color ,terminal-monokai-gray
                                                  :line-width 1
                                                  :style unspecified)))))
@@ -3209,10 +3216,23 @@ Also affects 'linum-mode' background."
 
    ;; linum-mode
    `(linum
-     ((,class (:foreground ,monokai-comments
+     ((,class (:foreground ,monokai-linum
                            :background ,monokai-fringe-bg))
-      (,terminal-class (:foreground ,terminal-monokai-comments
+      (,terminal-class (:foreground ,terminal-monokai-linum
                                     :background ,terminal-monokai-fringe-bg))))
+   ;; linum-mode
+   `(linum
+     ((,class (:foreground ,monokai-linum
+                           :background ,monokai-fringe-bg))
+      (,terminal-class (:foreground ,terminal-monokai-linum
+                                    :background ,terminal-monokai-fringe-bg))))
+
+   ;; linum-relative-current-face
+   `(linum-relative-current-face
+     ((,class (:foreground ,monokai-linum
+                           :background ,monokai-highlight-line))
+      (,terminal-class (:foreground ,terminal-monokai-linum
+                                    :background ,terminal-monokai-highlight-line))))
 
    ;; lusty-explorer
    `(lusty-directory-face
