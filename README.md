@@ -60,7 +60,7 @@ i.e.:
         monokai-bg             "#282C34"
         ;; highlights and comments
         monokai-comments       "#F8F8F0"
-        monokai-emph           "#282C34"
+        monokai-emphasis       "#282C34"
         monokai-highlight      "#FFB269"
         monokai-highlight-alt  "#66D9EF"
         monokai-highlight-line "#1B1D1E"
