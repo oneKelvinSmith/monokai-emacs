@@ -2745,10 +2745,10 @@ Also affects 'linum-mode' background."
       (,terminal-class (:inherit helm-match))))
 
    `(helm-selection
-     ((,class (:background ,monokai-highlight-line
+     ((,class (:background ,monokai-highlight
                            :inherit bold
                            :underline nil))
-      (,terminal-class (:background ,terminal-monokai-highlight-line
+      (,terminal-class (:background ,terminal-monokai-highlight
                                     :inherit bold
                                     :underline nil))))
 
