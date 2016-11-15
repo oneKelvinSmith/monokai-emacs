@@ -56,8 +56,8 @@ Please see full list of variables in the `defcustom` section.
 i.e.:
 ```lisp
   (setq ;; foreground and background
-        monokai-fg             "#ABB2BF"
-        monokai-bg             "#282C34"
+        monokai-foreground     "#ABB2BF"
+        monokai-background     "#282C34"
         ;; highlights and comments
         monokai-comments       "#F8F8F0"
         monokai-emphasis       "#282C34"
