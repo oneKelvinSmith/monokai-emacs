@@ -49,11 +49,12 @@ To load it automatically on Emacs startup add this to your init file:
 (load-theme 'monokai t)
 ```
 
-## Customization
+# Customization
 
 Please see full list of variables in the `defcustom` section.
 
-i.e.:
+You can override specific core colors using this in your `init.el` or equivalent file:
+
 ```lisp
   (setq ;; foreground and background
         monokai-foreground     "#ABB2BF"
@@ -64,7 +65,7 @@ i.e.:
         monokai-highlight      "#FFB269"
         monokai-highlight-alt  "#66D9EF"
         monokai-highlight-line "#1B1D1E"
-        monokai-linum          "#F8F8F0"
+        monokai-line-number    "#F8F8F0"
         ;; colours
         monokai-blue           "#61AFEF"
         monokai-cyan           "#56B6C2"
@@ -75,6 +76,29 @@ i.e.:
         monokai-orange         "#D19A66"
         monokai-yellow         "#E5C07B")
 ```
+
+## `org-mode` headers
+
+If you would like to change the font size of your `org-mode` headers you can do so with:
+
+```lisp
+  (setq monokai-height-minus-1 0.8
+        monokai-height-plus-1 1.1
+        monokai-height-plus-2 1.15
+        monokai-height-plus-3 1.2
+        monokai-height-plus-4 1.3)
+```
+
+## Variable pitch
+
+If you would like to use `variable-pitch-mode` you can enable it with:
+
+```lisp
+  (setq monokai-user-variable-pitch t)
+```
+
+This used to be enabled by default but broke the principle of least surprise which resulted in a couple of issues. See [#62](https://github.com/oneKelvinSmith/monokai-emacs/issues/62) & [#56](https://github.com/oneKelvinSmith/monokai-emacs/issues/56).
+
 
 ## Windows
 
@@ -88,7 +112,7 @@ your `init.el` or equivalent file:
     (when (and sys/win32p (> emacs-major-version 24))
       (add-hook 'window-setup-hook '(lambda () (load-theme 'monokai t))))
 ```
-For more info check this thread: [Invalid font in org-mode](https://github.com/oneKelvinSmith/monokai-emacs/issues/56)
+For more info check the thread in [#56](https://github.com/oneKelvinSmith/monokai-emacs/issues/56)
 
 # Bugs & Improvements
 

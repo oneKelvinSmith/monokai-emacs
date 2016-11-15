@@ -63,7 +63,7 @@ Also affects 'linum-mode' background."
   :type 'boolean
   :group 'monokai)
 
-(defcustom monokai-use-variable-pitch t
+(defcustom monokai-use-variable-pitch nil
   "Use variable pitch face for some headings and titles."
   :type 'boolean
   :group 'monokai)
