@@ -402,7 +402,7 @@ Also affects 'linum-mode' background."
 
    `(lazy-highlight
      ((,monokai-class (:inherit highlight
-                                :background ,monokai-comments))
+                                :background ,monokai-highlight-alt))
       (,monokai-256-class  (:inherit highlight
                                      :background ,monokai-256-comments))))
 
@@ -554,14 +554,14 @@ Also affects 'linum-mode' background."
      ((,monokai-class (:inverse-video unspecified
                                       :underline unspecified
                                       :foreground ,monokai-comments
-                                      :background ,monokai-gray
+                                      :background ,monokai-background
                                       :box (:line-width 1
                                                         :color ,monokai-gray
                                                         :style unspecified)))
       (,monokai-256-class  (:inverse-video unspecified
                                            :underline unspecified
                                            :foreground ,monokai-256-comments
-                                           :background ,monokai-256-gray
+                                           :background ,monokai-256-background
                                            :box (:line-width 1
                                                              :color ,monokai-256-gray
                                                              :style unspecified)))))
@@ -571,8 +571,8 @@ Also affects 'linum-mode' background."
       (,monokai-256-class  (:background ,monokai-256-gray-d))))
 
    `(powerline-inactive2
-     ((,monokai-class (:background ,monokai-gray))
-      (,monokai-256-class  (:background ,monokai-256-gray))))
+     ((,monokai-class (:background ,monokai-background))
+      (,monokai-256-class  (:background ,monokai-256-background))))
 
    ;; header-line
    `(header-line
