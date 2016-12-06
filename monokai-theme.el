@@ -314,10 +314,8 @@ Also affects 'linum-mode' background."
       (,monokai-256-class  (:foreground ,monokai-256-comments))))
 
    `(font-lock-comment-face
-     ((,monokai-class (:foreground ,monokai-comments
-                                   :background ,monokai-background))
-      (,monokai-256-class  (:foreground ,monokai-256-comments
-                                        :background ,monokai-256-background))))
+     ((,monokai-class (:foreground ,monokai-comments))
+      (,monokai-256-class  (:foreground ,monokai-256-comments))))
 
    `(font-lock-constant-face
      ((,monokai-class (:foreground ,monokai-violet))
