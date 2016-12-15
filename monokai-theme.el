@@ -4031,6 +4031,10 @@ Also affects 'linum-mode' background."
      ((,monokai-class (:foreground ,monokai-comments))
       (,monokai-256-class  (:foreground ,monokai-256-comments))))
 
+   ;; adoc-mode / markup
+   `(markup-meta-face
+     ((,monokai-class (:foreground ,monokai-gray-l))
+      (,monokai-256-class  (:foreground ,monokai-256-gray-l))))
 
    ;; org-mode
    `(org-agenda-structure
