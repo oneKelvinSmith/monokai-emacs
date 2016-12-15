@@ -4036,6 +4036,40 @@ Also affects 'linum-mode' background."
      ((,monokai-class (:foreground ,monokai-gray-l))
       (,monokai-256-class  (:foreground ,monokai-256-gray-l))))
 
+   `(markup-table-face
+     ((,monokai-class (:foreground ,monokai-blue-hc
+                                   :background ,monokai-blue-lc))
+      (,monokai-256-class  (:foreground ,monokai-256-blue-hc
+                                        :background ,monokai-256-blue-lc))))
+
+   `(markup-verbatim-face
+     ((,monokai-class (:background ,monokai-orange-lc))
+      (,monokai-256-class  (:background ,monokai-256-orange-lc))))
+
+   `(markup-list-face
+     ((,monokai-class (:foreground ,monokai-violet-hc
+                                   :background ,monokai-violet-lc))
+      (,monokai-256-class  (:foreground ,monokai-256-violet-hc
+                                        :background ,monokai-256-violet-lc))))
+
+   `(markup-replacement-face
+     ((,monokai-class (:foreground ,monokai-violet))
+      (,monokai-256-class  (:foreground ,monokai-256-violet))))
+
+   `(markup-complex-replacement-face
+     ((,monokai-class (:foreground ,monokai-violet-hc
+                                   :background ,monokai-violet-lc))
+      (,monokai-256-class  (:foreground ,monokai-256-violet-hc
+                                        :background ,monokai-256-violet-lc))))
+
+   `(markup-gen-face
+     ((,monokai-class (:foreground ,monokai-blue))
+      (,monokai-256-class  (:foreground ,monokai-256-blue))))
+
+   `(markup-secondary-text-face
+     ((,monokai-class (:foreground ,monokai-red))
+      (,monokai-256-class  (:foreground ,monokai-256-red))))
+
    ;; org-mode
    `(org-agenda-structure
      ((,monokai-class (:foreground ,monokai-emphasis
