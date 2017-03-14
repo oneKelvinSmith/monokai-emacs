@@ -2108,75 +2108,69 @@ Also affects 'linum-mode' background."
 
    ;; flycheck
    `(flycheck-error
-     ((,(append '((supports :underline (:style wave))) monokai-class)
-       (:underline (:style wave :color ,monokai-red)
-                   :inherit unspecified))
-      (,monokai-class (:foreground ,monokai-red-hc
-                                   :background ,monokai-red-lc
+     ((,(append '((supports :underline (:style line))) monokai-class)
+       (:underline (:style line :color ,monokai-red)))
+      (,monokai-class (:foreground ,monokai-red
+                                   :background ,monokai-background
                                    :weight bold
                                    :underline t))
-      (,(append '((supports :underline (:style wave))) monokai-256-class )
-       (:underline (:style wave :color ,monokai-256-red)
-                   :inherit unspecified))
-      (,monokai-256-class  (:foreground ,monokai-256-red-hc
-                                        :background ,monokai-256-red-lc
+      (,(append '((supports :underline (:style line))) monokai-256-class )
+       (:underline (:style line :color ,monokai-256-red)))
+      (,monokai-256-class  (:foreground ,monokai-256-red
+                                        :background ,monokai-256-background
                                         :weight bold
                                         :underline t))))
 
    `(flycheck-warning
-     ((,(append '((supports :underline (:style wave))) monokai-class)
-       (:underline (:style wave :color ,monokai-yellow)
-                   :inherit unspecified))
-      (,monokai-class (:foreground ,monokai-yellow-hc
-                                   :background ,monokai-yellow-lc
+     ((,(append '((supports :underline (:style line))) monokai-class)
+       (:underline (:style line :color ,monokai-orange)))
+      (,monokai-class (:foreground ,monokai-orange
+                                   :background ,monokai-background
                                    :weight bold
                                    :underline t))
-      (,(append '((supports :underline (:style wave))) monokai-256-class )
-       (:underline (:style wave :color ,monokai-256-yellow)
-                   :inherit unspecified))
-      (,monokai-256-class  (:foreground ,monokai-256-yellow-hc
-                                        :background ,monokai-256-yellow-lc
+      (,(append '((supports :underline (:style line))) monokai-256-class )
+       (:underline (:style line :color ,monokai-256-orange)))
+      (,monokai-256-class  (:foreground ,monokai-256-orange
+                                        :background ,monokai-256-background
                                         :weight bold
                                         :underline t))))
 
    `(flycheck-info
-     ((,(append '((supports :underline (:style wave))) monokai-class)
-       (:underline (:style wave :color ,monokai-blue)
-                   :inherit unspecified))
-      (,monokai-class (:foreground ,monokai-blue-hc
-                                   :background ,monokai-blue-lc
+     ((,(append '((supports :underline (:style line))) monokai-class)
+       (:underline (:style line :color ,monokai-blue)))
+      (,monokai-class (:foreground ,monokai-blue
+                                   :background ,monokai-background
                                    :weight bold
                                    :underline t))
-      (,(append '((supports :underline (:style wave))) monokai-256-class )
-       (:underline (:style wave :color ,monokai-256-blue)
-                   :inherit unspecified))
-      (,monokai-256-class  (:foreground ,monokai-256-blue-hc
-                                        :background ,monokai-256-blue-lc
+      (,(append '((supports :underline (:style line))) monokai-256-class )
+       (:underline (:style line :color ,monokai-256-blue)))
+      (,monokai-256-class  (:foreground ,monokai-256-blue
+                                        :background ,monokai-256-background
                                         :weight bold
                                         :underline t))))
 
    `(flycheck-fringe-error
-     ((,monokai-class (:foreground ,monokai-red-hc
-                                   :background ,monokai-red-lc
+     ((,monokai-class (:foreground ,monokai-red-l
+                                   :background unspecified
                                    :weight bold))
-      (,monokai-256-class  (:foreground ,monokai-256-red-hc
-                                        :background ,monokai-256-red-lc
+      (,monokai-256-class  (:foreground ,monokai-256-red-l
+                                        :background unspecified
                                         :weight bold))))
 
    `(flycheck-fringe-warning
-     ((,monokai-class (:foreground ,monokai-yellow-hc
-                                   :background ,monokai-yellow-lc
+     ((,monokai-class (:foreground ,monokai-orange-l
+                                   :background unspecified
                                    :weight bold))
-      (,monokai-256-class  (:foreground ,monokai-256-yellow-hc
-                                        :background ,monokai-256-yellow-lc
+      (,monokai-256-class  (:foreground ,monokai-256-orange-l
+                                        :background unspecified
                                         :weight bold))))
 
    `(flycheck-fringe-info
-     ((,monokai-class (:foreground ,monokai-blue-hc
-                                   :background ,monokai-blue-lc
+     ((,monokai-class (:foreground ,monokai-blue-l
+                                   :background unspecified
                                    :weight bold))
-      (,monokai-256-class  (:foreground ,monokai-256-blue-hc
-                                        :background ,monokai-256-blue-lc
+      (,monokai-256-class  (:foreground ,monokai-256-blue-l
+                                        :background unspecified
                                         :weight bold))))
 
    ;; flyspell
@@ -3218,16 +3212,20 @@ Also affects 'linum-mode' background."
    ;; linum-mode
    `(linum
      ((,monokai-class (:foreground ,monokai-line-number
-                                   :background ,monokai-fringe-bg))
+                                   :background ,monokai-fringe-bg
+                                   :underline nil))
       (,monokai-256-class  (:foreground ,monokai-256-line-number
-                                        :background ,monokai-256-fringe-bg))))
+                                        :background ,monokai-256-fringe-bg
+                                        :underline nil))))
 
    ;; linum-relative-current-face
    `(linum-relative-current-face
      ((,monokai-class (:foreground ,monokai-line-number
-                                   :background ,monokai-highlight-line))
+                                   :background ,monokai-highlight-line
+                                   :underline nil))
       (,monokai-256-class  (:foreground ,monokai-256-line-number
-                                        :background ,monokai-256-highlight-line))))
+                                        :background ,monokai-256-highlight-line
+                                        :underline nil))))
 
    ;; lusty-explorer
    `(lusty-directory-face
