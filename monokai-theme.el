@@ -4610,6 +4610,17 @@ Also affects 'linum-mode' background."
                                         :background ,monokai-256-background
                                         :inverse-video t))))
 
+   ;; realgud
+   `(realgud-overlay-arrow1
+     ((,monokai-class (:foreground ,monokai-green-d))
+      (,monokai-256-class  (:foreground ,monokai-green-d))))
+   `(realgud-overlay-arrow2
+     ((,monokai-class (:foreground ,monokai-yellow-d))
+      (,monokai-256-class  (:foreground ,monokai-yellow-d))))
+   `(realgud-overlay-arrow3
+     ((,monokai-class (:foreground ,monokai-orange-d))
+      (,monokai-256-class  (:foreground ,monokai-orange-d))))
+
    ;; rhtm-mode
    `(erb-face
      ((,monokai-class (:foreground ,monokai-emphasis
