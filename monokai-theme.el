@@ -4613,13 +4613,31 @@ Also affects 'linum-mode' background."
    ;; realgud
    `(realgud-overlay-arrow1
      ((,monokai-class (:foreground ,monokai-green-d))
-      (,monokai-256-class  (:foreground ,monokai-green-d))))
+      (,monokai-256-class  (:foreground ,monokai-256-green-d))))
    `(realgud-overlay-arrow2
      ((,monokai-class (:foreground ,monokai-yellow-d))
-      (,monokai-256-class  (:foreground ,monokai-yellow-d))))
+      (,monokai-256-class  (:foreground ,monokai-256-yellow-d))))
    `(realgud-overlay-arrow3
      ((,monokai-class (:foreground ,monokai-orange-d))
-      (,monokai-256-class  (:foreground ,monokai-orange-d))))
+      (,monokai-256-class  (:foreground ,monokai-256-orange-d))))
+   `(realgud-bp-enabled-face
+     ((,monokai-class (:inherit error)))
+     ((,monokai-256-class (:inherit error))))
+   `(realgud-bp-disabled-face
+     ((,monokai-class (:inherit secondary-selection)))
+     ((,monokai-256-class (:inherit secondary-selection))))
+   `(realgud-bp-line-enabled-face
+     ((,monokai-class (:foreground ,monokai-red-d)))
+     ((,monokai-256-class (:foreground ,monokai-256-red-d))))
+   `(realgud-bp-line-disabled-face
+     ((,monokai-class (:inherit secondary-selection)))
+     ((,monokai-256-class (:inherit secondary-selection))))
+   `(realgud-line-number
+     ((,monokai-class (:inerhit monokai-line-number)))
+     ((,monokai-256-class (:inerhit monokai-line-number))))
+   `(realgud-backtrace-number
+     ((,monokai-class (:foreground ,monokai-yellow-d :weight bold)))))
+     ((,monokai-256-class (:foreground ,monokai-256-yellow :weight bold))))))
 
    ;; rhtm-mode
    `(erb-face
