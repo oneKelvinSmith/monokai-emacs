@@ -5894,7 +5894,7 @@ Also affects 'linum-mode' background."
 
    ;; pos-tip
    `(pos-tip-foreground-color ,monokai-background)
-   `(pos-tip-background-color ,monokai-green)
+   `(pos-tip-background-color ,monokai-yellow-hc)
 
    ;; vc
    `(vc-annotate-color-map
