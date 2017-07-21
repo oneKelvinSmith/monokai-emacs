@@ -2907,6 +2907,11 @@ Also affects 'linum-mode' background."
      ((,monokai-class (:background ,monokai-gray))
       (,monokai-256-class  (:background ,monokai-256-gray))))
 
+   ;; highlight-symbol
+   `(highlight-symbol-face
+     ((,monokai-class (:background ,monokai-highlight))
+      (,monokai-256-class  (:background ,monokai-256-highlight))))
+
    ;; hl-line-mode
    `(hl-line
      ((,monokai-class (:background ,monokai-highlight-line))
