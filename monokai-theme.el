@@ -402,7 +402,7 @@ Also affects 'linum-mode' background."
      ((,monokai-class (:inherit highlight
                                 :background ,monokai-highlight-alt))
       (,monokai-256-class  (:inherit highlight
-                                     :background ,monokai-256-comments))))
+                                     :background ,monokai-256-highlight-alt))))
 
    `(region
      ((,monokai-class (:inherit highlight
