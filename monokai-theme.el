@@ -3218,9 +3218,11 @@ Also affects 'linum-mode' background."
    `(linum
      ((,monokai-class (:foreground ,monokai-line-number
                                    :background ,monokai-fringe-bg
+                                   :inherit default
                                    :underline nil))
       (,monokai-256-class  (:foreground ,monokai-256-line-number
                                         :background ,monokai-256-fringe-bg
+                                        :inherit default
                                         :underline nil))))
 
    ;; linum-relative-current-face
