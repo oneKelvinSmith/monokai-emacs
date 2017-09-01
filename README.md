@@ -15,7 +15,7 @@ The theme uses built-in theming support available Emacs 24 and later.
 
 I recommend using [Prelude](http://batsov.com/prelude/) in conjunction with
 this theme. Bozhidar Batsov has done some awesome work in making Emacs beautiful and
-accessable to a newcomer.
+accessible to a newcomer.
 
 # Installation
 
