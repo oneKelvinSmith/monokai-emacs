@@ -799,9 +799,11 @@ Also affects 'linum-mode' background."
    ;; isearch
    `(isearch
      ((,monokai-class (:inherit region
-                                :background ,monokai-green))
+                                :foreground ,monokai-background
+                                :background ,monokai-yellow))
       (,monokai-256-class  (:inherit region
-                                     :background ,monokai-256-green))))
+                                     :foreground ,monokai-256-background
+                                     :background ,monokai-256-yellow))))
 
    `(isearch-fail
      ((,monokai-class (:inherit isearch
