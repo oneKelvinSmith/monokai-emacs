@@ -5260,10 +5260,8 @@ Also affects 'linum-mode' background."
 
    ;; volatile highlights
    `(vhl/default-face
-     ((,monokai-class (:background ,monokai-green-lc
-                                   :foreground ,monokai-green-hc))
-      (,monokai-256-class  (:background ,monokai-256-green-lc
-                                        :foreground ,monokai-256-green-hc))))
+      ((,monokai-class (:background ,monokai-highlight-alt))
+        (,monokai-256-class  (:background ,monokai-256-highlight-alt))))
 
    ;; w3m
    `(w3m-anchor
