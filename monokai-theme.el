@@ -185,7 +185,7 @@ Also affects 'linum-mode' background."
                         'default))
 
        ;; Definitions for guis that support 256 colors
-       (monokai-class '((class color) (min-colors 257)))
+       (monokai-class '((class color) (min-colors #xFFFFFF)))
 
        ;; Darker and lighter accented colors
        (monokai-yellow-d       "#BEB244")
@@ -233,7 +233,7 @@ Also affects 'linum-mode' background."
                             monokai-background))
 
        ;; Definitions for terminals that do not support 256 colors
-       (monokai-256-class '((class color) (min-colors 89)))
+       (monokai-256-class '((class color) (min-colors #xFF)))
        ;; Primary colors
        (monokai-256-yellow         "#CDC673")
        (monokai-256-orange         "#FF8C00")
