@@ -71,7 +71,7 @@ You can override specific core colors using this in your `init.el` or equivalent
       monokai-highlight-alt  "#66D9EF"
       monokai-highlight-line "#1B1D1E"
       monokai-line-number    "#F8F8F0"
-      ;; colours
+      ;; colors
       monokai-blue           "#61AFEF"
       monokai-cyan           "#56B6C2"
       monokai-green          "#98C379"
@@ -104,6 +104,40 @@ If you would like to use `variable-pitch-mode` you can enable it with:
 
 This used to be enabled by default but broke the principle of least surprise which resulted in a couple of issues.
 See [#62](https://github.com/oneKelvinSmith/monokai-emacs/issues/62) & [#56](https://github.com/oneKelvinSmith/monokai-emacs/issues/56)
+
+
+### Truecolor
+
+Firstly, be sure to be using a terminal emulator that supports truecolor (e.g. iTerm2 or the latest tmux configured correctly). Next you need to be using Emacs 26.1 or later.
+
+To get 24 bit color support you'll want to run this command to create terminal information compatible with emacs:
+
+```bash
+$ tic -x -o ~/.terminfo terminfo-24bit.src
+```
+
+where `terminfo-24bit.src` file with the following contents:
+```
+# Use colon separators.
+xterm-24bit|xterm with 24-bit direct color mode,
+  use=xterm-256color,
+  setb24=\E[48:2:%p1%{65536}%/%d:%p1%{256}%/%{255}%&%d:%p1%{255}%&%dm,
+  setf24=\E[38:2:%p1%{65536}%/%d:%p1%{256}%/%{255}%&%d:%p1%{255}%&%dm,
+# Use semicolon separators.
+xterm-24bits|xterm with 24-bit direct color mode,
+  use=xterm-256color,
+  setb24=\E[48;2;%p1%{65536}%/%d;%p1%{256}%/%{255}%&%d;%p1%{255}%&%dm,
+  setf24=\E[38;2;%p1%{65536}%/%d;%p1%{256}%/%{255}%&%d;%p1%{255}%&%dm,
+
+```
+
+Now you can emacs with your `$TERM` environment variable set to `xterm-24bit` or `xterm-24bits`:
+
+```bash
+$ TERM=xterm-24bit emacsclient -t README.md
+```
+
+And now you can enjoy this theme in all it's glory...
 
 
 ### Windows
