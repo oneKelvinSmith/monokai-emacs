@@ -1766,6 +1766,15 @@ Also affects 'linum-mode' background."
      ((,monokai-class (:foreground ,monokai-cyan))
       (,monokai-256-class  (:foreground ,monokai-256-cyan))))
 
+   ;; elixir
+   `(elixir-attribute-face
+     ((,monokai-class (:foreground ,monokai-orange))
+      (,monokai-256-class  (:foreground ,monokai-256-orange))))
+
+   `(elixir-atom-face
+     ((,monokai-class (:foreground ,monokai-violet))
+      (,monokai-256-class  (:foreground ,monokai-256-violet))))
+
    ;; ein
    `(ein:cell-input-area
      ((,monokai-class (:background ,monokai-highlight-line))
