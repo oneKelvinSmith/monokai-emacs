@@ -322,8 +322,8 @@ Also affects 'linum-mode' background."
       (,monokai-256-class (:foreground ,monokai-256-violet))))
 
    `(font-lock-doc-face
-     ((,monokai-class (:foreground ,monokai-comments))
-      (,monokai-256-class (:foreground ,monokai-256-comments))))
+     ((,monokai-class (:foreground ,monokai-yellow))
+      (,monokai-256-class (:foreground ,monokai-256-yellow))))
 
    `(font-lock-function-name-face
      ((,monokai-class (:foreground ,monokai-green))
