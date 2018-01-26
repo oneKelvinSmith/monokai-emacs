@@ -68,6 +68,11 @@ Also affects 'linum-mode' background."
   :type 'boolean
   :group 'monokai)
 
+(defcustom monokai-doc-face-as-comment nil
+  "Consider `font-lock-doc-face' as comment instead of a string."
+  :type 'boolean
+  :group 'monokai)
+
 (defcustom monokai-height-minus-1 0.8
   "Font size -1."
   :type 'number
@@ -322,8 +327,12 @@ Also affects 'linum-mode' background."
       (,monokai-256-class (:foreground ,monokai-256-violet))))
 
    `(font-lock-doc-face
-     ((,monokai-class (:foreground ,monokai-yellow))
-      (,monokai-256-class (:foreground ,monokai-256-yellow))))
+     ((,monokai-class (:foreground ,(if monokai-doc-face-as-comment
+                                        monokai-comments
+                                      monokai-yellow)))
+      (,monokai-256-class (:foreground ,(if monokai-doc-face-as-comment
+                                            monokai-256-comments
+                                          monokai-256-yellow)))))
 
    `(font-lock-function-name-face
      ((,monokai-class (:foreground ,monokai-green))
