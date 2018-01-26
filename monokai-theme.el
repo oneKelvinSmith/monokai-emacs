@@ -4,7 +4,7 @@
 
 ;; Author: Kelvin Smith <oneKelvinSmith@gmail.com>
 ;; URL: http://github.com/oneKelvinSmith/monokai-emacs
-;; Version: 3.5.0
+;; Version: 3.5.1
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -71,7 +71,8 @@ Also affects 'linum-mode' background."
 (defcustom monokai-doc-face-as-comment nil
   "Consider `font-lock-doc-face' as comment instead of a string."
   :type 'boolean
-  :group 'monokai)
+  :group 'monokai
+  :package-version "3.5.1")
 
 (defcustom monokai-height-minus-1 0.8
   "Font size -1."
