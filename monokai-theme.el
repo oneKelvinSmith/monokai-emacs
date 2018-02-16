@@ -3246,6 +3246,26 @@ Also affects 'linum-mode' background."
                                         :inherit default
                                         :underline nil))))
 
+   ;; line-number (>= Emacs26)
+   `(line-number
+     ((,monokai-class (:foreground ,monokai-line-number
+                                   :background ,monokai-fringe-bg
+                                   :inherit default
+                                   :underline nil))
+      (,monokai-256-class (:foreground ,monokai-256-line-number
+                                        :background ,monokai-256-fringe-bg
+                                        :inherit default
+                                        :underline nil))))
+   `(line-number-current-line
+     ((,monokai-class (:foreground ,monokai-foreground
+                                   :background ,monokai-fringe-bg
+                                   :inherit default
+                                   :underline nil))
+      (,monokai-256-class (:foreground ,monokai-256-foreground
+                                        :background ,monokai-256-fringe-bg
+                                        :inherit default
+                                        :underline nil))))
+
    ;; linum-relative-current-face
    `(linum-relative-current-face
      ((,monokai-class (:foreground ,monokai-line-number
