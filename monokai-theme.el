@@ -6022,7 +6022,7 @@ Also affects 'linum-mode' background."
 
    ;; weechat
    `(weechat-color-list
-     (unspecified ,monokai-background ,monokai-highlight-line
+     '(unspecified ,monokai-background ,monokai-highlight-line
                   ,monokai-red-d ,monokai-red
                   ,monokai-green-d ,monokai-green
                   ,monokai-yellow-d ,monokai-yellow
