@@ -193,6 +193,14 @@ Also affects 'linum-mode' background."
        ;; Definitions for guis that support 256 colors
        (monokai-class '((class color) (min-colors 257)))
 
+       ;; Functionality specific colors
+       (monokai-diff-blue-base      "#232438")
+       (monokai-diff-blue-emphasis  "#1F204E")
+       (monokai-diff-green-base     "#233E1E")
+       (monokai-diff-green-emphasis "#1F541A")
+       (monokai-diff-red-base       "#3D241E")
+       (monokai-diff-red-emphasis   "#53201A")
+
        ;; Darker and lighter accented colors
        (monokai-yellow-d       "#BEB244")
        (monokai-yellow-l       "#FFF7A8")
@@ -240,6 +248,15 @@ Also affects 'linum-mode' background."
 
        ;; Definitions for terminals that do not support 256 colors
        (monokai-256-class '((class color) (min-colors 89)))
+
+       ;; Functionality specific colors
+       (monokai-256-diff-blue-base      "#00005f")
+       (monokai-256-diff-blue-emphasis  "#000087")
+       (monokai-256-diff-green-base     "#005800")
+       (monokai-256-diff-green-emphasis "#008700")
+       (monokai-256-diff-red-base       "#5f0000")
+       (monokai-256-diff-red-emphasis   "#870000")
+
        ;; Primary colors
        (monokai-256-yellow         "#CDC673")
        (monokai-256-orange         "#FF8C00")
@@ -1646,20 +1663,28 @@ Also affects 'linum-mode' background."
 
    ;; ediff
    `(ediff-fine-diff-A
-     ((,monokai-class (:background ,monokai-orange-lc))
-      (,monokai-256-class (:background ,monokai-256-orange-lc))))
+     ((,monokai-class (:background ,monokai-diff-red-emphasis))
+      (,monokai-256-class (:background ,monokai-256-diff-red-emphasis))))
 
    `(ediff-fine-diff-B
-     ((,monokai-class (:background ,monokai-green-lc))
-      (,monokai-256-class (:background ,monokai-256-green-lc))))
+     ((,monokai-class (:background ,monokai-diff-green-emphasis))
+      (,monokai-256-class (:background ,monokai-256-diff-green-emphasis))))
 
    `(ediff-fine-diff-C
-     ((,monokai-class (:background ,monokai-yellow-lc))
-      (,monokai-256-class (:background ,monokai-256-yellow-lc))))
+     ((,monokai-class (:background ,monokai-diff-blue-emphasis))
+      (,monokai-256-class (:background ,monokai-256-diff-blue-emphasis))))
+
+   `(ediff-current-diff-A
+     ((,monokai-class (:background ,monokai-diff-red-base))
+      (,monokai-256-class (:background ,monokai-256-diff-red-base))))
+
+   `(ediff-current-diff-B
+     ((,monokai-class (:background ,monokai-diff-green-base))
+      (,monokai-256-class (:background ,monokai-256-diff-green-base))))
 
    `(ediff-current-diff-C
-     ((,monokai-class (:background ,monokai-blue-lc))
-      (,monokai-256-class (:background ,monokai-256-blue-lc))))
+     ((,monokai-class (:background ,monokai-diff-blue-base))
+      (,monokai-256-class (:background ,monokai-256-diff-blue-base))))
 
    `(ediff-even-diff-A
      ((,monokai-class (:background ,monokai-comments
@@ -4932,6 +4957,28 @@ Also affects 'linum-mode' background."
    `(slime-repl-inputed-output-face
      ((,monokai-class (:foreground ,monokai-red))
       (,monokai-256-class (:foreground ,monokai-256-red))))
+
+   ;; smerge
+   `(smerge-base
+      ((,monokai-class (:background ,monokai-diff-blue-base))
+        (,monokai-256-class (:background ,monokai-256-diff-blue-base))))
+   `(smerge-upper
+      ((,monokai-class (:background ,monokai-diff-red-base))
+        (,monokai-256-class (:background ,monokai-256-diff-red-base))))
+   `(smerge-lower
+      ((,monokai-class (:background ,monokai-diff-green-base))
+        (,monokai-256-class (:background ,monokai-256-diff-green-base))))
+   ;; WARNING: defining this face will overwrite the next two when displaying a
+   ;; smerge diff in a file.
+   ;; `(smerge-refined-changed
+   ;;    ((,monokai-class (:background ,monokai-diff-blue-emphasis))
+   ;;      (,monokai-256-class (:background ,monokai-256-diff-blue-emphasis))))
+   `(smerge-refined-added
+      ((,monokai-class (:background ,monokai-diff-green-emphasis))
+        (,monokai-256-class (:background ,monokai-256-diff-green-emphasis))))
+   `(smerge-refined-removed
+      ((,monokai-class (:background ,monokai-diff-red-emphasis))
+        (,monokai-256-class (:background ,monokai-256-diff-red-emphasis))))
 
    ;; speedbar
    `(speedbar-button-face
