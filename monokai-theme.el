@@ -3300,6 +3300,15 @@ Also affects 'linum-mode' background."
                                         :background ,monokai-256-highlight-line
                                         :underline nil))))
 
+   ;; lsp-mode
+   `(lsp-ui-doc-header
+     ((,monokai-class (:inherit org-document-title))
+      (,monokai-256-class (:inherit org-document-title))))
+
+   `(lsp-ui-doc-background
+     ((,monokai-class (:background ,monokai-highlight-line))
+      (,monokai-256-class (:background ,monokai-highlight-line))))
+
    ;; lusty-explorer
    `(lusty-directory-face
      ((,monokai-class (:inherit dimonokai-red-directory))
