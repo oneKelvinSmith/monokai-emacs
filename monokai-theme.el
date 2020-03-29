@@ -3329,117 +3329,265 @@ Also affects 'linum-mode' background."
                                         :weight bold))))
 
    ;; magit
-   ;;
-   ;; TODO: Add supports for all magit faces
-   ;; https://github.com/magit/magit/search?utf8=%E2%9C%93&q=face
-   ;;
+   `(magit-bisect-good
+     ((,monokai-class (:foreground ,monokai-green))
+      (,monokai-256-class (:foreground ,monokai-256-green))))
+
+   `(magit-bisect-skip
+     ((,monokai-class (:foreground ,monokai-orange))
+      (,monokai-256-class (:foreground ,monokai-256-orange))))
+
+   `(magit-bisect-bad
+     ((,monokai-class (:foreground ,monokai-red))
+      (,monokai-256-class (:foreground ,monokai-256-red))))
+
+   `(magit-blame-highlight
+     ((,monokai-class (:foreground ,monokai-foreground
+                                   :background ,monokai-highlight-alt))
+      (,monokai-256-class (:foreground ,monokai-256-foreground
+                                       :background ,monokai-256-highlight-alt))))
+
+   `(magit-diff-file-heading-selection
+     ((,monokai-class (:inherit magit-diff-file-heading-highlight
+                                :foreground ,monokai-orange-d))
+      (,monokai-256-class (:inherit magit-diff-file-heading-highlight
+                                   :foreground ,monokai-256-orange-d))))
+
+   `(magit-diff-hunk-heading
+     ((,monokai-class (:foreground ,monokai-gray-d
+                                   :background ,monokai-gray-l))
+      (,monokai-256-class (:foreground ,monokai-256-gray-d
+                                       :background ,monokai-256-gray-l))))
+
+   `(magit-diff-hunk-heading-highlight
+     ((,monokai-class (:foreground ,monokai-background
+                                   :background ,monokai-foreground))
+      (,monokai-256-class (:foreground ,monokai-256-background
+                                       :background ,monokai-256-foreground))))
+
+   `(magit-diff-hunk-heading-selection
+     ((,monokai-class (:inherit magit-diff-hunk-heading-highlight
+                                :foreground ,monokai-orange))
+      (,monokai-256-class (:inherit magit-diff-hunk-heading-highlight
+                                    :foreground ,monokai-256-orange))))
+
+   `(magit-diff-lines-heading
+     ((,monokai-class (:inherit magit-diff-hunk-heading-highlight
+                                :foreground ,monokai-background
+                                :background ,monokai-orange-l))
+      (,monokai-256-class (:inherit magit-diff-hunk-heading-highlight
+                                    :foreground ,monokai-256-background
+                                    :background ,monokai-256-orange-l))))
+
    `(magit-diff-added
      ((,monokai-class (:foreground ,monokai-green
                                    :background ,monokai-background))
       (,monokai-256-class (:foreground ,monokai-256-green
                                         :background ,monokai-256-background))))
 
-   `(magit-diff-added-highlight
-     ((,monokai-class (:foreground ,monokai-green
-                                   :background ,monokai-highlight-line))
-      (,monokai-256-class (:foreground ,monokai-256-green
-                                        :background ,monokai-256-highlight-line))))
-
    `(magit-diff-removed
      ((,monokai-class (:foreground ,monokai-red
                                    :background ,monokai-background))
       (,monokai-256-class (:foreground ,monokai-256-red
-                                        :background ,monokai-256-background))))
+                                       :background ,monokai-256-background))))
+
+   `(magit-diff-base
+     ((,monokai-class (:foreground ,monokai-yellow
+                                   :background ,monokai-background))
+      (,monokai-256-class (:foreground ,monokai-256-yellow
+                                       :background ,monokai-256-background))))
+
+   `(magit-diff-context
+     ((,monokai-class (:foreground ,monokai-gray-l))
+      (,monokai-256-class (:foreground ,monokai-256-gray-l))))
+
+   `(magit-diff-added-highlight
+     ((,monokai-class (:foreground ,monokai-green
+                                   :background ,monokai-highlight-alt))
+      (,monokai-256-class (:foreground ,monokai-256-green
+                                        :background ,monokai-256-highlight-alt))))
 
    `(magit-diff-removed-highlight
      ((,monokai-class (:foreground ,monokai-red
-                                   :background ,monokai-highlight-line))
+                                   :background ,monokai-highlight-alt))
       (,monokai-256-class (:foreground ,monokai-256-red
-                                        :background ,monokai-256-highlight-line))))
+                                        :background ,monokai-256-highlight-alt))))
 
-   `(magit-section-title
+   `(magit-diff-base-highlight
      ((,monokai-class (:foreground ,monokai-yellow
-                                   :weight bold))
+                                   :background ,monokai-highlight-alt))
       (,monokai-256-class (:foreground ,monokai-256-yellow
-                                        :weight bold))))
+                                       :background ,monokai-256-highlight-alt))))
 
-   `(magit-branch
-     ((,monokai-class (:foreground ,monokai-orange
-                                   :weight bold))
-      (,monokai-256-class (:foreground ,monokai-256-orange
-                                        :weight bold))))
+   `(magit-diff-context-highlight
+     ((,monokai-class (:foreground ,monokai-foreground
+                                   :background ,monokai-highlight-alt))
+      (,monokai-256-class (:foreground ,monokai-256-foreground
+                                       :background ,monokai-256-highlight-alt))))
 
-   `(magit-item-highlight
-     ((,monokai-class (:background ,monokai-highlight-line
-                                   :weight unspecified))
-      (,monokai-256-class (:background ,monokai-256-highlight-line
-                                        :weight unspecified))))
+   `(magit-diffstat-added
+     ((,monokai-class (:foreground ,monokai-green))
+      (,monokai-256-class (:foreground ,monokai-256-green))))
 
-   `(magit-log-author
-     ((,monokai-class (:foreground ,monokai-cyan))
-      (,monokai-256-class (:foreground ,monokai-256-cyan))))
+   `(magit-diffstat-removed
+     ((,monokai-class (:foreground ,monokai-red))
+      (,monokai-256-class (:foreground ,monokai-256-red))))
 
    `(magit-log-graph
      ((,monokai-class (:foreground ,monokai-comments))
       (,monokai-256-class (:foreground ,monokai-256-comments))))
 
-   `(magit-log-head-label-bisect-bad
-     ((,monokai-class (:background ,monokai-red-hc
-                                   :foreground ,monokai-red-lc
-                                   :box 1))
-      (,monokai-256-class (:background ,monokai-256-red-hc
-                                        :foreground ,monokai-256-red-lc
-                                        :box 1))))
+   `(magit-log-author
+     ((,monokai-class (:foreground ,monokai-red-d
+                                   :slant normal
+                                   :weight normal))
+      (,monokai-256-class (:foreground ,monokai-256-red-d
+                                       :slant normal
+                                       :weight normal))))
 
-   `(magit-log-head-label-bisect-good
-     ((,monokai-class (:background ,monokai-green-hc
-                                   :foreground ,monokai-green-lc
-                                   :box 1))
-      (,monokai-256-class (:background ,monokai-256-green-hc
-                                        :foreground ,monokai-256-green-lc
-                                        :box 1))))
+   `(magit-log-date
+     ((,monokai-class (:foreground ,monokai-gray
+                                   :slant normal
+                                   :weight normal))
+      (,monokai-256-class (:foreground ,monokai-256-gray
+                                       :slant normal
+                                       :weight normal))))
 
-   `(magit-log-head-label-default
-     ((,monokai-class (:background ,monokai-highlight-line
-                                   :box 1))
-      (,monokai-256-class (:background ,monokai-256-highlight-line
-                                        :box 1))))
+   `(magit-process-ok
+     ((,monokai-class (:inherit magit-section-heading
+                                :foreground ,monokai-green))
+      (,monokai-256-class (:inherit magit-section-heading
+                                    :foreground ,monokai-256-green))))
 
-   `(magit-log-head-label-local
-     ((,monokai-class (:background ,monokai-blue-lc
-                                   :foreground ,monokai-blue-hc
-                                   :box 1))
-      (,monokai-256-class (:background ,monokai-256-blue-lc
-                                        :foreground ,monokai-256-blue-hc
-                                        :box 1))))
+   `(magit-process-ng
+     ((,monokai-class (:inherit magit-section-heading
+                                :foreground ,monokai-red))
+      (,monokai-256-class (:inherit magit-section-heading
+                                    :foreground ,monokai-256-red))))
 
-   `(magit-log-head-label-patches
-     ((,monokai-class (:background ,monokai-red-lc
-                                   :foreground ,monokai-red-hc
-                                   :box 1))
-      (,monokai-256-class (:background ,monokai-256-red-lc
-                                        :foreground ,monokai-256-red-hc
-                                        :box 1))))
+   `(magit-reflog-commit
+     ((,monokai-class (:foreground ,monokai-green))
+      (,monokai-256-class (:foreground ,monokai-256-green))))
 
-   `(magit-log-head-label-remote
-     ((,monokai-class (:background ,monokai-green-lc
-                                   :foreground ,monokai-green-hc
-                                   :box 1))
-      (,monokai-256-class (:background ,monokai-256-green-lc
-                                        :foreground ,monokai-256-green-hc
-                                        :box 1))))
+   `(magit-reflog-amend
+     ((,monokai-class (:foreground ,monokai-magenta))
+      (,monokai-256-class (:foreground ,monokai-256-magenta))))
 
-   `(magit-log-head-label-tags
-     ((,monokai-class (:background ,monokai-yellow-lc
-                                   :foreground ,monokai-yellow-hc
-                                   :box 1))
-      (,monokai-256-class (:background ,monokai-256-yellow-lc
-                                        :foreground ,monokai-256-yellow-hc
-                                        :box 1))))
+   `(magit-reflog-merge
+     ((,monokai-class (:foreground ,monokai-green))
+      (,monokai-256-class (:foreground ,monokai-256-green))))
 
-   `(magit-log-sha1
-     ((,monokai-class (:foreground ,monokai-yellow))
-      (,monokai-256-class (:foreground ,monokai-256-yellow))))
+   `(magit-reflog-checkout
+     ((,monokai-class (:foreground ,monokai-blue))
+      (,monokai-256-class (:foreground ,monokai-256-blue))))
+
+   `(magit-reflog-reset
+     ((,monokai-class (:foreground ,monokai-red))
+      (,monokai-256-class (:foreground ,monokai-256-red))))
+
+   `(magit-reflog-rebase
+     ((,monokai-class (:foreground ,monokai-violet))
+      (,monokai-256-class (:foreground ,monokai-256-violet))))
+
+   `(magit-reflog-cherry-pick
+     ((,monokai-class (:foreground ,monokai-green))
+      (,monokai-256-class (:foreground ,monokai-256-green))))
+
+   `(magit-reflog-remote
+     ((,monokai-class (:foreground ,monokai-cyan))
+      (,monokai-256-class (:foreground ,monokai-256-cyan))))
+
+   `(magit-reflog-other
+     ((,monokai-class (:foreground ,monokai-cyan))
+      (,monokai-256-class (:foreground ,monokai-256-cyan))))
+
+   `(magit-section-highlight
+     ((,monokai-class (:background ,monokai-highlight-line))
+      (,monokai-256-class (:background ,monokai-256-highlight-line))))
+
+   `(magit-section-heading
+     ((,monokai-class (:foreground ,monokai-yellow
+                                   :weight bold))
+      (,monokai-256-class (:foreground ,monokai-256-yellow
+                                       :weight bold))))
+
+   `(magit-section-heading-selection
+     ((,monokai-class (:foreground ,monokai-orange))
+      (,monokai-256-class (:foreground ,monokai-256-orange))))
+
+   `(magit-sequence-stop
+     ((,monokai-class (:foreground ,monokai-cyan))
+      (,monokai-256-class (:foreground ,monokai-256-cyan))))
+
+   `(magit-sequence-part
+     ((,monokai-class (:foreground ,monokai-orange))
+      (,monokai-256-class (:foreground ,monokai-256-orange))))
+
+   `(magit-sequence-head
+     ((,monokai-class (:foreground ,monokai-blue))
+      (,monokai-256-class (:foreground ,monokai-256-blue))))
+
+   `(magit-sequence-drop
+     ((,monokai-class (:foreground ,monokai-red))
+      (,monokai-256-class (:foreground ,monokai-256-red))))
+
+   `(magit-dimmed
+     ((,monokai-class (:foreground ,monokai-comments))
+      (,monokai-256-class (:foreground ,monokai-256-comments))))
+
+   `(magit-hash
+     ((,monokai-class (:foreground ,monokai-comments))
+      (,monokai-256-class (:foreground ,monokai-256-comments))))
+
+   `(magit-tag
+     ((,monokai-class (:foreground ,monokai-orange))
+      (,monokai-256-class (:foreground ,monokai-256-orange))))
+
+   `(magit-branch-remote
+     ((,monokai-class (:foreground ,monokai-green))
+      (,monokai-256-class (:foreground ,monokai-256-green))))
+
+   `(magit-branch-local
+     ((,monokai-class (:foreground ,monokai-blue))
+      (,monokai-256-class (:foreground ,monokai-256-blue))))
+
+   `(magit-refname
+     ((,monokai-class (:foreground ,monokai-comments))
+      (,monokai-256-class (:foreground ,monokai-256-comments))))
+
+   `(magit-signature-good
+     ((,monokai-class (:foreground ,monokai-green-d))
+      (,monokai-256-class (:foreground ,monokai-256-green-d))))
+
+   `(magit-signature-bad
+     ((,monokai-class (:foreground ,monokai-red-d
+                                   :weight bold))
+      (,monokai-256-class (:foreground ,monokai-256-red-d
+                                       :weight bold))))
+
+   `(magit-signature-untrusted
+     ((,monokai-class (:foreground ,monokai-cyan))
+      (,monokai-256-class (:foreground ,monokai-256-cyan))))
+
+   `(magit-signature-expired
+     ((,monokai-class (:foreground ,monokai-orange))
+      (,monokai-256-class (:foreground ,monokai-256-orange))))
+
+   `(magit-signature-revoked
+     ((,monokai-class (:foreground ,monokai-magenta))
+      (,monokai-256-class (:foreground ,monokai-256-magenta))))
+
+   `(magit-signature-error
+     ((,monokai-class (:foreground ,monokai-red-l))
+      (,monokai-256-class (:foreground ,monokai-256-red-l))))
+
+   `(magit-cherry-unmatched
+     ((,monokai-class (:foreground ,monokai-cyan))
+      (,monokai-256-class (:foreground ,monokai-256-cyan))))
+
+   `(magit-cherry-equivalent
+     ((,monokai-class (:foreground ,monokai-magenta))
+      (,monokai-256-class (:foreground ,monokai-256-magenta))))
 
    ;; man
    `(Man-overstrike
