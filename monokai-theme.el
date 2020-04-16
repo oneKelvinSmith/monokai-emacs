@@ -5750,6 +5750,10 @@ Also affects 'linum-mode' background."
      ((,monokai-class (:foreground ,monokai-green))
       (,monokai-256-class (:foreground ,monokai-256-green))))
 
+   `(web-mode-html-tag-bracket-face
+     ((,monokai-class (:foreground ,monokai-gray))
+      (,monokai-256-class (:foreground ,monokai-256-gray))))
+
    `(web-mode-keyword-face
      ((,monokai-class (:foreground ,monokai-red))
       (,monokai-256-class (:foreground ,monokai-256-red))))
