@@ -225,10 +225,12 @@ Also affects 'linum-mode' background."
        (monokai-foreground-lc  "#171A0B")
        ;; High contrast colors
        (monokai-yellow-hc      "#FFFACE")
+       (monokai-yellow-hc-alt  "#E7DB74")
        (monokai-yellow-lc      "#9A8F21")
        (monokai-orange-hc      "#FFBE74")
        (monokai-orange-lc      "#A75B00")
        (monokai-red-hc         "#FEB0CC")
+       (monokai-red-hc-alt     "#F83535")
        (monokai-red-lc         "#F20055")
        (monokai-magenta-hc     "#FEC6F9")
        (monokai-magenta-lc     "#F309DF")
@@ -239,6 +241,7 @@ Also affects 'linum-mode' background."
        (monokai-cyan-hc        "#D3FBF6")
        (monokai-cyan-lc        "#4BBEAE")
        (monokai-green-hc       "#CCF47C")
+       (monokai-green-hc-alt   "#A6E22C")
        (monokai-green-lc       "#679A01")
 
        ;; Distinct fringe
@@ -1638,27 +1641,27 @@ Also affects 'linum-mode' background."
 
    ;; diff-hl
    `(diff-hl-change
-     ((,monokai-class (:background ,monokai-blue-lc
-                                   :foreground ,monokai-blue-hc))
-      (,monokai-256-class (:background ,monokai-256-blue-lc
-                                        :foreground ,monokai-256-blue-hc))))
+     ((,monokai-class (:background ,monokai-yellow-hc-alt
+                                   :foreground ,monokai-yellow-hc-alt))
+      (,monokai-256-class (:background ,monokai-256-yellow-hc
+                                        :foreground ,monokai-256-yellow-hc))))
 
    `(diff-hl-delete
-     ((,monokai-class (:background ,monokai-red-lc
-                                   :foreground ,monokai-red-hc))
-      (,monokai-256-class (:background ,monokai-256-red-lc
+     ((,monokai-class (:background ,monokai-red-hc-alt
+                                   :foreground ,monokai-red-hc-alt))
+      (,monokai-256-class (:background ,monokai-256-red-hc
                                         :foreground ,monokai-256-red-hc))))
 
    `(diff-hl-insert
-     ((,monokai-class (:background ,monokai-green-lc
-                                   :foreground ,monokai-green-hc))
-      (,monokai-256-class (:background ,monokai-256-green-lc
+     ((,monokai-class (:background ,monokai-green-hc-alt
+                                   :foreground ,monokai-green-hc-alt))
+      (,monokai-256-class (:background ,monokai-256-green-hc
                                         :foreground ,monokai-256-green-hc))))
 
    `(diff-hl-unknown
-     ((,monokai-class (:background ,monokai-violet-lc
+     ((,monokai-class (:background ,monokai-violet-hc
                                    :foreground ,monokai-violet-hc))
-      (,monokai-256-class (:background ,monokai-256-violet-lc
+      (,monokai-256-class (:background ,monokai-256-violet-hc
                                         :foreground ,monokai-256-violet-hc))))
 
    ;; ediff
