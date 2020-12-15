@@ -2926,6 +2926,8 @@ Also affects 'linum-mode' background."
 
    `(hi-red-b
      ((,monokai-class (:foreground ,monokai-red
+                                   :weight bold))
+      (,monokai-256-class (:foreground ,monokai-256-red
                                    :weight bold))))
 
    `(hi-black-hb
