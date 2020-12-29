@@ -881,7 +881,7 @@ Also affects 'linum-mode' background."
        (:inherit (font-latex-doctex-documentation-face
                   font-lock-builtin-face
                   font-lock-preprocessor-face)))
-      (,monokai-class
+      (,monokai-256-class
        (:inherit (font-latex-doctex-documentation-face
                   font-lock-builtin-face
                   font-lock-preprocessor-face)))))
