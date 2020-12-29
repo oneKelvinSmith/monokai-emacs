@@ -2745,8 +2745,8 @@ Also affects 'linum-mode' background."
       (,monokai-256-class (:foreground ,monokai-256-orange))))
 
    `(helm-grep-match
-     ((,monokai-class (:inherit helm-match)))
-     ((,monokai-256-class (:inherit helm-match))))
+     ((,monokai-class (:inherit helm-match))
+      (,monokai-256-class (:inherit helm-match))))
 
    `(helm-grep-running
      ((,monokai-class (:foreground ,monokai-red))
@@ -4564,8 +4564,8 @@ Also affects 'linum-mode' background."
 
    `(org-todo
      ((,monokai-class (:foreground ,monokai-red
-                                   :weight bold)))
-     ((,monokai-256-class (:foreground ,monokai-256-red
+                                   :weight bold))
+      (,monokai-256-class (:foreground ,monokai-256-red
                                         :weight bold))))
 
    `(org-upcoming-deadline
@@ -4859,29 +4859,29 @@ Also affects 'linum-mode' background."
       (,monokai-256-class (:foreground ,monokai-256-orange-d))))
 
    `(realgud-bp-enabled-face
-     ((,monokai-class (:inherit error)))
-     ((,monokai-256-class (:inherit error))))
+     ((,monokai-class (:inherit error))
+      (,monokai-256-class (:inherit error))))
 
    `(realgud-bp-disabled-face
-     ((,monokai-class (:inherit secondary-selection)))
-     ((,monokai-256-class (:inherit secondary-selection))))
+     ((,monokai-class (:inherit secondary-selection))
+      (,monokai-256-class (:inherit secondary-selection))))
 
    `(realgud-bp-line-enabled-face
-     ((,monokai-class (:foreground ,monokai-red-d)))
-     ((,monokai-256-class (:foreground ,monokai-256-red-d))))
+     ((,monokai-class (:foreground ,monokai-red-d))
+      (,monokai-256-class (:foreground ,monokai-256-red-d))))
 
    `(realgud-bp-line-disabled-face
-     ((,monokai-class (:inherit secondary-selection)))
-     ((,monokai-256-class (:inherit secondary-selection))))
+     ((,monokai-class (:inherit secondary-selection))
+      (,monokai-256-class (:inherit secondary-selection))))
 
    `(realgud-line-number
-     ((,monokai-class (:inerhit monokai-line-number)))
-     ((,monokai-256-class (:inerhit monokai-line-number))))
+     ((,monokai-class (:inerhit monokai-line-number))
+      (,monokai-256-class (:inerhit monokai-line-number))))
 
    `(realgud-backtrace-number
      ((,monokai-class (:foreground ,monokai-yellow-d
-                                   :weight bold)))
-     ((,monokai-256-class (:foreground ,monokai-256-yellow
+                                   :weight bold))
+      (,monokai-256-class (:foreground ,monokai-256-yellow
                                        :weight bold))))
 
    ;; rhtm-mode
