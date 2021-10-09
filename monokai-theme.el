@@ -1366,16 +1366,12 @@ Also affects 'linum-mode' background."
                                         :foreground ,monokai-256-emphasis))))
 
    `(company-tooltip-selection
-     ((,monokai-class (:background ,monokai-blue
-                                   :foreground ,monokai-background))
-      (,monokai-256-class (:background ,monokai-256-blue
-                                        :foreground ,monokai-256-background))))
+     ((,monokai-class (:background ,monokai-highlight))
+      (,monokai-256-class (:background ,monokai-256-highlight))))
 
    `(company-tooltip-mouse
-     ((,monokai-class (:background ,monokai-blue
-                                   :foreground ,monokai-background))
-      (,monokai-256-class (:background ,monokai-256-blue
-                                        :foreground ,monokai-256-background))))
+     ((,monokai-class (:background ,monokai-highlight))
+      (,monokai-256-class (:background ,monokai-256-highlight))))
 
    `(company-tooltip-common
      ((,monokai-class (:foreground ,monokai-blue
@@ -1385,11 +1381,9 @@ Also affects 'linum-mode' background."
 
    `(company-tooltip-common-selection
      ((,monokai-class (:foreground ,monokai-background
-                                   :background ,monokai-blue
-                                   :underline t))
+                                   :background ,monokai-blue))
       (,monokai-256-class (:foreground ,monokai-256-background
-                                        :background ,monokai-256-blue
-                                        :underline t))))
+                                        :background ,monokai-256-blue))))
 
    `(company-preview
      ((,monokai-class (:background ,monokai-highlight-line
