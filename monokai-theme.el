@@ -1,4 +1,4 @@
-;;; monokai-theme.el --- A fruity color theme for Emacs.
+;;; monokai-theme.el --- A fruity color theme for Emacs. -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2011-2016
 
