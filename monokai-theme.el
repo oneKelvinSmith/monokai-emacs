@@ -617,38 +617,23 @@ Also affects 'linum-mode' background."
 
    ;; tab-line
    `(tab-line
-     ((,monokai-class (:foreground ,monokai-foreground
-                                   :background ,monokai-highlight))
-      (,monokai-256-class (:foreground ,monokai-256-foreground
-                                       :background ,monokai-256-highlight))))
+     ((,monokai-class (:height 1.5))
+      (,monokai-256-class (:height 1.5))))
    `(tab-line-highlight
-     ((,monokai-class (:underline t))
-      (,monokai-256-class (:underline t))))
+     ((,monokai-class (:inherit tab-line :background ,monokai-highlight))
+      (,monokai-256-class (:inherit tab-line :background ,monokai-256-highlight))))
    `(tab-line-tab
-     ((,monokai-class (:foreground ,monokai-foreground
-				   :background ,monokai-background
-				   :box (:line-width 4 :color ,monokai-background)))
-      (,monokai-256-class (:foreground ,monokai-256-foreground
-				       :background ,monokai-256-background
-				       :box (:line-width 4 :color ,monokai-background)))))
+     ((,monokai-class (:inherit tab-line :height 0.5))
+      (,monokai-256-class (:inherit tab-line :height 0.5))))
    `(tab-line-tab-current
-     ((,monokai-class (:inherit tab-line-tab)))
-      (,monokai-256-class (:inherit tab-line-tab)))
+     ((,monokai-class (:inherit tab-line-tab :overline t :weight bold))
+      (,monokai-256-class (:inherit tab-line-tab :overline t :weight bold))))
    `(tab-line-tab-inactive
-     ((,monokai-class (:inherit tab-line-tab
-				:foreground ,monokai-comments
-				:background ,monokai-highlight
-				:box (:line-width 4 :color ,monokai-highlight)))
-      (,monokai-256-class (:inherit tab-line-tab
-				    :foreground ,monokai-256-comments
-				    :background ,monokai-256-highlight
-				    :box (:line-width 4 :color ,monokai-256-highlight)))))
-   `(tab-line-tab-inactive-alternate
-     ((,monokai-class (:inherit tab-line-tab-inactive))
-      (,monokai-256-class (:inherit tab-line-tab-inactive))))
-   `(tab-line-tab-modified
      ((,monokai-class (:inherit tab-line-tab))
       (,monokai-256-class (:inherit tab-line-tab))))
+   `(tab-line-tab-inactive-alternate
+     ((,monokai-class (:inherit tab-line-tab-inactive))
+      (,monokai-256-class (:inherit tab-line-tab-inactive))))   
 
    ;; window-tool-bar
    `(window-tool-bar-button
@@ -5412,7 +5397,6 @@ Also affects 'linum-mode' background."
                                    :foreground ,monokai-magenta))
       (,monokai-256-class (:background unspecified
                                         :foreground ,monokai-256-magenta))))
-
    ;; table
    `(table-cell
      ((,monokai-class (:foreground ,monokai-foreground
@@ -6224,7 +6208,7 @@ Also affects 'linum-mode' background."
      ((,monokai-class (:background ,monokai-highlight-line
                                    :box ,monokai-emphasis))
       (,monokai-256-class (:background ,monokai-256-highlight-line
-                                        :box ,monokai-256-emphasis)))))
+                                       :box ,monokai-256-emphasis)))))
 
   (custom-theme-set-variables
    'monokai
