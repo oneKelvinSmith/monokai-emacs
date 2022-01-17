@@ -6153,6 +6153,14 @@ Also affects 'linum-mode' background."
                                    :weight bold))
       (,monokai-256-class (:foreground ,monokai-256-red
                                         :weight bold))))
+
+   ;; window-divider-mode
+   `(window-divider
+     ((,monokai-class (:foreground ,monokai-highlight))
+      (,monokai-256-class (:foreground ,monokai-highlight))))
+   `(window-divider-first-pixel ((t (:inherit window-divider))))
+   `(window-divider-last-pixel ((t (:inherit window-divider))))
+
    ;; window-number-mode
    `(window-number-face
      ((,monokai-class (:foreground ,monokai-green))
