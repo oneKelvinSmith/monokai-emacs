@@ -1400,7 +1400,21 @@ Also affects 'linum-mode' background."
      ((,monokai-class (:background ,monokai-highlight-line
                                    :foreground ,monokai-blue))
       (,monokai-256-class (:background ,monokai-256-highlight-line
-                                        :foreground ,monokai-256-blue))))
+                                       :foreground ,monokai-256-blue))))
+   
+   ;; corfu
+   `(corfu-current
+     ((,monokai-class (:background ,monokai-highlight))
+      (,monokai-256-class (:background ,monokai-256-highlight))))
+
+   `(corfu-default
+     ((,monokai-class (:foreground ,monokai-foreground
+                                   :background ,monokai-background))
+      (,monokai-256-class (:foreground ,monokai-256-foreground
+                                       :background ,monokai-256-background))))
+   `(corfu-annotations
+     ((,monokai-class (:foreground ,monokai-green))
+      (,monokai-256-class (:foreground ,monokai-256-green))))
 
    ;; compilation
    `(compilation-column-face
