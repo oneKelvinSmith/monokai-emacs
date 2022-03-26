@@ -422,7 +422,11 @@ Also affects 'linum-mode' background."
       ((,monokai-class (:foreground ,monokai-foreground
                                     :background ,monokai-background))
        (,monokai-256-class (:foreground ,monokai-256-foreground
-                                         :background ,monokai-256-background))))
+                                        :background ,monokai-256-background))))
+
+   `(italic
+         ((,monokai-class (:underline nil))
+          (,monokai-256-class (:underline nil))))
 
    `(highlight
      ((,monokai-class (:background ,monokai-highlight))
