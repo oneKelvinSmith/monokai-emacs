@@ -425,8 +425,8 @@ Also affects 'linum-mode' background."
                                         :background ,monokai-256-background))))
 
    `(italic
-         ((,monokai-class (:underline nil))
-          (,monokai-256-class (:underline nil))))
+     ((,monokai-class (:underline nil))
+      (,monokai-256-class (:underline nil))))
 
    `(highlight
      ((,monokai-class (:background ,monokai-highlight))
@@ -1412,20 +1412,27 @@ Also affects 'linum-mode' background."
       (,monokai-256-class (:background ,monokai-256-highlight))))
 
    `(corfu-default
-     ((,monokai-class (:foreground ,monokai-foreground
-                                   :background ,monokai-background))
-      (,monokai-256-class (:foreground ,monokai-256-foreground
-                                       :background ,monokai-256-background))))
+     ((,monokai-class (:foreground ,monokai-foreground :background ,monokai-background))
+      (,monokai-256-class (:foreground ,monokai-256-foreground :background ,monokai-256-background))))
+   
    `(corfu-annotations
      ((,monokai-class (:foreground ,monokai-green))
       (,monokai-256-class (:foreground ,monokai-256-green))))
+
+   `(corfu-bar
+     ((,monokai-class (:background ,monokai-gray-l))
+      (,monokai-256-class (:background ,monokai-256-gray-l))))
+
+   `(corfu-border
+     ((,monokai-class (:background ,monokai-gray-d))
+           (,monokai-256-class (:background ,monokai-256-gray-d))))
 
    ;; compilation
    `(compilation-column-face
      ((,monokai-class (:foreground ,monokai-cyan
                                    :underline nil))
       (,monokai-256-class (:foreground ,monokai-256-cyan
-                                        :underline nil))))
+                                       :underline nil))))
 
    `(compilation-column-number
      ((,monokai-class (:inherit font-lock-doc-face
