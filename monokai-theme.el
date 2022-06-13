@@ -1408,6 +1408,10 @@ Also affects 'linum-mode' background."
       (,monokai-256-class (:background ,monokai-256-highlight-line
                                        :foreground ,monokai-256-blue))))
    
+   `(child-frame-border
+     ((,monokai-class (:background ,monokai-gray-d))
+      (,monokai-256-class (:background ,monokai-256-gray-d))))
+   
    ;; corfu
    `(corfu-current
      ((,monokai-class (:background ,monokai-highlight))
@@ -3363,8 +3367,8 @@ Also affects 'linum-mode' background."
       (,monokai-256-class (:inherit org-document-title))))
 
    `(lsp-ui-doc-background
-     ((,monokai-class (:background ,monokai-highlight-line))
-      (,monokai-256-class (:background ,monokai-highlight-line))))
+     ((,monokai-class (:background ,monokai-background))
+      (,monokai-256-class (:background ,monokai-background))))
 
    ;; lusty-explorer
    `(lusty-directory-face
