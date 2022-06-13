@@ -575,6 +575,14 @@ Also affects 'linum-mode' background."
                                                              :color ,monokai-256-highlight
                                                              :style nil)))))
 
+   `(mode-line-highlight
+     ((,monokai-class (:background ,monokai-gray))
+      (,monokai-256-class (:background ,monokai-256-gray))))
+
+   `(doom-modeline-bar
+     ((,monokai-class (:background ,monokai-gray-l))
+      (,monokai-256-class (:background ,monokai-256-gray-l))))
+
    `(powerline-active1
      ((,monokai-class (:background ,monokai-gray-d))
       (,monokai-256-class (:background ,monokai-256-gray-d))))
@@ -582,7 +590,6 @@ Also affects 'linum-mode' background."
    `(powerline-active2
      ((,monokai-class (:background ,monokai-background))
       (,monokai-256-class (:background ,monokai-256-background))))
-
 
    `(mode-line-inactive
      ((,monokai-class (:inverse-video unspecified
@@ -607,6 +614,10 @@ Also affects 'linum-mode' background."
    `(powerline-inactive2
      ((,monokai-class (:background ,monokai-background))
       (,monokai-256-class (:background ,monokai-256-background))))
+
+   `(doom-modeline-bar-inactive
+     ((,monokai-class (:background ,monokai-gray-d))
+      (,monokai-256-class (:background ,monokai-256-gray-d))))
 
    ;; header-line
    `(header-line
@@ -1408,7 +1419,7 @@ Also affects 'linum-mode' background."
       (,monokai-256-class (:background ,monokai-256-highlight-line
                                        :foreground ,monokai-256-blue))))
    
-   `(child-frame-border
+   `(internal-border
      ((,monokai-class (:background ,monokai-gray-d))
       (,monokai-256-class (:background ,monokai-256-gray-d))))
    
@@ -3367,8 +3378,8 @@ Also affects 'linum-mode' background."
       (,monokai-256-class (:inherit org-document-title))))
 
    `(lsp-ui-doc-background
-     ((,monokai-class (:background ,monokai-background))
-      (,monokai-256-class (:background ,monokai-background))))
+     ((,monokai-class (:background ,monokai-gray-d))
+      (,monokai-256-class (:background ,monokai-256-gray-d))))
 
    ;; lusty-explorer
    `(lusty-directory-face
