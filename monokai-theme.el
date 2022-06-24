@@ -1422,6 +1422,10 @@ Also affects 'linum-mode' background."
    `(internal-border
      ((,monokai-class (:background ,monokai-gray-d))
       (,monokai-256-class (:background ,monokai-256-gray-d))))
+
+   `(child-frame-border
+     ((,monokai-class (:inherit internal-border))
+      (,monokai-256-class (:inherit internal-border))))
    
    ;; corfu
    `(corfu-current
@@ -3024,6 +3028,54 @@ Also affects 'linum-mode' background."
    `(highlight-indentation-current-column-face
      ((,monokai-class (:background ,monokai-gray))
       (,monokai-256-class (:background ,monokai-256-gray))))
+   
+   ;; highlight-indent-guides
+   ;; ---
+   ;; Gray colors sorted by brightness:
+   ;; monokai-gray-d
+   ;; monokai-highlight-alt
+   ;; monokai-highlight-line
+   ;; monokai-highlight
+   ;; monokai-gray
+   ;; monokai-comments
+   ;; monokai-gray-l
+   ;; monokai-line-number
+   ;; ---
+   `(highlight-indent-guides-odd-face
+     ((,monokai-class (:background ,monokai-gray-d))
+      (,monokai-256-class (:background ,monokai-256-gray-d))))
+   
+   `(highlight-indent-guides-even-face
+     ((,monokai-class (:background ,monokai-highlight-alt))
+      (,monokai-256-class (:background ,monokai-256-highlight-alt))))
+
+   `(highlight-indent-guides-top-odd-face
+     ((,monokai-class (:background ,monokai-highlight))
+      (,monokai-256-class (:background ,monokai-256-highlight))))
+   
+   `(highlight-indent-guides-top-even-face
+     ((,monokai-class (:background ,monokai-highlight))
+      (,monokai-256-class (:background ,monokai-256-highlight))))
+   
+   `(highlight-indent-guides-character-face
+     ((,monokai-class (:foreground ,monokai-highlight))
+      (,monokai-256-class (:foreground ,monokai-256-highlight))))
+   
+   `(highlight-indent-guides-stack-odd-face
+     ((,monokai-class (:background ,monokai-highlight-alt))
+      (,monokai-256-class (:background ,monokai-256-highlight-alt))))
+   
+   `(highlight-indent-guides-stack-even-face
+     ((,monokai-class (:background ,monokai-highlight-line))
+      (,monokai-256-class (:background ,monokai-256-highlight-line))))
+   
+   `(highlight-indent-guides-top-character-face
+     ((,monokai-class (:foreground ,monokai-gray))
+      (,monokai-256-class (:foreground ,monokai-256-gray))))
+   
+   `(highlight-indent-guides-stack-character-face
+     ((,monokai-class (:foreground ,monokai-gray))
+      (,monokai-256-class (:foreground ,monokai-256-gray))))
 
    ;; highlight-symbol
    `(highlight-symbol-face
@@ -4753,7 +4805,11 @@ Also affects 'linum-mode' background."
      ((,monokai-class (:foreground ,monokai-magenta
                                    :underline t))
       (,monokai-256-class (:foreground ,monokai-256-magenta
-                                        :underline t))))
+                                       :underline t))))
+
+   `(org-remark-highlighter
+     ((,monokai-class (:background ,monokai-highlight :underline ,monokai-gray-l))
+           (,monokai-256-class (:background ,monokai-256-highlight :underline ,monokai-256-gray-l))))
 
    `(org-latex-and-export-specials
      ((,monokai-class (:foreground ,monokai-orange))
