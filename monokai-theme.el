@@ -2058,7 +2058,7 @@ Also affects 'linum-mode' background."
      ((,monokai-class (:foreground ,monokai-blue
                                    :inherit bold))
       (,monokai-256-class (:foreground ,monokai-256-blue
-                                        :inherit bold))))
+                                       :inherit bold))))
 
    `(eshell-ls-archive
      ((,monokai-class (:foreground ,monokai-red
@@ -2108,7 +2108,28 @@ Also affects 'linum-mode' background."
      ((,monokai-class (:foreground ,monokai-cyan
                                    :inherit bold))
       (,monokai-256-class (:foreground ,monokai-256-cyan
-                                        :inherit bold))))
+                                       :inherit bold))))
+
+   ;; eshell-prompt-extras
+   `(epe-pipeline-delimiter-face
+     ((,monokai-class (:foreground ,monokai-green))
+      (,monokai-256-class (:foreground ,monokai-256-green))))
+   
+   `(epe-pipeline-user-face
+     ((,monokai-class (:foreground ,monokai-red))
+      (,monokai-256-class (:foreground ,monokai-256-red))))
+
+   `(epe-pipeline-time-face
+     ((,monokai-class (:foreground ,monokai-yellow))
+      (,monokai-256-class (:foreground ,monokai-256-yellow))))
+
+   `(epe-pipeline-host-face
+     ((,monokai-class (:foreground ,monokai-orange))
+      (,monokai-256-class (:foreground ,monokai-256-orange))))
+
+   `(epe-git-dir-face
+     ((,monokai-class (:foreground ,monokai-yellow-d))
+      (,monokai-256-class (:foreground ,monokai-256-yellow-d))))
 
    ;; evil-ex-substitute
    `(evil-ex-substitute-matches
@@ -3090,6 +3111,19 @@ Also affects 'linum-mode' background."
    `(hl-line-face
      ((,monokai-class (:background ,monokai-highlight-line))
       (,monokai-256-class (:background ,monokai-256-highlight-line))))
+
+   ;; tty-menu
+   `(tty-menu-enabled-face
+     ((,monokai-class (:background ,monokai-gray-d))
+      (,monokai-256-class (:background ,monokai-256-gray-d))))
+
+   `(tty-menu-disabled-face
+     ((,monokai-class (:foreground ,monokai-comments :background ,monokai-gray-d))
+      (,monokai-256-class (:foreground ,monokai-256-comments :background ,monokai-256-gray-d))))
+
+   `(tty-menu-selected-face
+     ((,monokai-class (:background ,monokai-highlight))
+      (,monokai-256-class (:background ,monokai-256-highlight))))
 
    ;; ido-mode
    `(ido-first-match
