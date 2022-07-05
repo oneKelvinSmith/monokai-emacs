@@ -511,12 +511,12 @@ Also affects 'linum-mode' background."
                                         :weight normal))))
 
    `(success
-     ((,monokai-class (:foreground ,monokai-green ))
-      (,monokai-256-class (:foreground ,monokai-256-green ))))
+     ((,monokai-class (:foreground ,monokai-green))
+      (,monokai-256-class (:foreground ,monokai-256-green))))
 
    `(warning
-     ((,monokai-class (:foreground ,monokai-yellow ))
-      (,monokai-256-class (:foreground ,monokai-256-yellow ))))
+     ((,monokai-class (:foreground ,monokai-yellow))
+      (,monokai-256-class (:foreground ,monokai-256-yellow))))
 
    `(error
      ((,monokai-class (:foreground ,monokai-red))
@@ -1420,8 +1420,8 @@ Also affects 'linum-mode' background."
                                        :foreground ,monokai-256-blue))))
    
    `(internal-border
-     ((,monokai-class (:background ,monokai-gray-d))
-      (,monokai-256-class (:background ,monokai-256-gray-d))))
+     ((,monokai-class (:background ,monokai-highlight-alt))
+      (,monokai-256-class (:background ,monokai-highlight-alt))))
 
    `(child-frame-border
      ((,monokai-class (:inherit internal-border))
@@ -1433,8 +1433,8 @@ Also affects 'linum-mode' background."
       (,monokai-256-class (:background ,monokai-256-highlight))))
 
    `(corfu-default
-     ((,monokai-class (:foreground ,monokai-foreground :background ,monokai-background))
-      (,monokai-256-class (:foreground ,monokai-256-foreground :background ,monokai-256-background))))
+     ((,monokai-class (:foreground ,monokai-foreground :background ,monokai-gray-d))
+      (,monokai-256-class (:foreground ,monokai-256-foreground :background ,monokai-256-gray-d))))
    
    `(corfu-annotations
      ((,monokai-class (:foreground ,monokai-green))
@@ -1445,8 +1445,8 @@ Also affects 'linum-mode' background."
       (,monokai-256-class (:background ,monokai-256-gray-l))))
 
    `(corfu-border
-     ((,monokai-class (:background ,monokai-gray-d))
-           (,monokai-256-class (:background ,monokai-256-gray-d))))
+     ((,monokai-class (:inherit internal-border))
+           (,monokai-256-class (:inherit internal-border))))
 
    ;; compilation
    `(compilation-column-face
@@ -1619,6 +1619,26 @@ Also affects 'linum-mode' background."
                                         :slant italic))))
 
    ;; custom
+   `(custom-button
+     ((,monokai-class (:foreground ,monokai-foreground
+                                   :background ,monokai-gray-d
+                                   :box (:line-width 2 :color ,monokai-highlight-alt)))
+      (,monokai-256-class (:foreground ,monokai-256-foreground
+                                       :background ,monokai-256-gray-d
+                                       :box (:line-width 2 :color ,monokai-256-highlight-alt)))))
+   
+   `(custom-button-mouse
+     ((,monokai-class (:inherit custom-button))
+      (,monokai-256-class (:inherit custom-button))))
+   
+   `(custom-button-pressed
+     ((,monokai-class (:inherit custom-button-mouse
+                                :background ,monokai-highlight
+                                :box (:line-width 2 :color ,monokai-highlight)))
+      (,monokai-256-class (:inherit custom-button-mouse
+                                    :background ,monokai-256-highlight
+                                    :box (:line-width 2 :color ,monokai-256-highlight)))))
+   
    `(custom-face-tag
      ((,monokai-class (:inherit ,monokai-pitch
                                 :height ,monokai-height-plus-3
@@ -5088,7 +5108,44 @@ Also affects 'linum-mode' background."
      ((,monokai-class (:foreground ,monokai-cyan
                                    :background ,monokai-background))
       (,monokai-256-class (:foreground ,monokai-256-cyan
-                                        :background ,monokai-256-background))))
+                                       :background ,monokai-256-background))))
+
+   ;; eww
+   `(eww-valid-certificate
+     ((,monokai-class (:inherit success))
+      (,monokai-256-class (:inherit success))))
+
+   `(eww-valid-certificate
+     ((,monokai-class (:inherit error))
+      (,monokai-256-class (:inherit error))))
+
+   `(eww-form-text
+     ((,monokai-class (:background ,monokai-gray-d :box (:color ,monokai-highlight-alt)))
+      (,monokai-256-class (:background ,monokai-gray-d :box (:color ,monokai-highlight-alt)))))
+
+   `(eww-form-textarea
+     ((,monokai-class (:inherit eww-form-text))
+      (,monokai-256-class (:inherit eww-form-text))))
+
+   `(eww-form-select
+     ((,monokai-class (:foreground ,monokai-foreground
+                                   :background ,monokai-gray-d
+                                   :box (:line-width 2 :color ,monokai-highlight-alt)))
+      (,monokai-256-class (:foreground ,monokai-foreground
+                                       :background ,monokai-gray-d
+                                       :box (:line-width 2 :color ,monokai-256-highlight-alt)))))
+
+   `(eww-form-file
+     ((,monokai-class (:inherit eww-form-select))
+      (,monokai-256-class (:inherit eww-form-select))))
+   
+   `(eww-form-submit
+     ((,monokai-class (:inherit eww-form-select))
+      (,monokai-256-class (:inherit eww-form-select))))
+   
+   `(eww-form-checkbox
+     ((,monokai-class (:inherit eww-form-select))
+      (,monokai-256-class (:inherit eww-form-select))))
 
    ;; rst-mode
    `(rst-level-1-face
@@ -5181,7 +5238,54 @@ Also affects 'linum-mode' background."
      ((,monokai-class (:foreground ,monokai-yellow
                                    :weight bold))
       (,monokai-256-class (:foreground ,monokai-256-yellow
-                                        :weight bold))))
+                                       :weight bold))))
+
+   ;; shr
+   `(shr-h1
+     ((,monokai-class (:inherit shr-text :height 1.5 :weight bold))
+      (,monokai-256-class (:inherit shr-text :height 1.5 :weight bold))))
+
+   `(shr-h2
+     ((,monokai-class (:inherit shr-text :height 1.4 :weight bold))
+      (,monokai-256-class (:inherit shr-text :height 1.4 :weight bold))))
+
+   `(shr-h3
+     ((,monokai-class (:inherit shr-text :height 1.3 :weight bold))
+      (,monokai-256-class (:inherit shr-text :height 1.3 :weight bold))))
+
+   `(shr-h4
+     ((,monokai-class (:inherit shr-text :height 1.2 :weight bold))
+      (,monokai-256-class (:inherit shr-text :height 1.2 :weight bold))))
+
+   `(shr-h5
+     ((,monokai-class (:inherit shr-text :height 1.1 :weight bold))
+      (,monokai-256-class (:inherit shr-text :height 1.1 :weight bold))))
+
+   `(shr-h6
+        ((,monokai-class (:inherit shr-text :weight bold))
+         (,monokai-256-class (:inherit shr-text :weight bold))))
+
+   `(shr-sup
+     ((,monokai-class (:inherit shr-text :height 0.8))
+      (,monokai-256-class (:inherit shr-text :height 0.8))))
+   
+   `(shr-abbreviation
+     ((,monokai-class (:inherit shr-text :underline (:style wave)))
+      (,monokai-256-class (:inherit shr-text :underline (:style wave)))))
+   
+   `(shr-link
+     ((,monokai-class (:inherit shr-text :foreground ,monokai-blue
+                                :underline t :weight bold))
+      (,monokai-256-class (:inherit shr-text :foreground ,monokai-256-blue
+                                    :underline t :weight bold))))
+
+   `(shr-selected-link
+     ((,monokai-class (:inherit shr-link :foreground ,monokai-background :background ,monokai-blue))
+      (,monokai-256-class (:inherit shr-link :foreground ,monokai-background :background ,monokai-blue))))
+
+   `(shr-strike-through
+     ((,monokai-class (:inherit shr-text :strike-through t))
+      (,monokai-256-class (:inherit shr-text :strike-through t))))
 
    ;; smartparens
    `(sp-pair-overlay-face
@@ -6139,6 +6243,27 @@ Also affects 'linum-mode' background."
                                         :foreground ,monokai-256-orange
                                         :inverse-video t
                                         :weight bold))))
+
+   ;; widget
+   `(widget-field
+     ((,monokai-class (:foreground ,monokai-foreground
+                                   :background ,monokai-gray-d
+                                   :box (:color ,monokai-highlight-alt)))
+      (,monokai-256-class (:foreground ,monokai-256-foreground
+                                       :background ,monokai-256-gray-d
+                                       :box (:color ,monokai-256-highlight-alt)))))
+   
+   `(widget-single-line-field
+     ((,monokai-class (:inherit widget-field :box nil))
+      (,monokai-256-class (:inherit widget-field :box nil))))
+   
+   `(widget-button-pressed
+     ((,monokai-class (:foreground ,monokai-red))
+      (,monokai-256-class (:foreground ,monokai-256-red))))
+   
+   `(widget-documentation
+        ((,monokai-class (:foreground ,monokai-green))
+         (,monokai-256-class (:foreground ,monokai-256-green))))
 
    ;; wanderlust
    `(wl-highlight-folder-few-face
