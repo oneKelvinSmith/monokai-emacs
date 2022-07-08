@@ -1433,8 +1433,8 @@ Also affects 'linum-mode' background."
       (,monokai-256-class (:background ,monokai-256-highlight))))
 
    `(corfu-default
-     ((,monokai-class (:foreground ,monokai-foreground :background ,monokai-gray-d))
-      (,monokai-256-class (:foreground ,monokai-256-foreground :background ,monokai-256-gray-d))))
+     ((,monokai-class (:background ,monokai-gray-d))
+      (,monokai-256-class (:background ,monokai-256-gray-d))))
    
    `(corfu-annotations
      ((,monokai-class (:foreground ,monokai-green))
@@ -2266,6 +2266,27 @@ Also affects 'linum-mode' background."
                                         :background ,monokai-256-yellow-lc
                                         :weight bold
                                         :underline t))))
+
+   ;; flymake-popon
+   `(flymake-popon
+     ((,monokai-class (:background ,monokai-gray-d))
+      (,monokai-256-class (:background ,monokai-256-gray-d))))
+
+   `(flymake-popon-note
+     ((,monokai-class (:inherit flymake-popon :foreground ,monokai-comments))
+      (,monokai-256-class (:inherit flymake-popon :foreground ,monokai-256-comments))))
+
+   `(flymake-popon-error
+     ((,monokai-class (:inherit flymake-popon :foreground ,monokai-red))
+      (,monokai-256-class (:inherit flymake-popon :foreground ,monokai-256-red))))
+
+   `(flymake-popon-warning
+     ((,monokai-class (:inherit flymake-popon :foreground ,monokai-yellow))
+      (,monokai-256-class (:inherit flymake-popon :foreground ,monokai-256-yellow))))
+
+   `(flymake-popon-posframe-border
+     ((,monokai-class (:foreground ,monokai-highlight-alt))
+      (,monokai-256-class (:foreground ,monokai-256-highlight-alt))))
 
    ;; flycheck
    `(flycheck-error
@@ -3486,6 +3507,10 @@ Also affects 'linum-mode' background."
    `(lsp-ui-doc-background
      ((,monokai-class (:background ,monokai-gray-d))
       (,monokai-256-class (:background ,monokai-256-gray-d))))
+
+   `(lsp-ui-doc-border
+     ((,monokai-class (:background ,monokai-highlight-alt))
+      (,monokai-256-class (:background ,monokai-256-highlight-alt))))
 
    ;; lusty-explorer
    `(lusty-directory-face
