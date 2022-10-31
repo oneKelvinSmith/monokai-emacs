@@ -3512,6 +3512,14 @@ Also affects 'linum-mode' background."
      ((,monokai-class (:background ,monokai-highlight-alt))
       (,monokai-256-class (:background ,monokai-256-highlight-alt))))
 
+   `(eldoc-box-body
+     ((,monokai-class (:background ,monokai-gray-d))
+      (,monokai-256-class (:background ,monokai-256-gray-d))))
+
+   `(eldoc-box-border
+     ((,monokai-class (:background ,monokai-highlight-alt))
+      (,monokai-256-class (:background ,monokai-256-highlight-alt))))
+
    ;; lusty-explorer
    `(lusty-directory-face
      ((,monokai-class (:inherit dimonokai-red-directory))
