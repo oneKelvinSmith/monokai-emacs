@@ -1446,7 +1446,11 @@ Also affects 'linum-mode' background."
 
    `(corfu-border
      ((,monokai-class (:inherit internal-border))
-           (,monokai-256-class (:inherit internal-border))))
+      (,monokai-256-class (:inherit internal-border))))
+
+   `(corfu-popupinfo
+     ((,monokai-class (:height unspecified :inherit corfu-default))
+      (,monokai-256-class (:height unspecified :inherit corfu-default))))
 
    ;; compilation
    `(compilation-column-face
