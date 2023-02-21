@@ -4899,7 +4899,7 @@ Also affects 'linum-mode' background."
                                        :underline t))))
 
    `(org-remark-highlighter
-     ((,monokai-class (:background ,monokai-highlight :underline ,monokai-gray-l))
+     ((,monokai-class (:background ,monokai-highlight-alt :underline ,monokai-gray-l))
            (,monokai-256-class (:background ,monokai-256-highlight :underline ,monokai-256-gray-l))))
 
    `(org-latex-and-export-specials
