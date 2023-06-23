@@ -1124,8 +1124,8 @@ Also affects 'linum-mode' background."
    `(centaur-tabs-selected-modified ((t (:background ,monokai-background :foreground ,monokai-orange :box nil))))
    `(centaur-tabs-unselected-modified ((t (:background ,monokai-highlight-line :foreground ,monokai-orange :box nil))))
    `(centaur-tabs-active-bar-face ((t (:background ,monokai-background :box nil))))
-   `(centaur-tabs-modified-marker-selected ((t (:inherit 'centaur-tabs-selected-modified :foreground ,monokai-background :box nil))))
-   `(centaur-tabs-modified-marker-unselected ((t (:inherit 'centaur-tabs-unselected-modified :foreground ,monokai-background :box nil))))
+   `(centaur-tabs-modified-marker-selected ((t (:inherit 'centaur-tabs-selected-modified :foreground ,monokai-gray-l :box nil))))
+   `(centaur-tabs-modified-marker-unselected ((t (:inherit 'centaur-tabs-unselected-modified :foreground ,monokai-gray-l :box nil))))
    
    ;; calfw
    `(cfw:face-day-title
