@@ -1118,11 +1118,11 @@ Also affects 'linum-mode' background."
                                        :foreground ,monokai-256-background))))
 
    ;; centaur-tabs
-   `(centaur-tabs-default ((t (:background ,monokai-background :foreground ,monokai-gray-d :box nil))))
-   `(centaur-tabs-selected ((t (:background ,monokai-emphasis :foreground ,monokai-comments :box nil))))
-   `(centaur-tabs-unselected ((t (:background ,monokai-background :foreground ,monokai-comments :box nil))))
-   `(centaur-tabs-selected-modified ((t (:background ,monokai-emphasis :foreground ,monokai-orange :box nil))))
-   `(centaur-tabs-unselected-modified ((t (:background ,monokai-background :foreground ,monokai-orange :box nil))))
+   `(centaur-tabs-default ((t (:background ,monokai-highlight-line :foreground ,monokai-gray-d :box nil))))
+   `(centaur-tabs-selected ((t (:background ,monokai-background :foreground ,monokai-comments :box nil))))
+   `(centaur-tabs-unselected ((t (:background ,monokai-highlight-line :foreground ,monokai-comments :box nil))))
+   `(centaur-tabs-selected-modified ((t (:background ,monokai-background :foreground ,monokai-orange :box nil))))
+   `(centaur-tabs-unselected-modified ((t (:background ,monokai-highlight-line :foreground ,monokai-orange :box nil))))
    `(centaur-tabs-active-bar-face ((t (:background ,monokai-yellow :box nil))))
    `(centaur-tabs-modified-marker-selected ((t (:inherit 'centaur-tabs-selected-modified :foreground ,monokai-yellow :box nil))))
    `(centaur-tabs-modified-marker-unselected ((t (:inherit 'centaur-tabs-unselected-modified :foreground ,monokai-yellow :box nil))))
