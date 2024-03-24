@@ -1157,10 +1157,10 @@ Also affects 'linum-mode' background."
                                         :weight bold))))
 
    `(cfw:face-holiday
-     ((,monokai-class (:background nil
+     ((,monokai-class (:background unspecified
                                    :foreground ,monokai-red
                                    :weight bold))
-      (,monokai-256-class (:background nil
+      (,monokai-256-class (:background unspecified
                                         :foreground ,monokai-256-red
                                         :weight bold))))
 
@@ -1201,10 +1201,10 @@ Also affects 'linum-mode' background."
    `(cfw:face-today
      ((,monokai-class (:weight bold
                                :background ,monokai-highlight-line
-                               :foreground nil))
+                               :foreground unspecified))
       (,monokai-256-class (:weight bold
                                     :background ,monokai-256-highlight-line
-                                    :foreground nil))))
+                                    :foreground unspecified))))
 
    `(cfw:face-today-title
      ((,monokai-class (:background ,monokai-yellow-lc
@@ -1239,10 +1239,10 @@ Also affects 'linum-mode' background."
    ;; cider
    `(cider-enlightened
      ((,monokai-class (:foreground ,monokai-yellow
-                                   :background nil
+                                   :background unspecified
                                    :box (:color ,monokai-yellow :line-width -1 :style nil)))
       (,monokai-256-class (:foreground ,monokai-256-yellow
-                                        :background nil
+                                        :background unspecified
                                         :box (:color ,monokai-256-yellow :line-width -1 :style nil))) ))
 
    `(cider-enlightened-local
@@ -1251,18 +1251,18 @@ Also affects 'linum-mode' background."
 
    `(cider-instrumented-face
      ((,monokai-class (:foreground ,monokai-violet
-                                   :background nil
+                                   :background unspecified
                                    :box (:color ,monokai-violet :line-width -1 :style nil)))
       (,monokai-256-class (:foreground ,monokai-256-violet
-                                        :background nil
+                                        :background unspecified
                                         :box (:color ,monokai-256-violet :line-width -1 :style nil)))))
 
    `(cider-result-overlay-face
      ((,monokai-class (:foreground ,monokai-blue
-                                   :background nil
+                                   :background unspecified
                                    :box (:color ,monokai-blue :line-width -1 :style nil)))
       (,monokai-256-class (:foreground ,monokai-256-blue
-                                        :background nil
+                                        :background unspecified
                                         :box (:color ,monokai-256-blue :line-width -1 :style nil)))))
 
    `(cider-test-error-face
@@ -3033,10 +3033,10 @@ Also affects 'linum-mode' background."
       (,monokai-256-class (:foreground ,monokai-256-orange))))
 
    `(info-reference-item
-     ((,monokai-class (:background nil
+     ((,monokai-class (:background unspecified
                                    :underline t
                                    :inherit bold))
-      (,monokai-256-class (:background nil
+      (,monokai-256-class (:background unspecified
                                         :underline t
                                         :inherit bold))))
 
