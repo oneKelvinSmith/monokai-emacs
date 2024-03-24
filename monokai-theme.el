@@ -560,14 +560,14 @@ Also affects 'linum-mode' background."
                                       :background ,monokai-highlight
                                       :box (:line-width 1
                                                         :color ,monokai-gray
-                                                        :style unspecified)))
+                                                        :style nil)))
       (,monokai-256-class (:inverse-video unspecified
                                            :underline unspecified
                                            :foreground ,monokai-256-foreground
                                            :background ,monokai-256-background
                                            :box (:line-width 1
                                                              :color ,monokai-256-highlight
-                                                             :style unspecified)))))
+                                                             :style nil)))))
 
    `(powerline-active1
      ((,monokai-class (:background ,monokai-gray-d))
@@ -585,14 +585,14 @@ Also affects 'linum-mode' background."
                                       :background ,monokai-background
                                       :box (:line-width 1
                                                         :color ,monokai-gray
-                                                        :style unspecified)))
+                                                        :style nil)))
       (,monokai-256-class (:inverse-video unspecified
                                            :underline unspecified
                                            :foreground ,monokai-256-comments
                                            :background ,monokai-256-background
                                            :box (:line-width 1
                                                              :color ,monokai-256-gray
-                                                             :style unspecified)))))
+                                                             :style nil)))))
 
    `(powerline-inactive1
      ((,monokai-class (:background ,monokai-gray-d))
@@ -608,12 +608,12 @@ Also affects 'linum-mode' background."
                                    :background ,monokai-highlight
                                    :box (:color ,monokai-gray
                                                 :line-width 1
-                                                :style unspecified)))
+                                                :style nil)))
       (,monokai-256-class (:foreground ,monokai-256-emphasis
                                         :background ,monokai-256-highlight
                                         :box (:color ,monokai-256-gray
                                                      :line-width 1
-                                                     :style unspecified)))))
+                                                     :style nil)))))
 
    ;; cua
    `(cua-global-mark
