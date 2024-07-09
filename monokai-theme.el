@@ -650,6 +650,17 @@ Also affects 'linum-mode' background."
      ((,monokai-class (:inherit tab-line-tab))
       (,monokai-256-class (:inherit tab-line-tab))))
 
+   ;; window-tool-bar
+   `(window-tool-bar-button
+     ((,monokai-class (:inherit tab-line))
+      (,monokai-256-class (:inherit tab-line))))
+   `(window-tool-bar-button-hover
+     ((,monokai-class (:inherit tab-line :inverse-video t))
+      (,monokai-256-class (:inherit tab-line :inverse-video t))))
+   `(window-tool-bar-button-disabled
+     ((,monokai-class (:inherit shadow :background ,monokai-highlight-alt))
+      (,monokai-256-class (:inherit shadow :background ,monokai-256-highlight-alt))))
+
    ;; cua
    `(cua-global-mark
      ((,monokai-class (:background ,monokai-yellow
