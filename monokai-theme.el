@@ -615,6 +615,52 @@ Also affects 'linum-mode' background."
                                                      :line-width 1
                                                      :style nil)))))
 
+   ;; tab-line
+   `(tab-line
+     ((,monokai-class (:foreground ,monokai-foreground
+                                   :background ,monokai-highlight))
+      (,monokai-256-class (:foreground ,monokai-256-foreground
+                                       :background ,monokai-256-highlight))))
+   `(tab-line-highlight
+     ((,monokai-class (:underline t))
+      (,monokai-256-class (:underline t))))
+   `(tab-line-tab
+     ((,monokai-class (:foreground ,monokai-foreground
+				   :background ,monokai-background
+				   :box (:line-width 4 :color ,monokai-background)))
+      (,monokai-256-class (:foreground ,monokai-256-foreground
+				       :background ,monokai-256-background
+				       :box (:line-width 4 :color ,monokai-background)))))
+   `(tab-line-tab-current
+     ((,monokai-class (:inherit tab-line-tab)))
+      (,monokai-256-class (:inherit tab-line-tab)))
+   `(tab-line-tab-inactive
+     ((,monokai-class (:inherit tab-line-tab
+				:foreground ,monokai-comments
+				:background ,monokai-highlight
+				:box (:line-width 4 :color ,monokai-highlight)))
+      (,monokai-256-class (:inherit tab-line-tab
+				    :foreground ,monokai-256-comments
+				    :background ,monokai-256-highlight
+				    :box (:line-width 4 :color ,monokai-256-highlight)))))
+   `(tab-line-tab-inactive-alternate
+     ((,monokai-class (:inherit tab-line-tab-inactive))
+      (,monokai-256-class (:inherit tab-line-tab-inactive))))
+   `(tab-line-tab-modified
+     ((,monokai-class (:inherit tab-line-tab))
+      (,monokai-256-class (:inherit tab-line-tab))))
+
+   ;; window-tool-bar
+   `(window-tool-bar-button
+     ((,monokai-class (:inherit tab-line))
+      (,monokai-256-class (:inherit tab-line))))
+   `(window-tool-bar-button-hover
+     ((,monokai-class (:inherit tab-line :inverse-video t))
+      (,monokai-256-class (:inherit tab-line :inverse-video t))))
+   `(window-tool-bar-button-disabled
+     ((,monokai-class (:inherit shadow :background ,monokai-highlight-alt))
+      (,monokai-256-class (:inherit shadow :background ,monokai-256-highlight-alt))))
+
    ;; cua
    `(cua-global-mark
      ((,monokai-class (:background ,monokai-yellow
