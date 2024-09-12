@@ -430,9 +430,9 @@ Also affects 'linum-mode' background."
 
    `(highlight
      ((,monokai-class (:background ,monokai-highlight
-                                   :distant-foreground nil))
+                                   :distant-foreground unspecified))
       (,monokai-256-class (:background ,monokai-256-highlight
-                                       :distant-foreground nil))))
+                                       :distant-foreground unspecified))))
 
    `(lazy-highlight
      ((,monokai-class (:inherit highlight
