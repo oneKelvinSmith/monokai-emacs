@@ -430,9 +430,9 @@ Also affects 'linum-mode' background."
 
    `(highlight
      ((,monokai-class (:background ,monokai-highlight
-                                   :distant-foreground nil))
+                                   :distant-foreground unspecified))
       (,monokai-256-class (:background ,monokai-256-highlight
-                                       :distant-foreground nil))))
+                                       :distant-foreground unspecified))))
 
    `(lazy-highlight
      ((,monokai-class (:inherit highlight
@@ -634,23 +634,53 @@ Also affects 'linum-mode' background."
 
    ;; tab-line
    `(tab-line
-     ((,monokai-class (:height 1.5))
-      (,monokai-256-class (:height 1.5))))
+     ((,monokai-class (:height 1.4 :background ,monokai-gray-d))
+      (,monokai-256-class (:height 1.4 :background ,monokai-256-gray-d))))
+
    `(tab-line-highlight
      ((,monokai-class (:inherit tab-line :background ,monokai-highlight))
       (,monokai-256-class (:inherit tab-line :background ,monokai-256-highlight))))
+
    `(tab-line-tab
      ((,monokai-class (:inherit tab-line :height 0.5))
       (,monokai-256-class (:inherit tab-line :height 0.5))))
+
    `(tab-line-tab-current
-     ((,monokai-class (:inherit tab-line-tab :overline t :weight bold))
-      (,monokai-256-class (:inherit tab-line-tab :overline t :weight bold))))
+     ((,monokai-class (:inherit tab-line-tab :overline ,monokai-foreground :weight bold :background ,monokai-highlight-alt))
+      (,monokai-256-class (:inherit tab-line-tab :overline ,monokai-256-foreground :weight bold :background ,monokai-256-highlight-alt))))
+
    `(tab-line-tab-inactive
      ((,monokai-class (:inherit tab-line-tab))
       (,monokai-256-class (:inherit tab-line-tab))))
+
    `(tab-line-tab-inactive-alternate
      ((,monokai-class (:inherit tab-line-tab-inactive))
-      (,monokai-256-class (:inherit tab-line-tab-inactive))))   
+      (,monokai-256-class (:inherit tab-line-tab-inactive))))
+
+   ;; tab-bar
+   `(tab-bar
+     ((,monokai-class (:inherit tab-line))
+      (,monokai-256-class (:inherit tab-line))))
+
+   `(tab-bar-tab-inactive
+     ((,monokai-class (:background ,monokai-gray-d :height 0.7))
+      (,monokai-256-class (:background ,monokai-256-gray-d :height 0.7))))
+
+   `(tab-bar-tab
+     ((,monokai-class (:inherit tab-bar-tab-inactive :overline ,monokai-foreground :weight bold :background ,monokai-highlight-alt))
+      (,monokai-256-class (:inherit tab-bar-tab-inactive :overline ,monokai-256-foreground :weight bold :background ,monokai-256-highlight-alt))))
+
+   `(tab-bar-tab-ungrouped
+     ((,monokai-class (:inherit tab-bar-tab-inactive :foreground ,monokai-comments))
+      (,monokai-256-class (:inherit tab-bar-tab-inactive :foreground ,monokai-256-comments))))
+
+   `(tab-bar-tab-group-current
+     ((,monokai-class (:inherit tab-bar-tab :underline t))
+      (,monokai-256-class (:inherit tab-bar-tab :underline t))))
+
+   `(tab-bar-tab-group-inactive
+     ((,monokai-class (:inherit tab-bar-tab-inactive :foreground ,monokai-comments))
+      (,monokai-256-class (:inherit tab-bar-tab-inactive :foreground ,monokai-256-comments))))
 
    ;; window-tool-bar
    `(window-tool-bar-button
