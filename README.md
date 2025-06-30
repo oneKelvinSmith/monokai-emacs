@@ -31,6 +31,16 @@ Download `monokai-theme.el` to the directory `~/.emacs.d/themes/`. Add this to y
 
 Now you can load the theme with: `M-x load-theme RET monokai`
 
+### With use-package
+
+Add to your init file:
+
+```lisp
+(use-package monokai-theme
+  :ensure t
+  :config (load-theme 'monokai t))
+```
+
 ### With package.el
 
 Monokai is available in both [Marmalade](http://marmalade-repo.org)
